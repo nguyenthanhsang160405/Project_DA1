@@ -1,0 +1,106 @@
+body{
+    width: 1440px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+header nav{
+    display: flex;
+}
+nav img {
+    width: 155px;
+    height: 70px;
+    margin-right: 20px;
+}
+nav .menu-large{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 0 0 100px; */
+}
+
+nav .menu-large li{
+    list-style: none;
+    width: 120px;
+    text-align: center;
+    height: 15px;
+}
+nav ul li::after{
+    content: "";
+    width: 0px;
+    height: 1px;
+    background-color: #000000;
+    display: block;
+    position: relative;
+    /* transition: width 0.5s; */
+}
+nav ul li:hover::after{
+    width: 100%;
+    animation: example 0.5s alternate;
+}
+@keyframes example{
+    0%{width: 0%;background-color: rgb(0, 0, 0);}
+    25%{width: 25%;background-color: rgb(0, 0, 0);}
+    50%{width: 50%;background-color: rgb(0, 0, 0);}
+    75%{width: 75%;background-color: rgb(0, 0, 0);}
+    100%{width: 100%;background-color: rgb(0, 0, 0);}
+}
+nav ul li:hover{
+    cursor: pointer;
+}
+nav .menu-large .sub-menu .menu-small{
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    transition: 0.2s;
+}
+nav .menu-large .sub-menu:hover .menu-small{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    margin-top: 10px;
+}
+nav .menu-large .sub-menu .menu-small .menu-smaller{
+    height: 25px;
+    line-height: 25px;
+
+}
+nav .menu-large li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+input {
+    border-bottom: 2px solid black;
+    border-top: none;                       
+    border-left: none;
+    border-right: none;
+    height: 20px;
+}
+input[type="placeholder"]{
+    color: #000;
+    font-size: 14px;
+    width: 100px;
+}
+
+header nav ul .search{
+    position: absolute;
+    right: 370px;
+    font-size: larger;
+}
+header nav ul .cart{
+    right: 20px;
+    font-size: larger;
+    margin-left: 20px;
+}
