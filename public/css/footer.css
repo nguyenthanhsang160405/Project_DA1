@@ -59,17 +59,17 @@
     }
     .footer-large p{
         margin: 15px 0;
-        font-size: 14px;
+        font-size: 12px;
     }
     .footer-large h3{
-        font-size: 14px;
+        font-size: 11px;
     } 
     .footer-large .title-logo .img{
         width: 100px;
         height: 100px;
     }
     .footer-large .title .wrapp img{
-        height: 30px;
+        height: 20px;
         margin: 5px 0;
     }
     .footer-large .title .wrapp{
@@ -84,6 +84,9 @@
         padding: 5px;
         border: none;
         margin: 10px 0;
+    }
+    #bocongthuong{
+        width: 170px;
     }
 }
 @media only screen and (max-width:600px){
