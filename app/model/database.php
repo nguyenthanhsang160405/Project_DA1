@@ -31,9 +31,10 @@
             try{
                 $stmt = $this->conn->prepare($sql);
                 $stmt->execute($param);
-                return $stmt;
+                return true;
             }catch(PDOException $e){
                 echo "Lỗi khi insert SQL =>" . $e->getMessage();
+                return false;
             }
         }
     }

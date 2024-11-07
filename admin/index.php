@@ -1,6 +1,7 @@
 <?php 
     ob_start();
     session_start();
+    include_once './app/controller/productCtl.php';
     include_once '../app/model/database.php';
     include_once '../app/model/productModel.php';
     include_once '../app/model/categoryProModel.php';
@@ -17,6 +18,11 @@
             case 'catepro':
                 $catepro = new CateproCtl();
                 $catepro->ViewCatePro();
+                break;
+            case 'product':
+                $catepro = new ProductCtl();
+                $catepro->ViewProduct();
+                break;
         }
     }else{
         include_once './app/view/catepro.php';

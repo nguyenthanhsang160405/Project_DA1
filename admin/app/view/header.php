@@ -19,7 +19,7 @@
                 <div class="nav">
                     <ul>
                         <li><a href="index.php?page_adm=catepro"><i class="fa-solid fa-ticket"></i><p>Danh mục sản phẩm</p></a></li>
-                        <li><a href=""><i class="fa-solid fa-ticket"></i><p>Danh sách sản phẩm</p></a></li>
+                        <li><a href="index.php?page_adm=product"><i class="fa-solid fa-ticket"></i><p>Danh sách sản phẩm</p></a></li>
                         <li><a href=""><i class="fa-solid fa-ticket"></i><p>Bình luận</p></a></li>
                         <li><a href=""><i class="fa-solid fa-ticket"></i><p>Mã giảm giá</p></a></li>
                         <li><a href=""><i class="fa-solid fa-ticket"></i><p>Bài viết</p></a></li>
