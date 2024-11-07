@@ -37,43 +37,31 @@
                             <a href=""><i class="fa-solid fa-right-from-bracket"></i></a>
                         </div>
                     </div>
-                    <form action="" method="post">
-                        <div class="admin-showdata">
-                            <h3>DANH SÁCH SẢN PHẨM</h3>
-                            <div class="admin-function">
-                                <a id="admin-function-add" href=""><i class="fa-solid fa-calendar-plus"></i>Thêm sản phẩm</a>
-                                <button type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa sản phẩm</button>
-                            </div>
-                            <br>
-                            <hr>
-                            <br>
-                            <br>
-                            <div class="admin-table-ifm">
-                                <table border="1">
-                                    <tr>
-                                        <th><input type="checkbox"></th>
-                                        <th>STT</th>
-                                        <th>Hình ảnh</th>
-                                        <th>Tên</th>
-                                        <th>Số lượng</th>
-                                        <th>Giá</th>
-                                        <th colspan="2">Tính năng</th>
-                                    </tr>
-                                    <tr>
-                                        <td><input name="checkid_pro" value="" type="checkbox"></th>
-                                        <td>STT</td>
-                                        <td><img src="" alt=""></td>
-                                        <td>Tên</td>
-                                        <td>Số lượng</td>
-                                        <td>Giá</td>
-                                        <td><a href=""><i class="fa-solid fa-trash"></i></a></i></td>
-                                        <td><a href=""><i class="fa-regular fa-pen-to-square"></i></a></td>
-                                    </tr>
-                                </table>
-                            </div>
+                    <div class="admin-showdata">
+                        <div class="admin-table-ifm">
+                            <form action="" method="post" enctype="multipart/form-data">
+                                <h3>THÊM SẢN PHẨM</h3>
+                                <br>
+                                <label for="">Tên sản phẩm:</label><br>
+                                <input type="text" name="" value=""><br>
+                                <label for="">Giá sản phẩm</label><br>
+                                <input type="text" name="" value=""><br>
+                                <label for="">Số lượng sản phẩm</label><br>
+                                <input type="text" name="" value=""><br>
+                                <label for="">Danh mục</label><br>
+                                <select name="" id=""><br>
+                                    <option style="width: 40px;" value="">Sang Sang</option>
+                                </select>
+                                <br>
+                                <br>
+                                <label for="">Ảnh sản phẩm:</label><br>
+                                <input style="border: none;" type="file" name="image_pro[]" value="" multiple><br>
+                                <hr>
+                                <br>
+                                <input type="submit" value="Thêm sản phẩm">
+                            </form>
                         </div>
-                    </form>
-                    
+                    </div>    
                 </div>
             </div>
         </div>
