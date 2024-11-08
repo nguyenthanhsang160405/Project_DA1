@@ -4,8 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./public/css/all.css">
+    <link rel="stylesheet" href="./public/css/header.css">
+    <link rel="stylesheet" href="./public/css/footer.css">
+    <link rel="stylesheet" href="./public/css/payment.css">
 </head>
 <body>
-    
+    <header>
+        <div><img src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></div>
+        <div>
+            <nav>
+                <ul class="menu-large">
+                    <li class="sub-menu-left"><a href="#">Trang chủ</a></li>
+                    <li class="sub-menu-left"><a href="#">Giới thiệu</a></li>
+                    <li class="sub-menu-left" ><a href="#">Sản phẩm<i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="menu-small">
+                            <li class="menu-smaller"><a href="#">Áo Vest</a></li>
+                            <li class="menu-smaller"><a href="#">Áo Polo</a></li>
+                            <li class="menu-smaller"><a href="#">Áo Thun</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-left"><a href="#">Lookbook</a></li>
+                    <li class="sub-menu-left"><a href="#">Về chúng tôi</a></li>
+                    <li class="sub-menu-left"><a href="#">Liên Hệ</a></li>
+            </ul>
+            </nav>
+        </div>
+        <div>
+            <ul class="menu-large">
+                <form action="" method="get">
+                    <li class="sub-menu-right"><a href="#"> <input type="text" name="timkem" id="timkem" placeholder="Tìm Kiếm"><i class="fa-solid fa-magnifying-glass search"></i></a></li>
+                </form>
+                <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="img-title">
+        <div class="overlay"></div>
+        <h2>TÀI KHOẢN</h2>
+    </div>
+    <div class="container">
+        <div class="checkout-form">
+            <h2>Dwin Store - Thương hiệu bán đồ hàng đầu Việt Nam</h2>
+            <h3>Thông tin thanh toán</h3>
+            <div class="user-info">
+                <img src="./public/img/1.webp" alt="User Icon">
+                <p>Tên Đăng Nhập (email.com)</p>
+                <a href="#">Đăng xuất</a>
+            </div>
+            <form>
+                <input type="text" placeholder="Việt Nam">
+                <input type="text" placeholder="Họ và Tên*">
+                <input type="text" placeholder="Điện thoại*">
+                <input type="text" placeholder="Địa chỉ*">
+                <div class="location-select">
+                    <select>
+                        <option>Chọn tỉnh thành</option>
+                        <option>Ninh Thuận</option>
+                        <option>Hồ Chí Minh</option>
+                        <option>Hà Nội</option>
+                        <option>Bình Định</option>
+                        <option>Phú Yên</option>
+                        <option>Đồng Tháp</option>
+                    </select>
+                    <select>
+                        <option>Quận 1</option>
+                        <option>Quận 2</option>
+                        <option>Quận 4</option>
+                        <option>Quận 9</option>
+                        <option>Quận 12</option>
+                        <option>Quận Bình Thạnhn</option>
+                    </select>
+                    <select>
+                        <option>Đông Hưng Thuận</option>
+                        <option>Tân Hưng Thuận</option>
+                        <option>An Phú Đông</option>
+                        <option>Tân Chánh Hiệp</option>
+                        <option>Thạnh Lộc</option>
+                        <option>Thạnh Xuân</option>
+                        <option>Trưng Mỹ Tây</option>
+                    </select>
+                </div>
+                <h4>Phương thức thanh toán</h4>
+                <label>
+                    <input type="radio" name="payment" checked>
+                    Thanh toán khi nhận hàng (COD)
+                </label>
+            </form>
+            <div class="cart-checkout">
+                <a href="#" class="cart-link">Giỏ hàng</a>
+                <button class="checkout-button">Đặt hàng</button>
+            </div>
+        </div>
+        <div class="order-summary">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>SIZE</th>
+                    <th>SỐ LƯỢNG</th>
+                    <th>TÊN SẢN PHẨM</th>
+                    <th>GIÁ</th>
+                </tr>
+                <tr>
+                    <td><img src="./public/img/áo xanh kẻ đen.webp" alt=""></td>
+                    <td>48</td>
+                    <td>2</td>
+                    <td>Áo vest xanh kẻ đen</td>
+                    <td>7,000,000 VNĐ</td>
+                </tr>
+            </table>
+            <input type="text" placeholder="Mã giảm giá">
+            <button>Sử dụng</button>
+            <div class="total">
+                <span class="total-label">Tổng tiền</span>
+                <span class="total-amount">7,000,000 VNĐ</span>
+            </div>
+
+            <ul>
+                <li>Khách hàng vui lòng thanh toán phí vận chuyển khi nhận hàng.</li>
+                <li>Freeship toàn quốc đối với đơn hàng >1.000.000 chuyển khoản trước.</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-large">
+            <div class="title-logo">
+                <img class="img" src="public/img/Remove-bg.ai_1730792910599.png" alt="">
+                <p><i class="fa-solid fa-phone"></i> 0363599809</p>
+                <p><i class="fa-brands fa-instagram"></i> wuan.ch</p>
+                <img id="bocongthuong" src="public/img/ft_bct_img_medium.webp" alt="">
+            </div>
+            <div class="title">
+                <h3>GIỚI THIỆU</h3>
+                <p>Hệ thống cửa hàng</p>
+                <p>Tuyển dụng</p>
+                <p>Sản phẩm</p>
+            </div>
+            <div class="title">
+                <h3>CHƯƠNG TRÌNH & CHÍNH SÁCH</h3>
+                <p>Chương trình ưu đãi</p>
+                <p>Chính sách bảo hành</p>
+                <p>Chính sách đổi hàng</p>
+                <p>Chính sách bảo mật</p>
+                <p>Quy định thanh toán</p>
+            </div>
+            <div class="title">
+                <h3>TIN TỨC</h3>
+                <p>Dwin và Báo chí</p>
+                <p>Sao Việt và Khách hàng</p>
+                <p>Dwin Videos</p>
+            </div>
+            <div class="title" style="background-color: #f6f6f6;text-align: center;width: 320px;height: 285px;">
+                <h1p>THEO DÕI DWIN TRÊN MẠNG XÃ HỘI</h1>
+                <div class="wrapp">
+                    <img src="public/img/social_facebook_image_small.png" alt="">
+                    <img src="public/img/social_instagram_image_small.png" alt="">
+                    <img src="public/img/social_youtube_image_small.png" alt="">
+                    <img src="public/img/social_zalo_image_small.png" alt="">
+                </div>
+                <hr style="color: #f3f3f3;">
+                <div>
+                    <h3 style="text-align: center; margin: 19px 0;">ĐĂNG KÝ NHẬN THÔNG TIN MỚI TỪ DWIN STORE</h3>
+                    <form action="#" method="post">
+                        <input type="email" name="email" id="email" placeholder="Nhập email của bạn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

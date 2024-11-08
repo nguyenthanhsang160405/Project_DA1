@@ -4,8 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./public/css/all.css">
+    <link rel="stylesheet" href="./public/css/contact.css">
+    <link rel="stylesheet" href="./public/css/footer.css">
+    <link rel="stylesheet" href="./public/css/header.css">
 </head>
 <body>
-    
+    <header>
+        <div><img src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></div>
+        <div>
+            <nav>
+                <ul class="menu-large">
+                    <li class="sub-menu-left"><a href="#">Trang chủ</a></li>
+                    <li class="sub-menu-left"><a href="#">Giới thiệu</a></li>
+                    <li class="sub-menu-left" ><a href="#">Sản phẩm<i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="menu-small">
+                            <li class="menu-smaller"><a href="#">Áo Vest</a></li>
+                            <li class="menu-smaller"><a href="#">Áo Polo</a></li>
+                            <li class="menu-smaller"><a href="#">Áo Thun</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-left"><a href="#">Lookbook</a></li>
+                    <li class="sub-menu-left"><a href="#">Về chúng tôi</a></li>
+                    <li class="sub-menu-left"><a href="#">Liên Hệ</a></li>
+            </ul>
+            </nav>
+        </div>
+        <div>
+            <ul class="menu-large">
+                <form action="" method="get">
+                    <li class="sub-menu-right"><a href="#"> <input type="text" name="timkem" id="timkem" placeholder="Tìm Kiếm"><i class="fa-solid fa-magnifying-glass search"></i></a></li>
+                </form>
+                <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="img-title">
+        <div class="overlay"></div>
+        <h2>LIÊN HỆ</h2>
+    </div>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>LIÊN HỆ</h2>
+            <p>📞 Hotline: 0363599809</p>
+            <p>🏠 Số 81A Phố Huế, Ngô Thì Nhậm, Hai Bà Trưng, Hà Nội</p>
+            <p>✉️ nghithps40419@gmail.com</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.444162391639!2d106.62348197480605!3d10.853782889299708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b6c59ba4c97%3A0x535e784068f1558b!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYw!5e0!3m2!1svi!2s!4v1731060532397!5m2!1svi!2s" 
+            width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="gird-form">
+            <form class="contact-form"onsubmit="return validateForm()">
+                <label for="name">Họ và Tên:</label>
+                <input type="text" id="name" name="name" placeholder="Họ và Tên*" required>
+
+                <label for="email">Gmail:</label>
+                <input type="email" id="email" name="email" placeholder="Email*" required>
+
+                <label for="phone">Số Điện Thoại:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Số điện thoại*" required>
+
+                <label for="message">Nội Dung:</label>
+                <textarea id="message" name="message" placeholder="Nội dung*" required></textarea>
+            </form>
+            <button type="submit" class="submit-btn">Gửi</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-large">
+            <div class="title-logo">
+                <img class="img" src="public/img/Remove-bg.ai_1730792910599.png" alt="">
+                <p><i class="fa-solid fa-phone"></i> 0363599809</p>
+                <p><i class="fa-brands fa-instagram"></i> wuan.ch</p>
+                <img id="bocongthuong" src="public/img/ft_bct_img_medium.webp" alt="">
+            </div>
+            <div class="title">
+                <h3>GIỚI THIỆU</h3>
+                <p>Hệ thống cửa hàng</p>
+                <p>Tuyển dụng</p>
+                <p>Sản phẩm</p>
+            </div>
+            <div class="title">
+                <h3>CHƯƠNG TRÌNH & CHÍNH SÁCH</h3>
+                <p>Chương trình ưu đãi</p>
+                <p>Chính sách bảo hành</p>
+                <p>Chính sách đổi hàng</p>
+                <p>Chính sách bảo mật</p>
+                <p>Quy định thanh toán</p>
+            </div>
+            <div class="title">
+                <h3>TIN TỨC</h3>
+                <p>Dwin và Báo chí</p>
+                <p>Sao Việt và Khách hàng</p>
+                <p>Dwin Videos</p>
+            </div>
+            <div class="title" style="background-color: #f6f6f6;text-align: center;width: 320px;height: 285px;">
+                <h1p>THEO DÕI DWIN TRÊN MẠNG XÃ HỘI</h1>
+                <div class="wrapp">
+                    <img src="public/img/social_facebook_image_small.png" alt="">
+                    <img src="public/img/social_instagram_image_small.png" alt="">
+                    <img src="public/img/social_youtube_image_small.png" alt="">
+                    <img src="public/img/social_zalo_image_small.png" alt="">
+                </div>
+                <hr style="color: #f3f3f3;">
+                <div>
+                    <h3 style="text-align: center; margin: 19px 0;">ĐĂNG KÝ NHẬN THÔNG TIN MỚI TỪ DWIN STORE</h3>
+                    <form action="#" method="post">
+                        <input type="email" name="email" id="email" placeholder="Nhập email của bạn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
