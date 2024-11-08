@@ -29,6 +29,15 @@
         height: 30px;
         margin: 5px 0;
     }
+    .wrapp-title{
+
+    }
+    .wrapp-title .title{
+        background-color: #f6f6f6;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
     .footer-large .title .wrapp{
         display: flex;
         justify-content: center;
@@ -52,14 +61,17 @@
         justify-content: space-around;
         align-items: stretch;
         box-shadow: 0 0 7px 0 gray;
-        height: 295px;
+        height: 225px;
     }
-    .footer-large div{
+    .footer-large .title-logo{
+        width: 22%;
+    }
+    /* .footer-large div{
         padding: 10px;
-    }
+    } */
     .footer-large p{
-        margin: 15px 0;
-        font-size: 12px;
+        margin: 5px 0;
+        font-size: 11px;
     }
     .footer-large h3{
         font-size: 11px;
@@ -67,6 +79,73 @@
     .footer-large .title-logo .img{
         width: 100px;
         height: 100px;
+    }
+    .footer-large .title .wrapp img{
+        height: 20px;
+        margin: 5px 0;
+    }
+    .wrapp-title{
+        height: 200px;
+    }
+    .wrapp-title .title{
+        background-color: #f6f6f6;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+    .footer-large .title .wrapp{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .footer-large .title input{
+        width: 100%;
+        height: 35px;
+        font-size: 12px;
+        padding: 5px;
+        border: none;
+        margin: 10px 0;
+    }
+    #bocongthuong{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:600px){
+    *{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .footer-large{
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        box-shadow: 0 0 7px 0 gray;
+        height: 215px;
+    }
+    .footer-large .title-logo{
+        width: 22%;
+    }
+    /* .footer-large div{
+        padding: 10px;
+    } */
+    .footer-large p{
+        margin: 5px 0;
+        font-size: 7px;
+    }
+    .footer-large h3{
+        font-size: 11px;
+    } 
+    .footer-large .title-logo .img{
+        width: 100px;
+        height: 100px;
+    }
+    .wrapp-title{
+        height: 200px;
+    }
+    .wrapp-title .title{
+        background-color: #f6f6f6;
+        text-align: center;
+        width: 100%;
+        height: 100%;
     }
     .footer-large .title .wrapp img{
         height: 20px;
@@ -80,15 +159,12 @@
     .footer-large .title input{
         width: 100%;
         height: 35px;
-        font-size: 20px;
+        font-size: 12px;
         padding: 5px;
         border: none;
         margin: 10px 0;
     }
     #bocongthuong{
-        width: 170px;
+        width: 100%;
     }
-}
-@media only screen and (max-width:600px){
-
 }

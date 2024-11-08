@@ -1,151 +1,489 @@
-#fame{
-    overflow: hidden;
-    width: 100vw;
-    height: 600px;
-    margin: 0 auto 20px 0;
+@media only screen and (min-width: 1024px){
+    #fame{
+        overflow: hidden;
+        width: 100vw;
+        height: 600px;
+        margin: 0 auto 20px 0;
+    }
+    #anh{
+        display: flex;
+        width: 1476px;
+        height: 600px;
+        margin: 0 auto;
+    }
+    #anh img {
+        width: 100%;
+        height: 600px;
+    }
+    /* .main {
+        margin: 0 auto;
+        padding: 0;
+        width: 1440px;
+    } */
+    .grid-banner{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 42% 21% 21%;
+        grid-template-rows: 50% 50%;
+        gap: 20px;
+        justify-content: center;
+    }
+    .item1 img, .item2 img, .item3 img, .item4 img {
+        width: 100%;
+        height: 100%;
+        filter: brightness(100%);
+        transition: filter 0.9s ease;
+    }
+    .item1, .item2, .item3, .item4{
+        position: relative;
+    }
+    .hover-button {
+        text-transform: uppercase;
+        font-weight: 700;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity,background-color 0.9s ease;
+        border: 1px solid rgba(255, 255, 255, 1);
+        width: 45%;
+        height: 12%;
+        font-size: 70%;
+    
+    }
+    .item1:hover .hover-button,
+    .item2:hover .hover-button,
+    .item3:hover .hover-button,
+    .item4:hover .hover-button{
+        opacity: 1;
+    }
+    .item1, .hover-button:hover,
+    .item2, .hover-button:hover,
+    .item3, .hover-button:hover,
+    .item4, .hover-button:hover{
+        background-color: #000;
+    }
+    .item1:hover img, .item2:hover img, .item3:hover img,.item4:hover img {
+        filter: brightness(70%);
+    }
+    .item1{
+        grid-row: 1/3;
+    }
+    .item4{
+        grid-column: 2/4;
+    }
+    .popular h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .popular .wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .popular .wrapper .celebrity{
+        text-align: center;
+        width: 250px;
+    }
+    .popular .wrapper .celebrity img{
+        width: 100%;
+    }
+    .popular .wrapper .celebrity p{
+        font-weight: 700;
+    }
+    .suits h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .suits .wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0px 47px;
+    }
+    .suits .wrapper .new-suit{
+        text-align: center;
+        position: relative;
+        margin: 0 5px;
+        width: 285px;
+    }
+    .suits .wrapper .new-suit img{
+        width: 100%;
+    }
+    .suits .wrapper .new-suit span{
+        position: absolute;
+        border-radius: 7px;
+        width: 39px;
+        height: 20px;
+        left: 10px;
+        top: 5px;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        font-weight: 800;
+        border: 1px solid black;
+    }
+    .lookbook h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .lookbook .wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0px 49px;
+    }
+    .lookbook .wrapper .lookbook-img{
+        margin: 20px 5px;
+        text-align: center;
+        width: 295px;
+    }
+    
+    .lookbook .wrapper .lookbook-img img{
+        width: 100%;
+        filter: grayscale(100%);
+        transition: filter 0.5s ease-in-out;
+    }
+    .lookbook .wrapper .lookbook-img img:hover{
+        filter: grayscale(0%);
+    }
+    .lookbook .wrapper .lookbook-img p{
+        font-weight: 700;
+        margin: 0 0 20px 0;
+    }
 }
-#anh{
-    display: flex;
-    width: 1476px;
-    height: 600px;
-    margin: 0 auto;
+@media only screen and (max-width: 1024px){
+    #fame{
+        overflow: hidden;
+        width: 100vw;
+        height: 600px;
+        margin: 0 auto 20px 0;
+    }
+    #anh{
+        display: flex;
+        width: 1476px;
+        height: 600px;
+        margin: 0 auto;
+    }
+    #anh img {
+        width: 100%;
+        height: 600px;
+    }
+    /* .main {
+        margin: 0 auto;
+        padding: 0;
+        width: 1440px;
+    } */
+    .grid-banner{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 40% 21% 21%;
+        grid-template-rows: 50% 50%;
+        gap: 20px;
+        justify-content: center;
+    }
+    .item1 img, .item2 img, .item3 img, .item4 img {
+        width: 100%;
+        height: 100%;
+        filter: brightness(100%);
+        transition: filter 0.9s ease;
+    }
+    .item1, .item2, .item3, .item4{
+        position: relative;
+    }
+    .hover-button {
+        text-transform: uppercase;
+        font-weight: 700;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity,background-color 0.9s ease;
+        border: 1px solid rgba(255, 255, 255, 1);
+        width: 45%;
+        height: 12%;
+        font-size: 10%;
+        text-align: center;
+        line-height: 12%;
+    
+    }
+    .item1:hover .hover-button,
+    .item2:hover .hover-button,
+    .item3:hover .hover-button,
+    .item4:hover .hover-button{
+        opacity: 1;
+    }
+    .item1, .hover-button:hover,
+    .item2, .hover-button:hover,
+    .item3, .hover-button:hover,
+    .item4, .hover-button:hover{
+        background-color: #000;
+    }
+    .item1:hover img, .item2:hover img, .item3:hover img,.item4:hover img {
+        filter: brightness(70%);
+    }
+    .item1{
+        grid-row: 1/3;
+    }
+    .item4{
+        grid-column: 2/4;
+    }
+    .popular h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .popular .wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        /* margin: 0px 17px; */
+    }
+    .popular .wrapper .celebrity{
+        text-align: center;
+        margin: 0 5px;
+        width: 250px;
+    }
+    .popular .wrapper .celebrity img{
+        width: 100%;
+    }
+    .popular .wrapper .celebrity p{
+        font-weight: 700;
+    }
+    .suits h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .suits .wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0px 50px;
+    }
+    .suits .wrapper .new-suit{
+        text-align: center;
+        position: relative;
+        margin: 0 5px;
+        width: 290px;
+    }
+    .suits .wrapper .new-suit img{
+        width: 100%;
+    }
+    .suits .wrapper .new-suit span{
+        position: absolute;
+        border-radius: 7px;
+        width: 39px;
+        height: 20px;
+        left: 10px;
+        top: 5px;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        font-weight: 800;
+        border: 1px solid black;
+    }
+    .lookbook h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .lookbook .wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0px 35px;
+    }
+    .lookbook .wrapper .lookbook-img{
+        margin: 20px 5px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .lookbook .wrapper .lookbook-img img{
+        width: 100%;
+        filter: grayscale(100%);
+        transition: filter 0.5s ease-in-out;
+    }
+    .lookbook .wrapper .lookbook-img img:hover{
+        filter: grayscale(0%);
+    }
+    .lookbook .wrapper .lookbook-img p{
+        font-weight: 700;
+        margin: 0 0 20px 0;
+    }
 }
-#anh img {
-    width: 100%;
-    height: 600px;
-}
-.main {
-    margin: 0 auto;
-    padding: 0;
-    width: 1440px;
-}
-.grid-banner{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 42% 21% 21%;
-    grid-template-rows: 300px 300px;
-    gap: 20px;
-    justify-content: center;
-}
-.item1 img, .item2 img, .item3 img, .item4 img {
-    width: 100%;
-    height: 100%;
-    filter: brightness(100%);
-    transition: filter 0.9s ease;
-}
-.item1, .item2, .item3, .item4{
-    position: relative;
-}
-.hover-button {
-    text-transform: uppercase;
-    font-weight: 700;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity,background-color 0.9s ease;
-    border: 1px solid rgba(255, 255, 255, 1);
-    width: 190px;
-
-}
-.item1:hover .hover-button,
-.item2:hover .hover-button,
-.item3:hover .hover-button,
-.item4:hover .hover-button{
-    opacity: 1;
-}
-.item1, .hover-button:hover,
-.item2, .hover-button:hover,
-.item3, .hover-button:hover,
-.item4, .hover-button:hover{
-    background-color: #000;
-}
-.item1:hover img, .item2:hover img, .item3:hover img,.item4:hover img {
-    filter: brightness(70%);
-}
-.item1{
-    grid-row: 1/3;
-}
-.item4{
-    grid-column: 2/4;
-}
-.popular h2{
-    text-align: center;
-    margin: 20px 0;
-}
-.popular .wrapper{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0px 17px;
-}
-.popular .wrapper .celebrity{
-    text-align: center;
-}
-.popular .wrapper .celebrity img{
-    width: 260px;
-}
-.popular .wrapper .celebrity p{
-    font-weight: 700;
-}
-.suits h2{
-    text-align: center;
-    margin: 20px 0;
-}
-.suits .wrapper{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0px 50px;
-}
-.suits .wrapper .new-suit{
-    text-align: center;
-    position: relative;
-}
-.suits .wrapper .new-suit img{
-    width: 290px;
-}
-.suits .wrapper .new-suit span{
-    position: absolute;
-    border-radius: 7px;
-    width: 39px;
-    height: 20px;
-    left: 10px;
-    top: 5px;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    font-weight: 800;
-    border: 1px solid black;
-}
-.lookbook h2{
-    text-align: center;
-    margin: 20px 0;
-}
-.lookbook .wrapper{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0px 50px;
-}
-.lookbook .wrapper .lookbook-img{
-    text-align: center;
-}
-
-.lookbook .wrapper .lookbook-img img{
-    width: 290px;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease-in-out;
-}
-.lookbook .wrapper .lookbook-img img:hover{
-    filter: grayscale(0%);
-}
-.lookbook .wrapper .lookbook-img p{
-    font-weight: 700;
-    margin: 0 0 20px 0;
+@media only screen and (max-width: 600px){
+    #fame{
+        overflow: hidden;
+        width: 100vw;
+        height: 600px;
+        margin: 0 auto 20px 0;
+    }
+    #anh{
+        display: flex;
+        width: 1476px;
+        height: 600px;
+        margin: 0 auto;
+    }
+    #anh img {
+        width: 100%;
+        height: 600px;
+    }
+    /* .main {
+        margin: 0 auto;
+        padding: 0;
+        width: 1440px;
+    } */
+    .grid-banner{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 40% 21% 21%;
+        grid-template-rows: 50% 50%;
+        gap: 20px;
+        justify-content: center;
+    }
+    .item1 img, .item2 img, .item3 img, .item4 img {
+        width: 100%;
+        height: 100%;
+        filter: brightness(100%);
+        transition: filter 0.9s ease;
+    }
+    .item1, .item2, .item3, .item4{
+        position: relative;
+    }
+    .hover-button {
+        text-transform: uppercase;
+        font-weight: 700;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity,background-color 0.9s ease;
+        border: 1px solid rgba(255, 255, 255, 1);
+        width: 88%;
+        height: 12%;
+        font-size: 10%;
+        text-align: center;
+        line-height: 2%;
+    
+    }
+    .item1:hover .hover-button,
+    .item2:hover .hover-button,
+    .item3:hover .hover-button,
+    .item4:hover .hover-button{
+        opacity: 1;
+    }
+    .item1, .hover-button:hover,
+    .item2, .hover-button:hover,
+    .item3, .hover-button:hover,
+    .item4, .hover-button:hover{
+        background-color: #000;
+    }
+    .item1:hover img, .item2:hover img, .item3:hover img,.item4:hover img {
+        filter: brightness(70%);
+    }
+    .item1{
+        grid-row: 1/3;
+    }
+    .item4{
+        grid-column: 2/4;
+    }
+    .popular h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .popular .wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        /* margin: 0px 17px; */
+    }
+    .popular .wrapper .celebrity{
+        text-align: center;
+        margin: 0 5px;
+        width: 250px;
+    }
+    .popular .wrapper .celebrity img{
+        width: 100%;
+    }
+    .popular .wrapper .celebrity p{
+        font-weight: 700;
+    }
+    .suits h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .suits .wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0px 50px;
+    }
+    .suits .wrapper .new-suit{
+        text-align: center;
+        position: relative;
+        margin: 0 5px;
+        width: 290px;
+    }
+    .suits .wrapper .new-suit img{
+        width: 100%;
+    }
+    .suits .wrapper .new-suit span{
+        position: absolute;
+        border-radius: 7px;
+        width: 39px;
+        height: 20px;
+        left: 10px;
+        top: 5px;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        font-weight: 800;
+        border: 1px solid black;
+    }
+    .lookbook h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .lookbook .wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0px 35px;
+    }
+    .lookbook .wrapper .lookbook-img{
+        margin: 20px 5px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .lookbook .wrapper .lookbook-img img{
+        width: 100%;
+        filter: grayscale(100%);
+        transition: filter 0.5s ease-in-out;
+    }
+    .lookbook .wrapper .lookbook-img img:hover{
+        filter: grayscale(0%);
+    }
+    .lookbook .wrapper .lookbook-img p{
+        font-weight: 700;
+        margin: 0 0 20px 0;
+    }
 }
