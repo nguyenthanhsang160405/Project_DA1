@@ -39,6 +39,7 @@
                     </div>
                     <form action="" method="post">
                         <div class="admin-showdata">
+                            <h3>DANH SÁCH SẢN PHẨM</h3>
                             <div class="admin-function">
                                 <a id="admin-function-add" href=""><i class="fa-solid fa-calendar-plus"></i>Thêm sản phẩm</a>
                                 <button type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa sản phẩm</button>
@@ -50,7 +51,7 @@
                             <div class="admin-table-ifm">
                                 <table border="1">
                                     <tr>
-                                        <th><input type="checkbox"></th>
+                                        <th><input type="checkbox" id="box-checkall-delete-pro"></th>
                                         <th>STT</th>
                                         <th>Hình ảnh</th>
                                         <th>Tên</th>
@@ -59,9 +60,9 @@
                                         <th colspan="2">Tính năng</th>
                                     </tr>
                                     <tr>
-                                        <td><input name="checkid_pro" value="" type="checkbox"></th>
+                                        <td><input class="get-id-product-delete" name="checkid_pro" value="" type="checkbox"></th>
                                         <td>STT</td>
-                                        <td>Hình ảnh</td>
+                                        <td><img src="" alt=""></td>
                                         <td>Tên</td>
                                         <td>Số lượng</td>
                                         <td>Giá</td>

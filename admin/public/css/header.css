@@ -17,174 +17,13 @@
     .container .admin-content header .nav ul li{
         list-style: none;
         width: 100%;
-        padding: 10px 10px;
+        padding: 15px 0;
         background-color: #083183;
         border-radius: 7px;
         margin: 10px 0;
         gap: 20px;
         text-transform: uppercase;
-        display: flex;
-        align-items: center;
-    }
-    .container .admin-content header .nav ul li:hover{
-        background-color: #56DDEA;
-    }
-    .container .admin-content header .nav ul li a{
-        text-decoration: none;
-        display: flex;
-        font-size: 9px;
-        color: white;
-    }
-    .container .admin-content header .nav ul li a>p{
-        margin-left: 15px;
-    }
-    .container .admin-content header .nav ul li a>i{
-        font-size: 12px;
-    }
-    .container .admin-content header .nav{
-        border-top: 1px solid white;
-    }
-    .container .admin-content header .nav ul{
-        text-align: left;
-    }
-    .container .admin-content header{
-        padding: 0 25px;
-        width: 20%;
-    }
-    .container .admin-content header>.image_nguoi_dung img{
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
-        
-    }
-    .container .admin-content header>.image_nguoi_dung p{
-        color:white;
-        font-size: 12px;
-        font-weight: 100;
-        margin: 5px 0;
-    }
-    .container .admin-content header>.image_nguoi_dung{
-        text-align: center;
-        margin-bottom: 20px ;
-    }
-    .container .admin-content .main .admin-ifm{
-        background-color: #EBEAEA;
-        width: 100%;
-        min-height: 750px;
-        padding: 20px;
-        
-    }
-    .container .admin-content .main{
-        width: 80%;
-        height: 100%;
-    }
-    .container .admin-content .main .admin-ifm .admin-name{
-        padding-left: 7px;
-        background-color: #4A94F4;
-        border-radius: 5px;
-        margin-bottom: 20px;
-        
-        
-    }
-    .container .admin-content .main .admin-ifm .admin-name p{
-        padding: 13px;
-        border-radius: 5px;
-        font-weight: 600;
-        font-size: 19px;
-    }
-    .container .admin-content .main .admin-ifm .admin-name .admin-background-name{
-        background-color: white;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-right: 20px;
-        border-radius: 5px;
-    }
-    .container .admin-content .main .admin-ifm .admin-name .admin-background-name a i{
-        font-size: 23px;
-        color:black;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-function a{
-        padding: 10px;
-        text-decoration: none;
-        border-radius: 10px;
-        color:rgb(14, 14, 14);
-        font-size: 12px;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-function a i{
-        margin-right: 10px;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-function #admin-function-add{
-        background-color: #9AF785;
-        border-radius: 10px;
-    
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-function #admin-function-delete{
-        background-color: #FFBDBD;
-        border-radius: 10px;
-        padding: 10px;
-        border: none;
-        font-size: 12px;
-        cursor: pointer;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-function #admin-function-delete i{
-        margin-right: 10px;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata{
-        margin-top: 40px;
-        padding: 20px;
-        background-color: white;
-        min-height: 750px;
-        
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table{
-        width: 100%;
-        border-collapse: collapse;
-        text-align: center;
-        font-size: 12px;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table th{
-        background-color: #474646;
-        color: white;
-        padding: 10px;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table td{
-        padding: 40px 0;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table td a{
-        color: black;
-        cursor: pointer;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table td a:hover{
-        color:red;
-    }
-}
-@media only screen and (min-width:1300px){
-    *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-    }
-    .container{
-        background-color: #010F4E;
-        padding-top:  40px;
-        min-height: 750px;
-    }
-    .admin-content{
-        display: flex;
-    }
-    .container .admin-content header .nav ul li{
-        list-style: none;
-        width: 100%;
-        padding: 15px 20px;
-        background-color: #083183;
-        border-radius: 7px;
-        margin: 10px 0;
-        gap: 20px;
-        text-transform: uppercase;
+        padding-left:  10px;
     }
     .container .admin-content header .nav ul li:hover{
         background-color: #56DDEA;
@@ -271,6 +110,7 @@
         text-decoration: none;
         border-radius: 10px;
         color:rgb(14, 14, 14);
+        font-size: 13px;
         
     }
     .container .admin-content .main .admin-ifm .admin-showdata .admin-function a i{
@@ -302,6 +142,7 @@
         width: 100%;
         border-collapse: collapse;
         text-align: center;
+        font-size: 12px;
     }
     .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table th{
         background-color: #474646;
@@ -309,7 +150,7 @@
         padding: 10px;
     }
     .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table td{
-        padding: 40px 0;
+        padding: 30px 0;
     }
     .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table td a{
         color: black;
@@ -318,7 +159,49 @@
     .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table td a:hover{
         color:red;
     }
+    /* form trang add sản phẩm */
+    .admin-table-ifm form input{
+        width: 100%;
+        height: 35px;
+        margin-bottom: 10px;  
+        border: 1px solid grey;
+        padding-left: 10px;
+        margin-top: 5px; 
+    }
+    .admin-table-ifm form label{
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-bottom: 20px;
+        
+    }
+    .admin-table-ifm form input[type="submit"]{
+        text-transform: uppercase;
+        background-color: white;
+        font-weight: 500;
+        border: 1px solid grey;
+        
+        
+    }
+    .admin-table-ifm form input[type="submit"]:hover{
+        background-color: black;
+        color:white;
+    }
+    h3{
+        margin-bottom: 20px;
+    }
+    .admin-table-ifm form span{
+        color:red;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-left: 5px;
+    }
+    #ht-tb-da-thanh-cong{
+        font-size: 16px;
+        color:green;
+        font-weight: 600;
+    }
 }
+
 @media only screen and (max-width:1024px){
     *{
         box-sizing: border-box;
@@ -337,12 +220,13 @@
     .container .admin-content header .nav ul li{
         list-style: none;
         width: 100%;
-        padding: 10px 15px;
+        padding: 10px 0;
         background-color: #083183;
         border-radius: 7px;
         margin: 10px 0;
         gap: 20px;
         text-transform: uppercase;
+        padding-left: 15px;
     }
     .container .admin-content header .nav ul li:hover{
         background-color: #56DDEA;
@@ -366,7 +250,7 @@
         text-align: left;
     }
     .container .admin-content header{
-        padding: 0 25px;
+        padding: 0 15px;
         width: 20%;
     }
     .container .admin-content header>.image_nguoi_dung img{
@@ -477,6 +361,46 @@
     .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table td a:hover{
         color:red;
     }
+    .admin-table-ifm form input{
+        width: 100%;
+        height: 35px;
+        margin-bottom: 10px;  
+        border: 1px solid grey;
+        padding-left: 10px;
+        margin-top: 5px;
+        
+    }
+    .admin-table-ifm form label{
+        text-transform: uppercase;
+        font-size: 12px;
+        
+    }
+    .admin-table-ifm form input[type="submit"]{
+        text-transform: uppercase;
+        background-color: white;
+        font-weight: 500;
+        border: 1px solid grey;
+        
+        
+    }
+    .admin-table-ifm form input[type="submit"]:hover{
+        background-color: black;
+        color:white;
+    }
+    h3{
+        margin-bottom: 15px;
+    }
+    .admin-table-ifm form span{
+        color:red;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-left: 5px;
+    }
+    #ht-tb-da-thanh-cong{
+        font-size: 16px;
+        color:green;
+        font-weight: 600;
+    }
 }
 @media only screen and (max-width:800px){
     *{
@@ -496,12 +420,13 @@
     .container .admin-content header .nav ul li{
         list-style: none;
         width: 100%;
-        padding: 6px 8px;
+        padding: 7px 0px;
         background-color: #083183;
         border-radius: 7px;
-        margin: 10px 0;
+        margin: 6px 0;
         gap: 20px;
         text-transform: uppercase;
+        padding-left: 10px;
     }
     .container .admin-content header .nav ul li:hover{
         background-color: #56DDEA;
@@ -635,6 +560,21 @@
     }
     .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table td a:hover{
         color:red;
+    }
+    h3{
+        margin-bottom: 15px;
+    }
+    .admin-table-ifm form span{
+        color:red;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-left: 5px;
+    }
+    
+    #ht-tb-da-thanh-cong{
+        font-size: 14px;
+        color:green;
+        font-weight: 600;
     }
 }
 @media only screen and (max-width:600px){
@@ -795,6 +735,47 @@
     .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table td a:hover{
         color:red;
     }
+    .admin-table-ifm form input{
+        width: 100%;
+        height: 25px;
+        margin-bottom: 5px;  
+        border: 1px solid grey;
+        padding-left: 10px;
+    }
+    .admin-table-ifm form label{
+        text-transform: uppercase;
+        font-size: 10px;
+        
+    }
+    .admin-table-ifm form input[type="submit"]{
+        text-transform: uppercase;
+        background-color: white;
+        font-weight: 500;
+        border: 1px solid grey;
+        font-size: 10px;
+        
+        
+    }
+    .admin-table-ifm form input[type="submit"]:hover{
+        background-color: black;
+        color:white;
+    }
+    .admin-table-ifm form input[type="file"]{
+        font-size: 10px;
+        padding: 0;
+    }
+    h3{
+        margin-bottom: 10px;
+    }
+    .admin-table-ifm form span{
+        font-size: 10px;
+    }
+    #ht-tb-da-thanh-cong{
+        font-size: 10px;
+        color:green;
+        font-weight: 600;
+    }
+
 }
 
 
