@@ -3,9 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/header.css">
+    <link rel="stylesheet" href="./public/css/footer.css">
+    <link rel="stylesheet" href="./public/css/index.css">
+    <link rel="stylesheet" href="./public/css/all.css">
+    <link rel="stylesheet" href="./public/webfonts/all.css">
+    <link rel="stylesheet" href="./public/css/title-img.css">
+    <link rel="stylesheet" href="./public/css/cart.css">
     <title>Document</title>
 </head>
 <body>
-    
-</body>
-</html>
+        <div class="container">
+            <header>
+                <div><img onclick="AnHienConMenu(this)" src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></div>
+                <div id="navigation">
+                    <nav>
+                        <ul class="menu-large">
+                            <li class="sub-menu-left active"><a href="#">Trang chủ</a></li>
+                            <li class="sub-menu-left"><a href="#">Giới thiệu</a></li>
+                            <li class="sub-menu-left" ><a href="#">Sản phẩm<i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="menu-small">
+                                    <li class="menu-smaller"><a href="#">Áo Vest</a></li>
+                                    <li class="menu-smaller"><a href="#">Áo Polo</a></li>
+                                    <li class="menu-smaller"><a href="#">Áo Thun</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu-left"><a href="#">Lookbook</a></li>
+                            <li class="sub-menu-left"><a href="#">Về chúng tôi</a></li>
+                            <li class="sub-menu-left"><a href="#">Liên Hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <ul class="menu-large">
+                        <form id="form-desktop" action="" method="get">
+                            <li  class="sub-menu-right">
+                                <input type="text" name="timkem" id="timkem" placeholder="Tìm Kiếm">
+                                <i class="fa-solid fa-magnifying-glass search"></i>
+                            </li>
+                        </form>
+                        <form id="form-mobile" action="" method="get">
+                            <li class="sub-menu-right">
+                                <input type="text" name="timkem" id="timkem">
+                                <i class="fa-solid fa-magnifying-glass search"></i>
+                            </li>
+                        </form>
+                        <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                        <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+                        <li  onclick="AnHienMobile()" id="icon-mobile" class="sub-menu-right">
+                            <i class="fa-solid fa-bars"></i>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <ul id="menu-mobile-visi-hid">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li>
+                    <a href="#">Sản phẩm</a>
+                    <i onclick="AnHienConMenu()" class="fa-solid fa-plus"></i>
+                    <ul id="menu_con-icon-mobile">
+                        <li class="menu-smaller"><a href="#">Áo Vest</a></li>
+                        <li class="menu-smaller"><a href="#">Áo Polo</a></li>
+                        <li class="menu-smaller"><a href="#">Áo Thun</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Lookbook</a></li>
+                <li><a href="#">Về chúng tôi</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+            <div class="main">
+              
+                <div class="img-title">
+                    <div class="overlay"></div>
+                        <p>Giỏ hàng của bạn - DWIN STORE - Thương hiệu veston may sẵn hàng đầu Việt Nam
+                        </p>
+                    </div>
+                    <!-- Giỏ hàng -->
+                    <div class="title-cart"><h3>Giỏ Hàng</h3></div>
+                    <div class="form-cart">
+                            <div class="chitiet-cart">
+                                <div class="grid-cart">
+                                    <div class="grid-item "></div>
+                                    <div class="grid-item">Thông tin chi tiết sản phẩm</div>
+                                    <div class="grid-item">Đơn giá</div>  
+                                    <div class="grid-item">Số lượng </div>
+                                    <div class="grid-item item-row-2">Tổng giá</div>
+                                    <div class="grid-item item1">
+                                        <img style="width: 100%;" src="./public/img/hnc1_img_2_grande.webp" alt="">
+                                    </div>  
+                                    <div class="grid-item item2">
+                                        <h4>VEST NHUNG ĐEN Ô TRÁM - TXVN25</h4>
+                                        <p>48</p>
+                                        <a href="">Xóa</a>
+                                    </div>
+                                    <div class="grid-item input-main item2"><input type="number" name="gia" id="gia">đ</div>
+                                    <div class="grid-item input-main item2"><input type="number" name="soluong" id="soluong"></div>   
+                                    <div class="grid-item input-main item2 item-row2-column2"><input type="number" name="" id=""></div> 
+                                    <div class="grid-item item-row-2">
+                                        <p>Chú thích cho chủ cửa hàng</p>
+                                    </div>   
+                                    <div class="grid-item">2</div> 
+                                    <div class="grid-item">3</div>
+                                    <div class="grid-item">4</div>  
+                                    <div class="grid-item">5</div>
+                                    <!-- <div class="grid-item">6</div>
+                                    <div class="grid-item">7</div>
+                                    <div class="grid-item">8</div>
+                                    <div class="grid-item">9</div>  
+                                </div>           -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                                <div class="footer-large">
+                                    <div class="title-logo">
+                                        <img class="img" src="public/img/Remove-bg.ai_1730792910599.png" alt="">
+                                        <p><i class="fa-solid fa-phone"></i> 0363599809</p>
+                                        <p><i class="fa-brands fa-instagram"></i> wuan.ch</p>
+                                        <img id="bocongthuong" src="public/img/ft_bct_img_medium.webp" alt="">
+                                    </div>
+                                    <div class="title">
+                                        <h3>GIỚI THIỆU</h3>
+                                        <p>Hệ thống cửa hàng</p>
+                                        <p>Tuyển dụng</p>
+                                        <p>Sản phẩm</p>
+                                    </div>
+                                    <div class="title">
+                                        <h3>CHƯƠNG TRÌNH & CHÍNH SÁCH</h3>
+                                        <p>Chương trình ưu đãi</p>
+                                        <p>Chính sách bảo hành</p>
+                                        <p>Chính sách đổi hàng</p>
+                                        <p>Chính sách bảo mật</p>
+                                        <p>Quy định thanh toán</p>
+                                    </div>
+                                    <div class="title">
+                                        <h3>TIN TỨC</h3>
+                                        <p>Dwin và Báo chí</p>
+                                        <p>Sao Việt và Khách hàng</p>
+                                        <p>Dwin Videos</p>
+                                    </div>
+                                    <div class="title" style="background-color: #f6f6f6;text-align: center;width: 320px;height: 285px;">
+                                        <h3>THEO DÕI DWIN TRÊN MẠNG XÃ HỘI</h3>
+                                        <div class="wrapp">
+                                            <img src="public/img/social_facebook_image_small.png" alt="">
+                                            <img src="public/img/social_instagram_image_small.png" alt="">
+                                            <img src="public/img/social_youtube_image_small.png" alt="">
+                                            <img src="public/img/social_zalo_image_small.png" alt="">
+                                        </div>
+                                        <hr style="color: #f3f3f3;">
+                                        <div>
+                                            <h3 style="text-align: center; margin: 19px 0;">ĐĂNG KÝ NHẬN THÔNG TIN MỚI TỪ DWIN STORE</h3>
+                                            <form action="#" method="post">
+                                                <input type="email" name="email" id="email" placeholder="Nhập email của bạn">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                            <script src="./public/js/index.js"></script>
+                            <script src="./public/js/header.js"></script>
+                        </div>
+                </body>
+                </html>
