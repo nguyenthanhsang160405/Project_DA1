@@ -1,4 +1,5 @@
 <?php
+
     if(isset($data) && !empty($data)){
         if(isset($data['cate']) && !empty($data['cate'])){
             $cate = $data['cate'];
@@ -8,12 +9,12 @@
         }
     }
 ?>
-<form action="" method="post">
+<form action="index.php?page_adm=catepro" method="post">
                         <div class="admin-showdata">
                         <h3>DANH MỤC SẢN PHẨM</h3>
                             <div class="admin-function">
                                 <a id="admin-function-add" href="index.php?page_adm=addcatepro"><i class="fa-solid fa-calendar-plus"></i>Thêm danh mục</a>
-                                <button type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa danh mục</button>
+                                <button name="delete_cate_for_id_cate" type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa danh mục</button>
                             </div>
                             <br>
                             <span id="ht-tb-da-thanh-cong"><?php  if(isset($tb) && !empty($tb)) echo $tb?></span>
@@ -36,7 +37,7 @@
                                         foreach($cate as $item){
                                             $stt = $stt + 1;
                                             echo '<tr>
-                                                    <td><input class="get-id-product-delete"  name="checkid_pro" value="'.$item['id_loai'].'" type="checkbox"></th>
+                                                    <td><input class="get-id-product-delete"  name="checkid_pro[]" value="'.$item['id_loai'].'" type="checkbox"></th>
                                                     <td>'.$stt.'</td>
                                                     <td>'.$item['ten_loai'].'</td>
                                                     <td>'.$item['mota_loai'].'</td>

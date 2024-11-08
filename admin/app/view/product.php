@@ -2,8 +2,8 @@
                         <div class="admin-showdata">
                         <h3>DANH MỤC SẢN PHẨM</h3>
                             <div class="admin-function">
-                                <a id="admin-function-add" href="index.php?page_adm=addcatepro"><i class="fa-solid fa-calendar-plus"></i>Thêm danh mục</a>
-                                <button type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa danh mục</button>
+                                <a id="admin-function-add" href="index.php?page_adm=addpro  "><i class="fa-solid fa-calendar-plus"></i>Thêm sản phẩm</a>
+                                <button type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa sản phẩm</button>
                             </div>
                             <br>
                             <hr>
