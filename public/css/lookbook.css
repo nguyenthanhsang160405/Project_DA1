@@ -27,6 +27,7 @@
         justify-content: center;
         align-items: center;
         position: relative; /* Để lớp phủ có thể được đặt chính xác */
+        top: 20px;
     }
     
     .overlay {
@@ -173,6 +174,7 @@
         justify-content: center;
         align-items: center;
         position: relative; /* Để lớp phủ có thể được đặt chính xác */
+        top: 20px;
     }
     
     .overlay {
@@ -321,6 +323,7 @@
         justify-content: center;
         align-items: center;
         position: relative; /* Để lớp phủ có thể được đặt chính xác */
+        top: 20px;
     }
     
     .overlay {
