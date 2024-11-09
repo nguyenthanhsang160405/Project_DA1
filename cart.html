@@ -79,43 +79,70 @@
                         <p>Giỏ hàng của bạn - DWIN STORE - Thương hiệu veston may sẵn hàng đầu Việt Nam
                         </p>
                     </div>
+
+<!-- Giỏ Hàng  -->
                     <!-- Giỏ hàng -->
+                     <!-- Tiêu đề -->
                     <div class="title-cart"><h3>Giỏ Hàng</h3></div>
+                    <!-- Thành phần các giỏ hàng -->
                     <div class="form-cart">
-                            <div class="chitiet-cart">
-                                <div class="grid-cart">
+                        <div class="chitiet-cart">
+                            <div class="grid-cart">
+                                <!-- Tiêu đề nhỏ -->
                                     <div class="grid-item "></div>
-                                    <div class="grid-item">Thông tin chi tiết sản phẩm</div>
+                                    <div class="grid-item" style="justify-content: left;">Thông tin chi tiết sản phẩm</div>
                                     <div class="grid-item">Đơn giá</div>  
                                     <div class="grid-item">Số lượng </div>
                                     <div class="grid-item item-row-2">Tổng giá</div>
+                                    <!-- Sản phẩm trong giỏ hàng -->
+                                     <!-- Hình ảnh giỏ hàng -->
                                     <div class="grid-item item1">
                                         <img style="width: 100%;" src="./public/img/hnc1_img_2_grande.webp" alt="">
                                     </div>  
+                                    <!-- Tên giỏ hàng -->
                                     <div class="grid-item item2">
                                         <h4>VEST NHUNG ĐEN Ô TRÁM - TXVN25</h4>
                                         <p>48</p>
                                         <a href="">Xóa</a>
                                     </div>
-                                    <div class="grid-item input-main item2"><input type="number" name="gia" id="gia">đ</div>
-                                    <div class="grid-item input-main item2"><input type="number" name="soluong" id="soluong"></div>   
-                                    <div class="grid-item input-main item2 item-row2-column2"><input type="number" name="" id=""></div> 
-                                    <div class="grid-item item-row-2">
-                                        <p>Chú thích cho chủ cửa hàng</p>
+                                    <!-- Đơn giá -->
+                                    <div class="grid-item input-main item2">
+                                        <span id="dongia" hidden>100000</span>
+                                        <label for="">100.000đ</label>
+                                    </div>
+                                    <!-- Số lượng & Tổng giá tiền -->
+                                    <div class="grid-item input-main item2"><input type="number" name="soluong" value="1" id="soluong" min="1" max="10">
                                     </div>   
-                                    <div class="grid-item">2</div> 
-                                    <div class="grid-item">3</div>
-                                    <div class="grid-item">4</div>  
-                                    <div class="grid-item">5</div>
-                                    <!-- <div class="grid-item">6</div>
-                                    <div class="grid-item">7</div>
-                                    <div class="grid-item">8</div>
-                                    <div class="grid-item">9</div>  
-                                </div>           -->
+                                    <div class="grid-item input-main item2 item-row2-column2">                                        
+                                        <span id="total-price-product" hidden>100000</span>
+                                        <label for="total-price-product">100.000đ</label>
+                                    </div>
+                                    <!-- Phần chú thích  // Phần này cần chỉnh sửa thành terabox -->
+                                    <div  class="grid-item item-row-2">
+                                        <input style="font-size: 14px;" type="text" name="note" placeholder="Chú thích cho cửa hàng" id="">
+                                    </div>  
+                                    <div class="grid-item item-row-2"></div> 
+                                    <!-- Tổng tiền các sản phẩm cần thanh toán -->
+                                    <div class="grid-item-button item-row2-column2">
+                                        <div style="width: 200px; display: flex;justify-content: flex-end;">
+                                            <p style="width: 100px;">Tổng Tiền:</p>
+                                            <label for="total-price-pay">100.000đ</label>
+                                            <span id="total-price-pay" hidden>100000</span>
+                                        </div>
+                                        <div>
+                                            <p style="font-style: italic;font-weight: 300;font-size: 16px;">Vận chuyển</p></div>
+                                        <div class="button-pay-cart">
+                                            <a href="" class="button-pay">Cập nhật</a>
+                                            <a href="" class="button-pay">Thanh Toán</a>
+                                        </div>
+                                    </div> 
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                <!-- Footer -->
                 <footer>
                                 <div class="footer-large">
                                     <div class="title-logo">
