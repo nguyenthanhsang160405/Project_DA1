@@ -1,8 +1,20 @@
-<form action="" method="post">
+
+<?php
+    print_r($data);
+    if(isset($data) && !empty($data)){
+        if(isset($data['product']) && !empty($data['product'])){
+            $product = $data['product'];
+        }
+        if(isset($data['notification']) && !empty($data['notification'])){
+            $tb = $data['notification'];
+        }
+    }
+?>
+<form action="index.php?page_adm=product" method="post">
                         <div class="admin-showdata">
                         <h3>DANH MỤC SẢN PHẨM</h3>
                             <div class="admin-function">
-                                <a id="admin-function-add" href="index.php?page_adm=addpro  "><i class="fa-solid fa-calendar-plus"></i>Thêm sản phẩm</a>
+                                <a id="admin-function-add" href="index.php?page_adm=addpro"><i class="fa-solid fa-calendar-plus"></i>Thêm sản phẩm</a>
                                 <button type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa sản phẩm</button>
                             </div>
                             <br>
@@ -20,36 +32,24 @@
                                         <th>Giá</th>
                                         <th colspan="2">Tính năng</th>
                                     </tr>
-                                    <tr>
-                                        <td><input class="get-id-product-delete"  name="checkid_pro" value="" type="checkbox"></th>
-                                        <td>STT</td>
-                                        <td><img src="" alt=""></td>
-                                        <td>Tên</td>
-                                        <td>Số lượng</td>
-                                        <td>Giá</td>
-                                        <td><a href=""><i class="fa-solid fa-trash"></i></a></i></td>
-                                        <td><a href=""><i class="fa-regular fa-pen-to-square"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="get-id-product-delete" name="checkid_pro" value="" type="checkbox"></th>
-                                        <td>STT</td>
-                                        <td><img src="" alt=""></td>
-                                        <td>Tên</td>
-                                        <td>Số lượng</td>
-                                        <td>Giá</td>
-                                        <td><a href=""><i class="fa-solid fa-trash"></i></a></i></td>
-                                        <td><a href=""><i class="fa-regular fa-pen-to-square"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="get-id-product-delete" name="checkid_pro" value="" type="checkbox"></th>
-                                        <td>STT</td>
-                                        <td><img src="" alt=""></td>
-                                        <td>Tên</td>
-                                        <td>Số lượng</td>
-                                        <td>Giá</td>
-                                        <td><a href=""><i class="fa-solid fa-trash"></i></a></i></td>
-                                        <td><a href=""><i class="fa-regular fa-pen-to-square"></i></a></td>
-                                    </tr>
+                                    <?php
+                                    if(isset($product) && !empty($product)){
+                                        $stt = 0;
+                                        foreach($product as $item){
+                                            $stt = $stt + 1;
+                                            echo '<tr>
+                                                    <td><input class="get-id-product-delete"  name="checkid_pro" value="" type="checkbox"></th>
+                                                    <td>'.$stt.'</td>
+                                                    <td><img src="../public/img/" alt=""></td>
+                                                    <td>'.$item['ten_sanpham'].'</td>
+                                                    <td>'.$item['soluong_sanpham'].'</td>
+                                                    <td>'.$item['gia_sanpham'].'/td>
+                                                    <td><a href=""><i class="fa-solid fa-trash"></i></a></i></td>
+                                                    <td><a href=""><i class="fa-regular fa-pen-to-square"></i></a></td>
+                                                </tr>';
+                                        }
+                                    }
+                                    ?>
                                 </table>
                             </div>
                         </div>

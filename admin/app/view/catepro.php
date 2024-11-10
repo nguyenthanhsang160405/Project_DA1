@@ -41,7 +41,7 @@
                                                     <td>'.$stt.'</td>
                                                     <td>'.$item['ten_loai'].'</td>
                                                     <td>'.$item['mota_loai'].'</td>
-                                                    <td><a href="index.php?page_adm=catepro&&id_edit_cate='.$item['id_loai'].'"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                                                    <td><a href="index.php?page_adm=editcatepro&&id_edit_cate='.$item['id_loai'].'"><i class="fa-regular fa-pen-to-square"></i></a></td>
                                                     <td><a href="index.php?page_adm=catepro&&id_delete_cate='.$item['id_loai'].'"><i class="fa-solid fa-trash"></i></a></td>
                                                 </tr>';
                                         }

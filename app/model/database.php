@@ -25,7 +25,7 @@
         public function getOne($sql){
             $stmt = $this->conn->prepare($sql);
             $stmt->execute();
-            $stmt->fetch(PDO::FETCH_ASSOC);
+            return $stmt->fetch(PDO::FETCH_ASSOC);
         }
         public function query($sql,$param){
             try{
@@ -35,6 +35,16 @@
             }catch(PDOException $e){
                 echo "Lỗi khi insert SQL =>" . $e->getMessage();
                 return false;
+            }
+        }
+        public function query2($sql,$param){
+            try{
+                $stmt = $this->conn->prepare($sql);
+                $stmt->execute($param);
+                return [true,$this->conn->lastInsertId()];
+            }catch(PDOException $e){
+                echo "Lỗi khi insert SQL =>" . $e->getMessage();
+                return [false];
             }
         }
     }

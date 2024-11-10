@@ -9,7 +9,6 @@ function AnHienMobile(){
 }
 function AnHienConMenu(){
     const element = document.getElementById('menu_con-icon-mobile');
-    console.log(element);
     if(element.style.display=='none'){
         element.style.display='block';
     }else{
