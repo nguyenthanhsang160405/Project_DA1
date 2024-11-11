@@ -1,5 +1,4 @@
 <?php
-print_r($data);
     if(isset($data) && !empty($data)){
         if(isset($data['err']) && !empty($data['err'])){
             $err = $data['err'];

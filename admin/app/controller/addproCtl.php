@@ -85,7 +85,6 @@
                     }
 
                 }
-                echo $flag;
                 if($flag == 0){
                     $data = [$name,$price,$quantity,$id_cate];
                     $result = $this->product->InsertProduct($data);
