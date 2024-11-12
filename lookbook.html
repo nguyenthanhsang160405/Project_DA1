@@ -3,184 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/all.css">
     <link rel="stylesheet" href="./public/css/header.css">
-    <link rel="stylesheet" href="./public/css/lookbook.css">
     <link rel="stylesheet" href="./public/css/footer.css">
+    <link rel="stylesheet" href="./public/css/index.css">
+    <link rel="stylesheet" href="./public/css/all.css">
+    <link rel="stylesheet" href="./public/css/lookbook.css">
+    <link rel="stylesheet" href="./public/webfonts/all.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div><img src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></div>
-            <div>
-                <nav>
+        <div class="container">
+            <header>
+                <div><img onclick="AnHienConMenu(this)" src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></div>
+                <div id="navigation">
+                    <nav>
+                        <ul class="menu-large">
+                            <li class="sub-menu-left active"><a href="#">Trang chủ</a></li>
+                            <li class="sub-menu-left"><a href="#">Giới thiệu</a></li>
+                            <li class="sub-menu-left" ><a href="#">Sản phẩm<i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="menu-small">
+                                    <li class="menu-smaller"><a href="#">Áo Vest</a></li>
+                                    <li class="menu-smaller"><a href="#">Áo Polo</a></li>
+                                    <li class="menu-smaller"><a href="#">Áo Thun</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu-left"><a href="#">Lookbook</a></li>
+                            <li class="sub-menu-left"><a href="#">Về chúng tôi</a></li>
+                            <li class="sub-menu-left"><a href="#">Liên Hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
                     <ul class="menu-large">
-                        <li class="sub-menu-left"><a href="#">Trang chủ</a></li>
-                        <li class="sub-menu-left"><a href="#">Giới thiệu</a></li>
-                        <li class="sub-menu-left" ><a href="#">Sản phẩm<i class="fa-solid fa-chevron-down"></i></a>
-                            <ul class="menu-small">
-                                <li class="menu-smaller"><a href="#">Áo Vest</a></li>
-                                <li class="menu-smaller"><a href="#">Áo Polo</a></li>
-                                <li class="menu-smaller"><a href="#">Áo Thun</a></li>
-                            </ul>
-                        </li>
-                        <li class="sub-menu-left"><a href="#">Lookbook</a></li>
-                        <li class="sub-menu-left"><a href="#">Về chúng tôi</a></li>
-                        <li class="sub-menu-left"><a href="#">Liên Hệ</a></li>
-                </ul>
-                </nav>
-            </div>
-            <div>
-                <ul class="menu-large">
-                    <form action="" method="get">
-                        <li class="sub-menu-right"><a href="#"> <input type="text" name="timkem" id="timkem" placeholder="Tìm Kiếm"><i class="fa-solid fa-magnifying-glass search"></i></a></li>
-                    </form>
-                    <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-user"></i></a></li>
-                    <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
-                </ul>
-            </div>
-        </header>
-        <div class="danhmuc">
-            <a href="#"><i class="fa-solid fa-house"></i>Trang chủ</a>
-            <span>/</span>
-            <span>LOOK BOOK</span>
-        </div>
-        <div class="img-title">
-            <div class="overlay"></div>
-            <h2>LOOKBOOK</h2>
-        </div>
-        <div class="lookbook-container">
-            <div class="sidebar">
-                <h2>ADAMSTORE 360</h2>
-                <ul>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Khuyến mãi</a></li>
-                    <li><a href="#">Ưu đãi đối tác Adam</a></li>
-                    <li><a href="#">Sao Việt & Khách hàng</a></li>
-                    <li><a href="#">Adam's Videos</a></li>
-                </ul>
-                <div class="banner">
-                    <img src="./public/img/7.webp" alt="">
-                </div>
-                <div class="banner">
-                    <img src="./public/img/8.webp" alt="">
-                </div>
-            </div>
-            <div class="lookbook-content">
-                <h2>LOOKBOOK</h2>
-                <div class="lookbook-items">
-                    <!-- Mỗi phần tử trong Lookbook -->
-                    <div class="wrapper-lookbook-item">
-                        <div class="lookbook-item">
-                            <img src="./public/img/1.webp" alt="Ảnh Lookbook 2">
-                            <h1 class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</h1>
-                            <p class="item-date">20/10/24</p>
-                            <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</>
-                        </div>
-                        <div class="lookbook-item">
-                            <img src="./public/img/2.webp" alt="Ảnh Lookbook 2">
-                            <p class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</p>
-                            <p class="item-date">20/10/24</p>
-                            <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</p>
-                        </div>
-                        <div class="lookbook-item">
-                            <img src="./public/img/3.webp" alt="Ảnh Lookbook 2">
-                            <p class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</p>
-                            <p class="item-date">20/10/24</p>
-                            <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</p>
-                        </div>
-                    </div>
-                    <div class="wrapper-lookbook-item">
-                        <div class="lookbook-item">
-                            <img src="./public/img/1.webp" alt="Ảnh Lookbook 2">
-                            <h1 class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</h1>
-                            <p class="item-date">20/10/24</p>
-                            <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</>
-                        </div>
-                        <div class="lookbook-item">
-                            <img src="./public/img/2.webp" alt="Ảnh Lookbook 2">
-                            <p class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</p>
-                            <p class="item-date">20/10/24</p>
-                            <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</p>
-                        </div>
-                        <div class="lookbook-item">
-                            <img src="./public/img/3.webp" alt="Ảnh Lookbook 2">
-                            <p class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</p>
-                            <p class="item-date">20/10/24</p>
-                            <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</p>
-                        </div>
-                    </div>
-                    <div class="wrapper-lookbook-item">
-                        <div class="lookbook-item">
-                            <img src="./public/img/1.webp" alt="Ảnh Lookbook 2">
-                            <h1 class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</h1>
-                            <p class="item-date">20/10/24</p>
-                            <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</>
-                        </div>
-                        <div class="lookbook-item">
-                            <img src="./public/img/2.webp" alt="Ảnh Lookbook 2">
-                            <p class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</p>
-                            <p class="item-date">20/10/24</p>
-                            <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</p>
-                        </div>
-                        <div class="lookbook-item">
-                            <img src="./public/img/3.webp" alt="Ảnh Lookbook 2">
-                            <p class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</p>
-                            <p class="item-date">20/10/24</p>
-                            <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div class="footer-large">
-                <div class="title-logo">
-                    <img class="img" src="public/img/Remove-bg.ai_1730792910599.png" alt="">
-                    <p><i class="fa-solid fa-phone"></i> 0363599809</p>
-                    <p><i class="fa-brands fa-instagram"></i> wuan.ch</p>
-                    <img id="bocongthuong" src="public/img/ft_bct_img_medium.webp" alt="">
-                </div>
-                <div class="title">
-                    <h3>GIỚI THIỆU</h3>
-                    <p>Hệ thống cửa hàng</p>
-                    <p>Tuyển dụng</p>
-                    <p>Sản phẩm</p>
-                </div>
-                <div class="title">
-                    <h3>CHƯƠNG TRÌNH & CHÍNH SÁCH</h3>
-                    <p>Chương trình ưu đãi</p>
-                    <p>Chính sách bảo hành</p>
-                    <p>Chính sách đổi hàng</p>
-                    <p>Chính sách bảo mật</p>
-                    <p>Quy định thanh toán</p>
-                </div>
-                <div class="title">
-                    <h3>TIN TỨC</h3>
-                    <p>Dwin và Báo chí</p>
-                    <p>Sao Việt và Khách hàng</p>
-                    <p>Dwin Videos</p>
-                </div>
-                <div class="title" style="background-color: #f6f6f6;text-align: center;width: 320px;height: 285px;">
-                    <h3>THEO DÕI DWIN TRÊN MẠNG XÃ HỘI</h3>
-                    <div class="wrapp">
-                        <img src="public/img/social_facebook_image_small.png" alt="">
-                        <img src="public/img/social_instagram_image_small.png" alt="">
-                        <img src="public/img/social_youtube_image_small.png" alt="">
-                        <img src="public/img/social_zalo_image_small.png" alt="">
-                    </div>
-                    <hr style="color: #f3f3f3;">
-                    <div>
-                        <h3 style="text-align: center; margin: 19px 0;">ĐĂNG KÝ NHẬN THÔNG TIN MỚI TỪ DWIN STORE</h3>
-                        <form action="#" method="post">
-                            <input type="email" name="email" id="email" placeholder="Nhập email của bạn">
+                        <form id="form-desktop" action="" method="get">
+                            <li  class="sub-menu-right">
+                                <input type="text" name="timkem" id="timkem" placeholder="Tìm Kiếm">
+                                <i class="fa-solid fa-magnifying-glass search"></i>
+                            </li>
                         </form>
+                        <form id="form-mobile" action="" method="get">
+                            <li class="sub-menu-right">
+                                <input type="text" name="timkem" id="timkem">
+                                <i class="fa-solid fa-magnifying-glass search"></i>
+                            </li>
+                        </form>
+                        <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                        <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+                        <li  onclick="AnHienMobile()" id="icon-mobile" class="sub-menu-right">
+                            <i class="fa-solid fa-bars"></i>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <ul id="menu-mobile-visi-hid">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li>
+                    <a href="#">Sản phẩm</a>
+                    <i onclick="AnHienConMenu()" class="fa-solid fa-plus"></i>
+                    <ul id="menu_con-icon-mobile">
+                        <li class="menu-smaller"><a href="#">Áo Vest</a></li>
+                        <li class="menu-smaller"><a href="#">Áo Polo</a></li>
+                        <li class="menu-smaller"><a href="#">Áo Thun</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Lookbook</a></li>
+                <li><a href="#">Về chúng tôi</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+            <div class="main">
+                <div class="danhmuc">
+                    <a href="#"><i class="fa-solid fa-house"></i>Trang chủ</a>
+                    <span>/</span>
+                    <span>LOOK BOOK</span>
+                </div>
+                <div class="img-title">
+                    <div class="overlay"></div>
+                    <h2>LOOKBOOK</h2>
+                </div>
+                <div class="lookbook-container">
+                    <div class="sidebar">
+                        <h2>ADAMSTORE 360</h2>
+                        <ul>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Khuyến mãi</a></li>
+                            <li><a href="#">Ưu đãi đối tác Adam</a></li>
+                            <li><a href="#">Sao Việt & Khách hàng</a></li>
+                            <li><a href="#">Adam's Videos</a></li>
+                        </ul>
+                        <div class="banner">
+                            <img src="./public/img/7.webp" alt="">
+                        </div>
+                        <div class="banner">
+                            <img src="./public/img/8.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="lookbook-content">
+                        <h2>LOOKBOOK</h2>
+                        <div class="lookbook-items">
+                            <!-- Mỗi phần tử trong Lookbook -->
+                            <div class="wrapper-lookbook-item">
+                                <div class="lookbook-item">
+                                    <img src="./public/img/1.webp" alt="Ảnh Lookbook 2">
+                                    <h1 class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</h1>
+                                    <p class="item-date">20/10/24</p>
+                                    <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</>
+                                </div>
+                                <div class="lookbook-item">
+                                    <img src="./public/img/2.webp" alt="Ảnh Lookbook 2">
+                                    <p class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</p>
+                                    <p class="item-date">20/10/24</p>
+                                    <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</p>
+                                </div>
+                                <div class="lookbook-item">
+                                    <img src="./public/img/3.webp" alt="Ảnh Lookbook 2">
+                                    <p class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</p>
+                                    <p class="item-date">20/10/24</p>
+                                    <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</p>
+                                </div>
+                            </div>
+                            <div class="wrapper-lookbook-item">
+                                <div class="lookbook-item">
+                                    <img src="./public/img/1.webp" alt="Ảnh Lookbook 2">
+                                    <h1 class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</h1>
+                                    <p class="item-date">20/10/24</p>
+                                    <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</>
+                                </div>
+                                <div class="lookbook-item">
+                                    <img src="./public/img/2.webp" alt="Ảnh Lookbook 2">
+                                    <p class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</p>
+                                    <p class="item-date">20/10/24</p>
+                                    <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</p>
+                                </div>
+                                <div class="lookbook-item">
+                                    <img src="./public/img/3.webp" alt="Ảnh Lookbook 2">
+                                    <p class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</p>
+                                    <p class="item-date">20/10/24</p>
+                                    <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</p>
+                                </div>
+                            </div>
+                            <div class="wrapper-lookbook-item">
+                                <div class="lookbook-item">
+                                    <img src="./public/img/1.webp" alt="Ảnh Lookbook 2">
+                                    <h1 class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</h1>
+                                    <p class="item-date">20/10/24</p>
+                                    <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</>
+                                </div>
+                                <div class="lookbook-item">
+                                    <img src="./public/img/2.webp" alt="Ảnh Lookbook 2">
+                                    <p class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</p>
+                                    <p class="item-date">20/10/24</p>
+                                    <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</p>
+                                </div>
+                                <div class="lookbook-item">
+                                    <img src="./public/img/3.webp" alt="Ảnh Lookbook 2">
+                                    <p class="item-title">Adam's Sweater 24 | Tiếp Nối Cảm Hứng Thời Trang Hiện Đại</p>
+                                    <p class="item-date">20/10/24</p>
+                                    <p class="item-description">ADAM'S SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
+            <footer>
+                <div class="footer-large">
+                    <div class="title-logo">
+                        <img class="img" src="public/img/Remove-bg.ai_1730792910599.png" alt="">
+                        <p><i class="fa-solid fa-phone"></i> 0363599809</p>
+                        <p><i class="fa-brands fa-instagram"></i> wuan.ch</p>
+                        <img id="bocongthuong" src="public/img/ft_bct_img_medium.webp" alt="">
+                    </div>
+                    <div class="title">
+                        <h3>GIỚI THIỆU</h3>
+                        <p>Hệ thống cửa hàng</p>
+                        <p>Tuyển dụng</p>
+                        <p>Sản phẩm</p>
+                    </div>
+                    <div class="title">
+                        <h3>CHƯƠNG TRÌNH & CHÍNH SÁCH</h3>
+                        <p>Chương trình ưu đãi</p>
+                        <p>Chính sách bảo hành</p>
+                        <p>Chính sách đổi hàng</p>
+                        <p>Chính sách bảo mật</p>
+                        <p>Quy định thanh toán</p>
+                    </div>
+                    <div class="title">
+                        <h3>TIN TỨC</h3>
+                        <p>Dwin và Báo chí</p>
+                        <p>Sao Việt và Khách hàng</p>
+                        <p>Dwin Videos</p>
+                    </div>
+                    <div class="title">
+                        <h3>THEO DÕI DWIN TRÊN MẠNG XÃ HỘI</h3>
+                        <div class="wrapp">
+                            <img src="public/img/social_facebook_image_small.png" alt="">
+                            <img src="public/img/social_instagram_image_small.png" alt="">
+                            <img src="public/img/social_youtube_image_small.png" alt="">
+                            <img src="public/img/social_zalo_image_small.png" alt="">
+                        </div>
+                        <hr style="color: #f3f3f3;">
+                        <div>
+                            <h3 style="text-align: center; margin: 19px 0;">ĐĂNG KÝ NHẬN THÔNG TIN MỚI TỪ DWIN STORE</h3>
+                            <form action="#" method="post">
+                                <input type="email" name="email" id="email" placeholder="Nhập email của bạn">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
     <script src="./public/js/header.js"></script>
 </body>
 </html>

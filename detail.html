@@ -4,8 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./public/css/all.css">
+    <link rel="stylesheet" href="./public/css/detail.css">
+    <link rel="stylesheet" href="./public/css/footer.css">
 </head>
 <body>
-    
+            <header>
+            <div><img src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></div>
+            <div>
+                <nav>
+                    <ul class="menu-large">
+                        <li class="sub-menu-left"><a href="#">Trang chủ</a></li>
+                        <li class="sub-menu-left"><a href="#">Giới thiệu</a></li>
+                        <li class="sub-menu-left" ><a href="#">Sản phẩm<i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="menu-small">
+                                <li class="menu-smaller"><a href="#">Áo Vest</a></li>
+                                <li class="menu-smaller"><a href="#">Áo Polo</a></li>
+                                <li class="menu-smaller"><a href="#">Áo Thun</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-left"><a href="#">Lookbook</a></li>
+                        <li class="sub-menu-left"><a href="#">Về chúng tôi</a></li>
+                        <li class="sub-menu-left"><a href="#">Liên Hệ</a></li>
+                </ul>
+                </nav>
+            </div>
+            <div>
+                <ul class="menu-large">
+                    <form action="" method="get">
+                        <li class="sub-menu-right"><a href="#"> <input type="text" name="timkem" id="timkem" placeholder="Tìm Kiếm"><i class="fa-solid fa-magnifying-glass search"></i></a></li>
+                    </form>
+                    <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                    <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="danhmuc">
+            <a href="index.html"><i class="fa-solid fa-house"></i>Trang chủ</a>
+            <span>| BỘ SƯU TẬP SUIT DWIN 2024 |</span>
+            <span >Áo vest xanh kẻ đen - AV341</span>
+        </div>
+        <div class="img-title">
+            <div class="overlay"></div>
+            <h2>Áo vest xanh kẻ đen - AV341</h2>
+        </div>
+        <div class="container">
+            <div class="product-section">
+                <div class="image-container">
+                    <div class="main-image">
+                        <img src="./public/img/áo xanh kẻ đen.webp" alt="">
+                    </div>
+                    <div class="small-images">
+                        <div class="small-image">
+                            <img src="./public/img/1.webp" alt="">
+                        </div>
+                        <div class="small-image">
+                            <img src="./public/img/2.webp" alt="">
+                        </div>
+                        <div class="small-image">
+                            <img src="./public/img/3.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <div class="product-title">Áo Vest Xanh Kẻ Đen - AV341</div>
+                    <div class="masp">TXVN2550</div>
+                    <div class="price">3,500,000₫</div>
+
+        
+                    <div class="size-selection">
+                        <label>Kích thước:</label>
+                        <div class="size-buttons">
+                            <button>48</button>
+                            <button>50</button>
+                            <button>52</button>
+                            <button>54</button>
+                            <button>56</button>
+                        </div>
+                    </div>
+                    <div class="quantity-size">
+                        <p>Hướng Dẫn Chọn Size</p>
+                    </div>
+                    <div class="quantity-selection">
+                        <label>Số lượng:</label>
+                        <div class="quantity-buttons" id="buy-amount">
+                            <button class="minus-btn" onclick="handleminus()">-</button>
+                            <input type="text" name="amount" id="amount" value="1">
+                            <button class="plus-btn" onclick="handleplus()">+</button>
+                        </div>
+                    </div>
+        
+                    <button class="add-to-cart">THÊM VÀO GIỎ</button>
+                    <button class="buy-now"><a href="./payment.html">MUA NGAY</a></button>
+                </div>
+            </div>
+        
+            <div class="tabs">
+                <div class="tab1">THÔNG SỐ</div>
+                <div class="tab">CHI TIẾT SẢN PHẨM</div>
+                <div class="tab">BẢO HÀNH</div>
+                <div class="tab">BÌNH LUẬN</div>
+            </div>
+            <div class="size">
+                <img class="luachonsize" src="./public/img/size.webp" alt="">
+
+            </div>
+            <div class="related-products">
+                <h3>SẢN PHẨM LIÊN QUAN</h3>
+                <div class="product">
+                    <img src="./public/img/sp1.webp" alt="Vest Nhung Đen">
+                    <h1>VEST NHUNG ĐEN<h1>
+                    <p>2,800,000₫<p> 
+                </div>
+                <div class="product">
+                    <img src="./public/img/sp2.webp" alt="Vest Nhung Xanh">
+                    <h1>VEST NHUNG XANH<h1>
+                    <p>2,800,000₫</p>
+                </div>
+                <div class="product">
+                    <img src="./public/img/sp3.webp" alt="Vest Xám">
+                    <h1>TOV 22059 - ĐEN VÀNG ĐỎ<h1>
+                    <p>4,700,000₫</p>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <footer>
+        <div class="footer-large">
+            <div class="title-logo">
+                <img class="img" src="public/img/Remove-bg.ai_1730792910599.png" alt="">
+                <p><i class="fa-solid fa-phone"></i> 0363599809</p>
+                <p><i class="fa-brands fa-instagram"></i> wuan.ch</p>
+                <img id="bocongthuong" src="public/img/ft_bct_img_medium.webp" alt="">
+            </div>
+            <div class="title">
+                <h3>GIỚI THIỆU</h3>
+                <p>Hệ thống cửa hàng</p>
+                <p>Tuyển dụng</p>
+                <p>Sản phẩm</p>
+            </div>
+            <div class="title">
+                <h3>CHƯƠNG TRÌNH & CHÍNH SÁCH</h3>
+                <p>Chương trình ưu đãi</p>
+                <p>Chính sách bảo hành</p>
+                <p>Chính sách đổi hàng</p>
+                <p>Chính sách bảo mật</p>
+                <p>Quy định thanh toán</p>
+            </div>
+            <div class="title">
+                <h3>TIN TỨC</h3>
+                <p>Dwin và Báo chí</p>
+                <p>Sao Việt và Khách hàng</p>
+                <p>Dwin Videos</p>
+            </div>
+            <div class="title" style="background-color: #f6f6f6;text-align: center;width: 320px;height: 285px;">
+                <h1p>THEO DÕI DWIN TRÊN MẠNG XÃ HỘI</h1>
+                <div class="wrapp">
+                    <img src="public/img/social_facebook_image_small.png" alt="">
+                    <img src="public/img/social_instagram_image_small.png" alt="">
+                    <img src="public/img/social_youtube_image_small.png" alt="">
+                    <img src="public/img/social_zalo_image_small.png" alt="">
+                </div>
+                <hr style="color: #f3f3f3;">
+                <div>
+                    <h3 style="text-align: center; margin: 19px 0;">ĐĂNG KÝ NHẬN THÔNG TIN MỚI TỪ DWIN STORE</h3>
+                    <form action="#" method="post">
+                        <input type="email" name="email" id="email" placeholder="Nhập email của bạn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="public/js/quantity-selection.js"></script>
 </body>
 </html>
