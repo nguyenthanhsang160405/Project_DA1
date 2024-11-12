@@ -58,7 +58,7 @@
         justify-content: space-around;
         align-items: stretch;
         box-shadow: 0 0 7px 0 gray;
-        height: 225px;
+        /* height: 225px; */
     }
     .footer-large .title-logo{
         width: 22%;
@@ -116,7 +116,8 @@
         justify-content: space-around;
         align-items: stretch;
         box-shadow: 0 0 7px 0 gray;
-        height: 215px;
+        /* height: 215px; */
+        flex-wrap: wrap;
     }
     .footer-large .title-logo{
         width: 22%;
@@ -126,10 +127,10 @@
     } */
     .footer-large p{
         margin: 5px 0;
-        font-size: 7px;
+        font-size: 14px;
     }
     .footer-large h3{
-        font-size: 11px;
+        font-size: 15px;
     } 
     .footer-large .title-logo .img{
         width: 100px;

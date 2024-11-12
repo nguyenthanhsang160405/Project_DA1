@@ -590,198 +590,59 @@
     }
 }
 @media only screen and (max-width:600px){
-    *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-    }
     .container{
-        background-color: #010F4E;
-        padding-top:  40px;
-        min-height: 750px;
+        padding-top: 10px;
     }
-    .admin-content{
+    .container .admin-content {
+        flex-direction: column; /*Chuyển sang cột cho thiết bị nhỏ*/
+    }
+
+    .container .admin-content .image_nguoi_dung{
         display: flex;
+        flex-direction: row;
+        align-items: center;
     }
-    .container .admin-content header .nav ul li{
-        list-style: none;
-        width: 100%;
-        padding: 5px 5px;
-        background-color: #083183;
-        border-radius: 7px;
-        margin: 5px 0;
-        gap: 20px;
-        text-transform: uppercase;
+    .container .admin-content .image_nguoi_dung p{
+        margin: 0 0 0 10px !important;
+        font-size: 10px !important;
     }
-    .container .admin-content header .nav ul li:hover{
-        background-color: #56DDEA;
+    .container .admin-content header {
+        width: 100%; /* Đặt chiều rộng 100% cho thiết bị di động */
     }
-    .container .admin-content header .nav ul li a{
-        text-decoration: none;
-        display: flex;
-        font-size: 4px;
-        color: white;
-    }
-    .container .admin-content header .nav ul li a>p{
-        margin-left: 5px;
-    }
-    .container .admin-content header .nav ul li a>i{
-        font-size: 5px;
-    }
-    .container .admin-content header .nav{
-        border-top: 1px solid white;
+
+    .container .admin-content .main {
+        width: 100%; /* Đặt chiều rộng 100% cho thiết bị di động */
     }
     .container .admin-content header .nav ul{
-        text-align: left;
-    }
-    .container .admin-content header{
-        padding: 10px 5px;
-        width: 20%;
-    }
-    .container .admin-content header>.image_nguoi_dung img{
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        
-    }
-    .container .admin-content header>.image_nguoi_dung p{
-        color:white;
-        font-size: 6px;
-        font-weight: 100;
-        margin: 5px 0;
-    }
-    .container .admin-content header>.image_nguoi_dung{
-        text-align: center;
-        margin-bottom: 20px ;
-    }
-    .container .admin-content .main .admin-ifm{
-        background-color: #EBEAEA;
-        width: 100%;
-        min-height: 750px;
-        padding: 20px;
-        
-    }
-    .container .admin-content .main{
-        width: 80%;
-        height: 100%;
-    }
-    .container .admin-content .main .admin-ifm .admin-name{
-        padding-left: 7px;
-        background-color: #4A94F4;
-        border-radius: 5px;
-        margin-bottom: 20px;
-        
-        
-    }
-    .container .admin-content .main .admin-ifm .admin-name p{
-        padding: 13px;
-        border-radius: 5px;
-        font-weight: 600;
-        font-size: 19px;
-    }
-    .container .admin-content .main .admin-ifm .admin-name .admin-background-name{
-        background-color: white;
-        width: 100%;
-        height: 100%;
         display: flex;
+        flex-direction: column;
+    }
+    .container .admin-content header .nav ul .row{
+        display: flex; /* Thiết lập mỗi hàng là flex */
+        flex-direction: row;
+        gap: 10px;
         align-items: center;
-        justify-content: space-between;
-        padding-right: 20px;
-        border-radius: 5px;
     }
-    .container .admin-content .main .admin-ifm .admin-name .admin-background-name a i{
-        font-size: 23px;
-        color:black;
+    .container .admin-content header .nav ul li{
+        width: 200px;
+        flex: 1;
+        /* display: flex; */
+        align-items: center;
+        /* margin: 10px; */
     }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-function a{
-        padding: 7px;
-        text-decoration: none;
-        border-radius: 10px;
-        color:rgb(14, 14, 14);
-        font-size: 6px;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-function a i{
-        margin-right: 5px;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-function #admin-function-add{
-        background-color: #9AF785;
-        border-radius: 10px;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-function #admin-function-delete{
-        background-color: #FFBDBD;
-        border-radius: 10px;
-        padding: 7px;
-        border: none;
-        font-size: 6px;
-        cursor: pointer;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-function #admin-function-delete i{
-        margin-right: 5px;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata{
-        margin-top: 40px;
-        padding: 20px;
-        background-color: white;
-        min-height: 750px;
-        
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table{
-        width: 100%;
-        border-collapse: collapse;
-        text-align: center;
-        font-size: 6px;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table th{
-        background-color: #474646;
-        color: white;
-        padding: 5px;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table td{
-        padding: 15px 0;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table td a{
-        color: black;
-        cursor: pointer;
-    }
-    .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table td a:hover{
-        color:red;
-    }
-    .admin-table-ifm form input{
-        width: 100%;
-        height: 25px;
-        margin-bottom: 5px;  
-        border: 1px solid grey;
-        padding-left: 10px;
-    }
-    .admin-table-ifm form label{
-        text-transform: uppercase;
-        font-size: 10px;
-        
-    }
-    .admin-table-ifm form input[type="submit"]{
-        text-transform: uppercase;
-        background-color: white;
-        font-weight: 500;
-        border: 1px solid grey;
-        font-size: 10px;
-        
-        
-    }
-    .admin-table-ifm form input[type="submit"]:hover{
-        background-color: black;
-        color:white;
-    }
-    .admin-table-ifm form input[type="file"]{
-        font-size: 10px;
+    .container .admin-content header .nav ul li a i{
+        margin: 0;
         padding: 0;
     }
-    h3{
-        margin-bottom: 10px;
+    .container .admin-content header .nav ul li a {
+        font-size: 12px; /* Thay đổi kích thước chữ cho dễ đọc trên thiết bị nhỏ */
+        align-items: center;
     }
-    .admin-table-ifm form span{
-        font-size: 10px;
+    
+    .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table {
+        font-size: 12px; /* Thay đổi kích thước chữ cho dễ đọc trên thiết bị nhỏ */
     }
+}
     #ht-tb-da-thanh-cong{
         font-size: 10px;
         color:green;
