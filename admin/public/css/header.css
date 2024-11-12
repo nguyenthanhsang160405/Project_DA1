@@ -642,7 +642,6 @@
     .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table {
         font-size: 12px; /* Thay đổi kích thước chữ cho dễ đọc trên thiết bị nhỏ */
     }
-}
     #ht-tb-da-thanh-cong{
         font-size: 10px;
         color:green;
@@ -652,7 +651,6 @@
         width: 30px;
         height: auto;
     }
-
 }
 
 
