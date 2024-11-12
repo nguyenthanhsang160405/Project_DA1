@@ -19,6 +19,36 @@
         public function getAllImage(){
             $this->data['image'] = $this->image->getAll_Image();
         }
+        public function deleteProForIdPro(){
+            if(isset($_GET['id_pro_delete']) && !empty($_GET['id_pro_delete'])){
+                $id_pro = $_GET['id_pro_delete'];
+                $arr_image = $this->image->getImageForIdPro($id_pro);
+                if(empty($id_pro)){
+                    $this->data['notification'] ='Không có sản phẩm nào được chọn';
+                }else{
+                    if($this->product->DeleteProForIdPro($id_pro) == true){
+                        $target = "../public/img/";
+                        $flag = 0;
+                        foreach ($arr_image as $image){
+                            $target_image = $target.$image['link_anh'];
+                            if(file_exists($target_image)){
+                                unlink($target_image);
+                            }else{
+                                $flag =1;
+                            }
+                        }
+                        if($flag==0){
+                            $this->data['notification'] ='Xóa sản phẩm thành công';
+                        }else{
+                            $this->data['notification'] ='Xóa sản phẩm không thành công';
+                        }
+                    }else{
+                        $this->data['notification'] ='Xóa sản phẩm không thành công';
+                    }
+                }
+                
+            }
+        }
         public function deleteBoxCheckedPro(){
             if(isset($_POST['delete_pro_for_id_pro'])){
                 if(empty($_POST['checkid_pro'])){
@@ -51,6 +81,7 @@
             }
         }
         public function ViewProduct(){
+            $this->deleteProForIdPro();
             $this->getAllImage();
             $this->deleteBoxCheckedPro();
             $this->getAllPro();

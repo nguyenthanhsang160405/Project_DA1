@@ -1,6 +1,7 @@
 <?php 
     ob_start();
     session_start();
+    include_once './app/controller/editproCtl.php';
     include_once '../app/model/imageProModel.php';
     include_once './app/controller/editcateCtl.php';
     include_once './app/controller/addproCtl.php';
@@ -33,7 +34,12 @@
             case 'editcatepro':
                 $addpro = new EditcateCtl();
                 $addpro->ViewEditCatePro();
-                break;   
+                break;
+            case 'editproduct':
+                $editpro = new EditproCtl();
+                $editpro->ViewEditPro();
+                break;
+
         }
     }else{
         include_once './app/view/catepro.php';

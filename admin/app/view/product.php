@@ -9,7 +9,6 @@
         }
         if(isset($data['image']) && !empty($data['image'])){
             $image = $data['image'];
-            print_r($image);
         }
     }
 ?>
@@ -51,12 +50,12 @@
                                             echo '<tr>
                                                     <td><input class="get-id-product-delete"  name="checkid_pro[]" value="'.$item['id_sanpham'].'" type="checkbox"></th>
                                                     <td>'.$stt.'</td>
-                                                    <td><img id="image_table" src="../public/img/'.$image_pro.'" alt=""></td>
+                                                    <td><a href=""><img id="image_table" src="../public/img/'.$image_pro.'" alt=""></a></td>
                                                     <td>'.$item['ten_sanpham'].'</td>
                                                     <td>'.$item['soluong_sanpham'].'</td>
                                                     <td>'.number_format($item['gia_sanpham']).'đ</td>
-                                                    <td><a href=""><i class="fa-solid fa-trash"></i></a></i></td>
-                                                    <td><a href=""><i class="fa-regular fa-pen-to-square"></i></a></td>
+                                                    <td><a href="index.php?page_adm=editproduct&&id_pro_edit='.$item['id_sanpham'].'"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                                                    <td><a href="index.php?page_adm=product&&id_pro_delete='.$item['id_sanpham'].'"><i class="fa-solid fa-trash"></i></a></i></td>
                                                 </tr>';
                                         }
                                     }
