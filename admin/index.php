@@ -1,6 +1,7 @@
 <?php 
     ob_start();
     session_start();
+    include_once '../app/model/voucherModel.php';
     include_once './app/controller/editproCtl.php';
     include_once '../app/model/imageProModel.php';
     include_once './app/controller/editcateCtl.php';
@@ -39,7 +40,6 @@
                 $editpro = new EditproCtl();
                 $editpro->ViewEditPro();
                 break;
-
         }
     }else{
         include_once './app/view/catepro.php';
