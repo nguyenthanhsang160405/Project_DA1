@@ -891,9 +891,9 @@
         justify-content: center;
     }
     .main .wrapp-product-large .wrapp-product .fame-product{
-        width: 370px;
+        width: calc(47% - 10px);
         height: 365px;
-        margin: 0 8px;
+        margin: 25px 8px;
     }
     .main .wrapp-product-large .wrapp-product .fame-product img{
         width: 100%;
