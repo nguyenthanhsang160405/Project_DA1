@@ -47,5 +47,15 @@
                 return [false];
             }
         }
+        public function delete($sql){
+            try{
+                $stmt = $this->conn->prepare($sql);
+                $stmt->execute();
+                return true;
+            }catch(PDOException $e){
+                echo "Lỗi khi insert SQL =>" . $e->getMessage();
+                return false;
+            }
+        }
     }
 ?>

@@ -16,7 +16,7 @@
 ?>
                     <div class="admin-showdata">
                         <div class="admin-table-ifm">
-                            <form action="" method="post" enctype="multipart/form-data">
+                            <form action="index.php?page_adm=addpro" method="post" enctype="multipart/form-data">
                                 <h3>THÊM SẢN PHẨM</h3>
                                 <?php 
                                     if(isset($notification) && !empty($notification)){

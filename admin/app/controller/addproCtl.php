@@ -29,7 +29,6 @@
                 $quantity = $_POST['quantity_pro'];
                 $id_cate = $_POST['id_catepro'];
                 $image = $_FILES['image_pro'];
-                print_r($image['name'][0]);
                 $flag=0;
                 // xl tên
                 if(empty($name)){
@@ -90,12 +89,19 @@
                     $result = $this->product->InsertProduct($data);
                     if($result[0] == true){
                         $id_pro = $result[1];
-                        foreach($image['name'] as $image_insert){
-                            $param = [$image_insert,$id_pro];
-                            if($this->image_pro->InsertImagePro($param) == true){
-                                $this->data['notification'] = "Thêm sản phẩm thành công";
+                        $target = "../public/img/";
+                        for($i = 0 ; $i < count($image['name']) ; $i++){
+                            $target_one_img = $target.$image['name'][$i];
+                            $param = [$image['name'][$i],$id_pro];
+                            if(move_uploaded_file($image['tmp_name'][$i],$target_one_img)){
+                                if($this->image_pro->InsertImagePro($param)==true){
+                                    $this->data['notification'] = "Thêm sản phẩm thành công";
+                                }else{
+                                    $this->data['notification'] = "Thêm sản phẩm không thành công";
+                                }
+                                
                             }else{
-                                $this->data['notification'] = "Thêm sản phẩm thất bại";
+                                $this->data['notification'] = "Thêm ảnh không thành công";
                             }
                         }
                     }
