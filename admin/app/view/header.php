@@ -13,7 +13,7 @@
             <header>
                 <div class="image_nguoi_dung">
                     <img src="../public/img/haicho.jpg" alt="">
-                    <p>Xin chào, Võ Chí Hải</p>
+                    <p>Xin chào, <?php if(isset($_SESSION['admin']) && !empty($_SESSION['admin'])) echo $_SESSION['admin']['ten_kh'] ?></p>
                     <p>Chào mừng bạn trở lại!</p>
                 </div>
                 <div class="nav">
@@ -23,7 +23,7 @@
                         <li><a href="index.php?page_adm=product"><i class="fa-solid fa-ticket"></i><p>Danh sách sản phẩm</p></a></li>
                         </div>
                         <div class="row">
-                        <li><a href=""><i class="fa-solid fa-ticket"></i><p>Bình luận</p></a></li>
+                        <li><a href="index.php?page_adm=user"><i class="fa-solid fa-ticket"></i><p>Người dùng</p></a></li>
                         <li><a href="index.php?page_adm=voucher"><i class="fa-solid fa-ticket"></i><p>Mã giảm giá</p></a></li>
                         </div>
                         <div class="row">
@@ -31,11 +31,12 @@
                         <li><a href=""><i class="fa-solid fa-ticket"></i><p>Bài viết</p></a></li>
                         </div>
                         <div class="row">
-                        <li><a href=""><i class="fa-solid fa-ticket"></i><p>Đơn hàng chờ xác nhận</p></a></li>
+                        <li><a href="index.php?page_adm=pendingorder"><i class="fa-solid fa-ticket"></i><p>Đơn hàng chờ xác nhận</p></a></li>
                         <li><a href=""><i class="fa-solid fa-ticket"></i><p>Đơn hàng đã xác nhận</p></a></li>
                         </div>
                         <div class="row">
                         <li><a href=""><i class="fa-solid fa-ticket"></i><p>Thống kê</p></a></li>
+                        <li><a href=""><i class="fa-solid fa-ticket"></i><p>Bình luận</p></a></li>
                         </div>
                     </ul>
                 </div>

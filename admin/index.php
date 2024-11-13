@@ -1,6 +1,16 @@
 <?php 
     ob_start();
     session_start();
+    if(!isset($_SESSION['admin'])){
+        $_SESSION['admin'] = [];
+    }
+    $_SESSION['admin'] = ['id_kh' => 7 ,'ten_kh' => 'Nguyễn Thanh Sang','email_kh' => 'nguyenthanhsang160405@gmail.com','matkhau_kh' => '$2y$10$LVscOsO1oiYW7' ,'diachi_kh' => '66/76 đường số 21 Nguyễn Văn Khối Gò Vấp','sdt_kh' => '0963004872','vai_tro'=>1];
+    include_once './app/controller/ediuserCtl.php';
+    include_once './app/controller/adduserCtl.php';
+    include_once '../app/model/UserModel.php';
+    include_once './app/controller/userCtl.php';
+    include_once './app/controller/pendingorderCtl.php';
+    include_once '../app/model/orderModel.php';
     include_once './app/controller/editvoucherCtl.php';
     include_once './app/controller/addvoucherCtl.php';
     include_once './app/controller/voucherCtl.php';
@@ -52,8 +62,24 @@
                 $addvoucher->ViewAddVoucher();
                 break;
             case 'editvoucher':
-                $editvoucher = new EditvoucherCtl;
+                $editvoucher = new EditvoucherCtl();
                 $editvoucher->ViewEditVoucher();
+                break;
+            case 'user':
+                $user = new UserCtl();
+                $user->ViewUser();
+                break;
+            case 'adduser':
+                $adduser = new AdduserCtl();
+                $adduser->ViewAddUser();
+                break;
+            case 'pendingorder':
+                $pendingorder = new PendingoderCtl();
+                $pendingorder->ViewPendingOrder();
+                break;
+            case 'edituser':
+                $edituser = new EdiuserCtl();
+                $edituser->ViewEditUser();
                 break;
         }
     }else{
