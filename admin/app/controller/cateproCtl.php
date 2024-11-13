@@ -35,7 +35,6 @@
                         $this->data['notification'] = 'Xóa không thành công';
                     }
                 }
-                
             }
         }
         public function RenderView($data,$view){

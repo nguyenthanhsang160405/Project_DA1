@@ -1,6 +1,9 @@
 <?php 
     ob_start();
     session_start();
+    include_once './app/controller/editvoucherCtl.php';
+    include_once './app/controller/addvoucherCtl.php';
+    include_once './app/controller/voucherCtl.php';
     include_once '../app/model/voucherModel.php';
     include_once './app/controller/editproCtl.php';
     include_once '../app/model/imageProModel.php';
@@ -39,6 +42,18 @@
             case 'editproduct':
                 $editpro = new EditproCtl();
                 $editpro->ViewEditPro();
+                break;
+            case 'voucher':
+                $voucher = new VoucherCtl();
+                $voucher->ViewVoucher();
+                break;
+            case 'addvoucher':
+                $addvoucher = new AddvoucherCtl();
+                $addvoucher->ViewAddVoucher();
+                break;
+            case 'editvoucher':
+                $editvoucher = new EditvoucherCtl;
+                $editvoucher->ViewEditVoucher();
                 break;
         }
     }else{
