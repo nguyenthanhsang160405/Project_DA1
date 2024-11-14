@@ -5,6 +5,8 @@
         $_SESSION['admin'] = [];
     }
     $_SESSION['admin'] = ['id_kh' => 7 ,'ten_kh' => 'Nguyễn Thanh Sang','email_kh' => 'nguyenthanhsang160405@gmail.com','matkhau_kh' => '$2y$10$LVscOsO1oiYW7' ,'diachi_kh' => '66/76 đường số 21 Nguyễn Văn Khối Gò Vấp','sdt_kh' => '0963004872','vai_tro'=>1];
+    // $_SESSION['admin'] = [];
+    include_once './app/controller/acceptedorderCtl.php';
     include_once './app/controller/ediuserCtl.php';
     include_once './app/controller/adduserCtl.php';
     include_once '../app/model/UserModel.php';
@@ -80,6 +82,10 @@
             case 'edituser':
                 $edituser = new EdiuserCtl();
                 $edituser->ViewEditUser();
+                break;
+            case 'acceptedorder':
+                $acceptedordedr = new AcceptedorderCtl();
+                $acceptedordedr->ViewAcceptedOrder();
                 break;
         }
     }else{

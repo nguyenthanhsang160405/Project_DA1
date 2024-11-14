@@ -32,7 +32,7 @@
                         </div>
                         <div class="row">
                         <li><a href="index.php?page_adm=pendingorder"><i class="fa-solid fa-ticket"></i><p>Đơn hàng chờ xác nhận</p></a></li>
-                        <li><a href=""><i class="fa-solid fa-ticket"></i><p>Đơn hàng đã xác nhận</p></a></li>
+                        <li><a href="index.php?page_adm=acceptedorder"><i class="fa-solid fa-ticket"></i><p>Đơn hàng đã xác nhận</p></a></li>
                         </div>
                         <div class="row">
                         <li><a href=""><i class="fa-solid fa-ticket"></i><p>Thống kê</p></a></li>
