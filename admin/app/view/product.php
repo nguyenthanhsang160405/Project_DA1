@@ -41,16 +41,20 @@
                                         $stt = 0;
                                         foreach($product as $item){
                                             $image_pro = '';
-                                            for($i = 0 ; $i < count($image) ; $i++){
-                                                if($image[$i]['id_sanpham'] == $item['id_sanpham']){
-                                                    $image_pro = $image[$i]['link_anh'];
+                                            if(isset($image) && !empty($image)){
+                                                for($i = 0 ; $i < count($image) ; $i++){
+                                                    if($image[$i]['id_sanpham'] == $item['id_sanpham']){
+                                                        $image_pro = $image[$i]['link_anh'];
+                                                    }
                                                 }
+                                            }else{
+                                                $image_pro = '';
                                             }
                                             $stt = $stt + 1;
                                             echo '<tr>
                                                     <td><input class="get-id-product-delete"  name="checkid_pro[]" value="'.$item['id_sanpham'].'" type="checkbox"></th>
                                                     <td>'.$stt.'</td>
-                                                    <td><a href=""><img id="image_table" src="../public/img/'.$image_pro.'" alt=""></a></td>
+                                                    <td><a href="index.php?page_adm=image&&id_pro_image='.$item['id_sanpham'].'"><img id="image_table" src="../public/img/'.$image_pro.'" alt=""></a></td>
                                                     <td>'.$item['ten_sanpham'].'</td>
                                                     <td>'.$item['soluong_sanpham'].'</td>
                                                     <td>'.number_format($item['gia_sanpham']).'đ</td>

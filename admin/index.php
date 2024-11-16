@@ -6,6 +6,12 @@
     }
     $_SESSION['admin'] = ['id_kh' => 7 ,'ten_kh' => 'Nguyễn Thanh Sang','email_kh' => 'nguyenthanhsang160405@gmail.com','matkhau_kh' => '$2y$10$LVscOsO1oiYW7' ,'diachi_kh' => '66/76 đường số 21 Nguyễn Văn Khối Gò Vấp','sdt_kh' => '0963004872','vai_tro'=>1];
     // $_SESSION['admin'] = [];
+    include_once './app/controller/editimageCtl.php';
+    include_once './app/controller/imageCtl.php';
+    include_once './app/controller/editcateblogCtl.php';
+    include_once './app/controller/addcateblogCtl.php';
+    include_once '../app/model/cateBlogModel.php';
+    include_once './app/controller/cateblogCtl.php';
     include_once './app/controller/acceptedorderCtl.php';
     include_once './app/controller/ediuserCtl.php';
     include_once './app/controller/adduserCtl.php';
@@ -86,6 +92,26 @@
             case 'acceptedorder':
                 $acceptedordedr = new AcceptedorderCtl();
                 $acceptedordedr->ViewAcceptedOrder();
+                break;
+            case 'cateblog':
+                $cateblog = new CateblogCtl();
+                $cateblog->ViewCateBlog();
+                break;
+            case 'addcateblog':
+                $addcateblog = new AddcateblogCtl();
+                $addcateblog->ViewAddCateBlog();
+                break;
+            case 'editcateblog':
+                $editcateblog = new EditcateblogCtl();
+                $editcateblog->ViewEditCateBlog();
+                break;
+            case 'image':
+                $image = new ImageCtl();
+                $image->ViewImage();
+                break;
+            case 'editimage':
+                $editimage = new EditimageCtl();
+                $editimage->ViewEditImage();
                 break;
         }
     }else{

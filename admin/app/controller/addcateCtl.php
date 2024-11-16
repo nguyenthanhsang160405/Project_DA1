@@ -14,7 +14,6 @@
                     $name_cate = $_POST['name_cate'];
                     if(empty($_POST['describe_cate'])){
                         $describe_cate = '';
-                        echo 1;
                     }else{
                         $describe_cate = $_POST['describe_cate'];
                     }
