@@ -9,12 +9,12 @@
         }
     }
 ?>
-<form action="index.php?page_adm=catepro" method="post">
+<form action="index.php?page_adm=image&&id_pro_image=<?php if(isset($image) && !empty($image)) echo $image[0]['id_sanpham']?>" method="post">
                         <div class="admin-showdata">
-                        <h3>DANH MỤC SẢN PHẨM</h3>
+                        <h3>ẢNH CỦA SẢN PHẨM </h3>
                             <div class="admin-function">
-                                <a id="admin-function-add" href="index.php?page_adm=addcatepro"><i class="fa-solid fa-calendar-plus"></i>Thêm danh mục</a>
-                                <button name="delete_cate_for_id_cate" type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa danh mục</button>
+                                <a id="admin-function-add" href="index.php?page_adm=addimage&&id_pro_image=<?php if(isset($image) && !empty($image)) echo $image[0]['id_sanpham']?>"><i class="fa-solid fa-calendar-plus"></i>Thêm ảnh sản phẩm</a>
+                                <button name="delete_image_for_id_image" type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa ảnh sản phẩm</button>
                             </div>
                             <br>
                             <span id="ht-tb-da-thanh-cong"><?php  if(isset($tb) && !empty($tb)) echo $tb?></span>
