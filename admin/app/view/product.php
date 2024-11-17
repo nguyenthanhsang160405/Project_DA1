@@ -34,6 +34,7 @@
                                         <th>Tên</th>
                                         <th>Số lượng</th>
                                         <th>Giá</th>
+                                        <th>Bình Luận</th>
                                         <th colspan="2">Tính năng</th>
                                     </tr>
                                     <?php
@@ -58,6 +59,7 @@
                                                     <td>'.$item['ten_sanpham'].'</td>
                                                     <td>'.$item['soluong_sanpham'].'</td>
                                                     <td>'.number_format($item['gia_sanpham']).'đ</td>
+                                                    <td><a href="index.php?page_adm=comment&&id_comment_pro='.$item['id_sanpham'].'">Xem bình luận</a></td>
                                                     <td><a href="index.php?page_adm=editproduct&&id_pro_edit='.$item['id_sanpham'].'"><i class="fa-regular fa-pen-to-square"></i></a></td>
                                                     <td><a href="index.php?page_adm=product&&id_pro_delete='.$item['id_sanpham'].'"><i class="fa-solid fa-trash"></i></a></i></td>
                                                 </tr>';

@@ -1,8 +1,11 @@
 <?php
-
+    print_r($data);
     if(isset($data) && !empty($data)){
         if(isset($data['image']) && !empty($data['image'])){
             $image = $data['image'];
+        }
+        if(isset($data['product']) && !empty($data['product'])){
+            $product = $data['product'];
         }
         if(isset($data['notification']) && !empty($data['notification'])){
             $tb = $data['notification'];
@@ -11,7 +14,7 @@
 ?>
 <form action="index.php?page_adm=image&&id_pro_image=<?php if(isset($image) && !empty($image)) echo $image[0]['id_sanpham']?>" method="post">
                         <div class="admin-showdata">
-                        <h3>ẢNH CỦA SẢN PHẨM </h3>
+                        <h3 style="text-transform: uppercase;">ẢNH CỦA SẢN PHẨM <?php if(isset($product) && !empty($product)) echo $product['ten_sanpham'] ?></h3>
                             <div class="admin-function">
                                 <a id="admin-function-add" href="index.php?page_adm=addimage&&id_pro_image=<?php if(isset($image) && !empty($image)) echo $image[0]['id_sanpham']?>"><i class="fa-solid fa-calendar-plus"></i>Thêm ảnh sản phẩm</a>
                                 <button name="delete_image_for_id_image" type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa ảnh sản phẩm</button>

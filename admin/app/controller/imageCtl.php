@@ -2,8 +2,10 @@
     class ImageCtl{
         public $data;
         public $image;
+        public $product;
         public function __construct(){
             $this->image = new ImageProModel();
+            $this->product = new ProductModel();
         }
         public function RenderView($data,$view){
             $page = './app/view/'.$view.'.php';
@@ -12,6 +14,7 @@
         public function getImageForIDPro(){
             if(isset($_GET['id_pro_image']) && !empty($_GET['id_pro_image'])){
                 $id_pro = $_GET['id_pro_image'];
+                $this->data['product'] = $this->product->getOneProForIDPro($id_pro);
                 $this->data['image'] = $this->image->getImageForIdPro($id_pro);
             }
         }

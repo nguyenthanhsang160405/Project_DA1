@@ -36,7 +36,7 @@
                         </div>
                         <div class="row">
                         <li><a href=""><i class="fa-solid fa-ticket"></i><p>Thống kê</p></a></li>
-                        <li><a href=""><i class="fa-solid fa-ticket"></i><p>Bình luận</p></a></li>
+                        <li><a href="index.php?page_adm=allcomment"><i class="fa-solid fa-ticket"></i><p>Bình luận</p></a></li>
                         </div>
                     </ul>
                 </div>
