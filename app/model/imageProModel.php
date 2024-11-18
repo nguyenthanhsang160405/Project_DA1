@@ -20,5 +20,17 @@
             $sql = "DELETE FROM anh_san_pham WHERE id_sanpham = $id_pro";
             return $this->db->delete($sql);
         }
+        public function deleteImageForIdImage($id_anh){
+            $sql = "DELETE FROM anh_san_pham WHERE id_anh = $id_anh";
+            return $this->db->delete($sql);
+        }
+        public function getOneImage($id_anh){
+            $sql = "SELECT * FROM anh_san_pham WHERE id_anh = $id_anh";
+            return $this->db->getOne($sql);
+        }
+        public function UpdateImage($id_anh,$param){
+            $sql = "UPDATE anh_san_pham SET link_anh = ? WHERE id_anh = $id_anh";
+            return $this->db->query($sql,$param);
+        }
     }
 ?>
