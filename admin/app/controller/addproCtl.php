@@ -14,7 +14,7 @@
             include_once $page;
         }
         public function getAllCatePro(){
-            $this->data['cate_pro'] = $this->cate->getAllCate();
+            $this->data['cate_pro'] = $this->cate->getAllCate();    
         }
         public function AddPro(){
             if(isset($_POST['add_pro']) && $_POST['add_pro']){
