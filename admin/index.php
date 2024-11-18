@@ -6,6 +6,13 @@
     }
     $_SESSION['admin'] = ['id_kh' => 7 ,'ten_kh' => 'Nguyễn Thanh Sang','email_kh' => 'nguyenthanhsang160405@gmail.com','matkhau_kh' => '$2y$10$LVscOsO1oiYW7' ,'diachi_kh' => '66/76 đường số 21 Nguyễn Văn Khối Gò Vấp','sdt_kh' => '0963004872','vai_tro'=>1];
     // $_SESSION['admin'] = [];
+    
+    include_once '../app/model/Mailler.php';
+    include_once '../app/model/detailOrderModel.php';
+    include_once './app/controller/editblogCtl.php';
+    include_once './app/controller/addBlogCtl.php';
+    include_once './app/controller/blogCtl.php';
+    include_once '../app/model/blogModel.php';
     include_once './app/controller/allcommentCtl.php';
     include_once './app/controller/editcommentCtl.php';
     include_once './app/controller/addcommentCtl.php';
@@ -138,6 +145,18 @@
             case 'allcomment':
                 $allcomment = new AllCommentCtl();
                 $allcomment->viewAllComment();
+                break;
+            case 'blog':
+                $blog = new BlogCtl();
+                $blog->ViewBlog();
+                break;
+            case 'addblog':
+                $addblog = new AddBlogCtl();
+                $addblog->ViewAddBlog();
+                break;
+            case 'editblog':
+                $editblog = new EditblogCtl();
+                $editblog->ViewEditBlog();
                 break;
         }
     }else{

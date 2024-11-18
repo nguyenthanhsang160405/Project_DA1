@@ -20,6 +20,7 @@
             if(isset($_POST['add_pro']) && $_POST['add_pro']){
                 if(isset($_SESSION['admin']) && !empty($_SESSION['admin'])){
                     //variable err
+                    $err_idcate = '';
                     $err_name = '';
                     $err_price = '';
                     $err_quantity = '';
@@ -28,7 +29,6 @@
                     $name = $_POST['name_pro'];
                     $price = $_POST['price_pro'];
                     $quantity = $_POST['quantity_pro'];
-                    $id_cate = $_POST['id_catepro'];
                     $image = $_FILES['image_pro'];
                     $flag=0;
                     // xl tên
@@ -45,6 +45,13 @@
                             $err_price = 'Giá sản phẩm là 1 số lớn hơn 0';
                             $flag = 1;
                         }
+                    }
+                    // xl id_cate
+                    if(empty($_POST['id_catepro'])){
+                        $err_idcate = 'Bạn vui lòng thêm danh mục trước khi thêm sản phẩm';
+                        $flag = 1;
+                    }else{
+                        $id_cate = $_POST['id_catepro'];
                     }
                     // xl sl
                     if(empty($quantity)){
@@ -107,7 +114,7 @@
                             }
                         }
                     }else{
-                        $this->data['err'] = ['err_name'=>$err_name,'err_price'=>$err_price,'err_quantity'=>$err_quantity,'err_image'=>$err_image];
+                        $this->data['err'] = ['err_name'=>$err_name,'err_price'=>$err_price,'err_quantity'=>$err_quantity,'err_image'=>$err_image,'err_idcate'=>$err_idcate];
                         $this->data['ifm'] = ['name'=>$name,'price'=>$price,'quantity'=>$quantity,'image'=>$image];
                     }
                 }else{

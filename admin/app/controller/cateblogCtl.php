@@ -2,8 +2,10 @@
     class CateblogCtl{
         public $data;
         public $cateBlog;
+        public $blog;
         public function __construct(){
             $this->cateBlog = new CateBlogModel();
+            $this->blog = new BlogModel();
         }
         public function getAllCateBlog(){
             $this->data['cate_blog'] = $this->cateBlog->getAllCateBlog();
@@ -16,10 +18,15 @@
             if(isset($_GET['id_delete_cateblog']) && $_GET['id_delete_cateblog']){
                 if(isset($_SESSION['admin']) && !empty($_SESSION['admin'])){
                     $id_cateblog = $_GET['id_delete_cateblog'];
-                    if($this->cateBlog->DeleteOneCateBlog($id_cateblog)==true){
-                        $this->data['notification'] = 'Xóa thành công';
+                    $arr_blog_for_id_blog = $this->blog->getAllBlogForIdCateBlog($id_cateblog);
+                    if(count($arr_blog_for_id_blog) > 0 ){
+                        $this->data['notification'] = 'Bạn không thể xóa danh mục còn bài viết';
                     }else{
-                        $this->data['notification'] = 'Xóa không thành công';
+                        if($this->cateBlog->DeleteOneCateBlog($id_cateblog)==true){
+                            $this->data['notification'] = 'Xóa thành công';
+                        }else{
+                            $this->data['notification'] = 'Xóa không thành công';
+                        }
                     }
                 }else{
                     $this->data['notification'] = 'Bạn vui lòng đăng nhập để thực hiện chức năng này';

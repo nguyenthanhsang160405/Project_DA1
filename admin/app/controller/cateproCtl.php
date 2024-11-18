@@ -2,8 +2,10 @@
     class CateproCtl{
         public $cate;
         public $data;
+        public $product;
         public function __construct(){
             $this->cate = new CategoryModel();
+            $this->product = new ProductModel();
         }
         public function getALLCate(){
             $this->data['cate'] = $this->cate->getAllCate();
@@ -12,11 +14,16 @@
             if(isset($_GET['id_delete_cate']) && !empty($_GET['id_delete_cate'])){
                 if(isset($_SESSION['admin']) && !empty($_SESSION['admin'])){
                     $id_cate = $_GET['id_delete_cate'];
-                    if($this->cate->DeleteCateForIdCate($id_cate)==true){
-                        $this->data['notification'] = 'Xóa thành công';
+                    $arr_pro_for_id_cate = $this->product->getAllProForIdCate($id_cate);
+                    if(count($arr_pro_for_id_cate)>0){
+                        $this->data['notification'] = 'Danh mục vẫn còn sản phẩm bạn không thể xóa';
                     }else{
-                        $this->data['notification'] = 'Xóa không thành công';
-                    } 
+                        if($this->cate->DeleteCateForIdCate($id_cate)==true){
+                            $this->data['notification'] = 'Xóa thành công';
+                        }else{
+                            $this->data['notification'] = 'Xóa không thành công';
+                        } 
+                    }
                 }else{
                     $this->data['notification'] = 'Bạn vui lòng đăng nhập để thực hiện chức năng này';
                 }

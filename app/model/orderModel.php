@@ -24,5 +24,9 @@
             $sql = "SELECT * FROM don_hang WHERE ten_nhanvien IS NOT NULL && id_nhanvien IS NOT NULL";
             return $this->db->getAll($sql);
         }
+        public function getOneOrderByIdOrder($id_donhang){
+            $sql = "SELECT * FROM don_hang WHERE id_donhang = $id_donhang";
+            return $this->db->getOne($sql);
+        }
     }
 ?>

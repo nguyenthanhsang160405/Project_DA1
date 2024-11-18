@@ -24,8 +24,8 @@
                 if(isset($_SESSION['admin']) && !empty($_SESSION['admin'])){
                     $id_pro = $_GET['id_pro_delete'];
                     $arr_image = $this->image->getImageForIdPro($id_pro);
-                    if(empty($id_pro)){
-                        $this->data['notification'] ='Không có sản phẩm nào được chọn';
+                    if(empty($arr_image)){
+                        $this->data['notification'] ='Sản phẩm không tồn tại';
                     }else{
                         if($this->product->DeleteProForIdPro($id_pro) == true){
                             $target = "../public/img/";

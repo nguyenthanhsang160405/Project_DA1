@@ -28,7 +28,7 @@
                         </div>
                         <div class="row">
                         <li><a href="index.php?page_adm=cateblog"><i class="fa-solid fa-ticket"></i><p>Danh mục bài viết</p></a></li>
-                        <li><a href=""><i class="fa-solid fa-ticket"></i><p>Bài viết</p></a></li>
+                        <li><a href="index.php?page_adm=blog"><i class="fa-solid fa-ticket"></i><p>Bài viết</p></a></li>
                         </div>
                         <div class="row">
                         <li><a href="index.php?page_adm=pendingorder"><i class="fa-solid fa-ticket"></i><p>Đơn hàng chờ xác nhận</p></a></li>
