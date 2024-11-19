@@ -74,8 +74,8 @@
         opacity: 0;
         transition: opacity,background-color 0.9s ease;
         border: 1px solid rgba(255, 255, 255, 1);
-        width: 30%;
-        height: 6%;
+        width: 35%;
+        height: 7%;
         font-size: 70%;
         line-height: 6%;
     
@@ -525,7 +525,7 @@
         scrollbar-width: none;
         gap: 5px;
         margin: 0 auto;
-        height: 210px;
+        height: 220px;
     }
     .popular .wrapper .celebrity{
         width: 49%;
