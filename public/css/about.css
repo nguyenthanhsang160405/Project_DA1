@@ -1,0 +1,558 @@
+/* Reset basic styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+.container .main{
+    margin: 0 20px 0 20px;
+}
+
+
+
+/* Banner */
+.banner {
+    display: flex;
+    flex-direction: column; /* Thêm cho mobile */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.banner .img-title {
+    width: 100%;
+    height: 300px;
+    background-image: url('../img/breadcrumb-blog_master.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.banner .img-title .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.banner p {
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    z-index: 1;
+}
+
+/* Main Section */
+.container .main {
+    margin-top: 30px;
+}
+
+/* Part 1 */
+.main .part1 {
+    display: flex;
+    height: 600px;
+    /* border: 1px red solid; */
+}
+
+.part1 .left {
+    width: 50%;
+    /* border: 1px red solid; */
+}
+
+.part1 .left h2 {
+    padding: 20px;
+    font-size: 32px;
+}
+
+.part1 .left p {
+    padding: 20px;
+    color: #333;
+    font-weight: 300;
+    word-spacing: 1.5px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.part1 .right {
+    width: 50%;
+    overflow: hidden;
+    /* border: 1px red solid; */
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Part 2 */
+.main .part2 {
+    display: flex;
+    /* gap: 20px; */
+    height: 700px;
+    /* border: 1px red solid; */
+
+}
+
+.part2 .left {
+    width: 70%;
+    overflow: hidden;
+    /* border: 1px red solid; */
+
+
+}
+
+.part2 .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cocver;
+}
+
+.part2 .right {
+    width: 55%;
+    /* border: 1px red solid; */
+
+}
+
+.part2 .right h2 {
+    padding: 20px;
+    font-size: 32px;
+}
+
+.part2 .right p {
+    padding: 20px;
+    color: #333;
+    font-weight: 300;
+    word-spacing: 1.5px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.main .line {
+    width: 80%;
+    height: 2px;
+    background-color: #333;
+    margin: 40px auto;
+
+}
+
+/* Evaluation Section */
+.main .evaluate {
+    width: 80%;
+    margin: 40px auto;
+    height: 800px;
+    /* border: 1px red solid; */
+}
+
+.main .evaluate h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.main .evaluate .danhgia {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    /* border: 1px rgb(70, 180, 72) solid; */
+
+}
+
+.main .evaluate .danhgia .ellipes {
+    width: 270px;
+    height: 270px;
+    border: 2px black solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+
+}
+
+.main .evaluate .danhgia .ellipes i {
+    font-size: 120px;
+    color: #333;
+}
+
+.main .evaluate .danhgia1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+    /* border: 1px rgb(70, 180, 72) solid; */
+
+}
+
+.main .evaluate .danhgia1 .ellipes {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    /* border: 1px rgb(70, 180, 72) solid; */
+}
+
+.main .evaluate .danhgia1 .ellipes h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.ellipes span {
+    color: black;
+    font-weight: 300;
+    word-spacing: 1.5px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+
+/* Desktop (≥ 1024px) */
+/* @media (min-width: 1024px) {
+    .container .main {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .main .part1,
+    .main .part2 {
+        flex-direction: row;
+    }
+
+    .main .evaluate .danhgia {
+        display: flex;
+    }
+
+    .main .evaluate .danhgia .ellipes {
+        width: 270px;
+        height: 270px;
+    }
+} */
+
+/* Tablet (≥ 768px and < 1024px) */
+/* @media (min-width: 768px) and (max-width: 1023px) {
+    .container .main {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .main .part1, .main .part2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main .evaluate .danhgia {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main .evaluate .danhgia .ellipes {
+        margin-bottom: 20px;
+        width: 100px;
+        height: 100px;
+        margin: 0 50px ;
+    }
+
+    .main .evaluate .danhgia .ellipes i {
+        font-size: 100px;
+    }
+} */
+
+/* tablet */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container .main {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .container .main{
+        margin: 0 0px 0 0px;
+    }
+
+    /* Part 1 */
+    .main .part1 {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .part1 .left {
+        width: 50%;
+        padding: 20px;
+    }
+
+    .part1 .right {
+        width: 50%;
+    }
+
+    .part1 .right img {
+        object-fit: contain;
+    }
+
+    /* Part 2 */
+    .main .part2 {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .part2 .left {
+        width: 60%;
+    }
+
+    .part2 .right {
+        width: 40%;
+    }
+    .part2 .left img{
+        object-fit: contain;
+    }
+    .part2 .right h2 {
+        font-size: 28px;
+    }
+
+    .part2 .right p {
+        font-size: 18px;
+    }
+
+    .main .line {
+        width: 80%;
+        height: 2px;
+        background-color: #333;
+        margin: 40px auto;
+    }
+
+    /* Evaluation Section */
+    .main .evaluate {
+        width: 80%;
+        margin: 40px auto;
+        height: auto;
+    }
+
+    .main .evaluate h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .main .evaluate .danhgia {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 250px;
+    }
+
+    .main .evaluate .danhgia .ellipes {
+        width: 200px;
+        height: 200px;
+    }
+
+    .main .evaluate .danhgia .ellipes i {
+        font-size: 100px;
+    }
+
+    .main .evaluate .danhgia1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .main .evaluate .danhgia1 .ellipes {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .main .evaluate .danhgia1 .ellipes h3 {
+        font-size: 22px;
+    }
+
+    .ellipes span {
+        font-size: 16px;
+    }
+
+}
+
+
+
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+
+    .banner .img-title {
+        height: 200px; /* Giảm chiều cao banner */
+    }
+
+    .banner p {
+        font-size: 9px; /* Giảm kích thước chữ */
+    }
+
+    /* Main Container */
+    .container .main {
+        width: 100%;
+        padding: 0 10px; /* Giảm padding cho mobile */
+        margin: 0 0 0 0;
+    }
+
+    .main .part1 {
+        display: flex;
+        flex-direction: column; /* Đảm bảo phần 1 xếp theo cột */
+        align-items: center;
+        gap: 20px;
+        height: auto; /* Đảm bảo chiều cao tự động */
+    }
+
+    .part1 .left {
+        width: 100%; /* Chiếm 100% chiều rộng */
+    }
+
+    .part1 .left h2 {
+        font-size: 24px; /* Giảm kích thước tiêu đề */
+        padding: 10px;
+    }
+
+    .part1 .left p {
+        font-size: 16px; /* Giảm kích thước chữ */
+        padding: 10px;
+    }
+
+    .part1 .right {
+        width: 100%; /* Chiếm 100% chiều rộng */
+    }
+
+    .right img {
+        width: 100%;
+        height: auto; /* Đảm bảo ảnh có thể co dãn */
+        object-fit: cover;
+    }
+
+    /* Part 2 */
+    .main .part2 {
+        display: flex;
+        flex-direction: column; /* Đảm bảo phần 2 xếp theo cột */
+        align-items: center;
+        gap: 20px;
+        height: auto; /* Đảm bảo chiều cao tự động */
+    }
+
+    .part2 .left {
+        width: 100%; /* Chiếm 100% chiều rộng */
+    }
+
+    .part2 .right {
+        width: 100%; /* Chiếm 100% chiều rộng */
+    }
+
+    .part2 .right h2 {
+        font-size: 24px; /* Giảm kích thước tiêu đề */
+        padding: 10px;
+    }
+
+    .part2 .right p {
+        font-size: 16px; /* Giảm kích thước chữ */
+        padding: 10px;
+    }
+
+    .main .line {
+        width: 80%;
+        height: 2px;
+        background-color: #333;
+        margin: 40px auto;
+    }
+
+    /* Evaluation Section */
+    .main .evaluate {
+        width: 100%; /* Đảm bảo chiều rộng 100% */
+        margin: 40px auto;
+        height: auto; /* Đảm bảo chiều cao tự động */
+    }
+
+    .main .evaluate h2 {
+        font-size: 24px; /* Giảm kích thước tiêu đề */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .main .evaluate .danhgia {
+        display: flex;
+        flex-direction: column; /* Đặt phần tử chính theo chiều dọc */
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .main .evaluate .danhgia .ellipes {
+        width: 40%; /* Giảm kích thước của hình tròn */
+        height: 150px; /* Giảm chiều cao */
+        margin-bottom: 20px;
+        border: 2px black solid;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+    }
+
+    .main .evaluate .danhgia .ellipes i {
+        font-size: 80px; /* Giảm kích thước icon */
+    }
+
+    .main .evaluate .danhgia1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .main .evaluate .danhgia1 .ellipes {
+        width: 80%; /* Giảm chiều rộng cho phần này */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .main .evaluate .danhgia1 .ellipes h3 {
+        font-size: 18px; /* Giảm kích thước tiêu đề */
+        margin-bottom: 10px;
+    }
+
+    .ellipes span {
+        font-size: 14px; /* Giảm kích thước chữ cho mô tả */
+    }
+}
