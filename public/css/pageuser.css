@@ -17,7 +17,7 @@ body {
 
 /* -------------------------------------------------------------------------------------------------- */
 
-.main {
+.mainpageuserpageuser {
     display: flex; /* Sử dụng flexbox cho phần tử chính */
     width: 100%; /* Chiều rộng đầy đủ cho phần tử chính */
     max-width: 1800px; /* Giới hạn chiều rộng tối đa */
@@ -53,7 +53,7 @@ body {
 }
 .container .danhmuc{
     margin: 100px 0 0 50px
-    
+
 }
 .container .danhmuc a{
     text-decoration: none;
@@ -86,7 +86,7 @@ body {
     width: 100%;
     /* border: 1px red solid; */
     margin-right: 30px; /* Khoảng cách giữa hai cột */
-    padding-left: 20px; 
+    padding-left: 20px;
     padding-right: 20px;
     border: 1px solid #ccc; /* Thay đổi màu sắc border */
 }
@@ -114,10 +114,10 @@ body {
 }
 /* Giao diện cho Tablet */
 @media only screen and (max-width: 1024px) {
-    
+
 /* -------------------------------------------------------------------------------------------------- */
 
-    .main {
+    .mainpageuser {
         flex-direction: column; /* Đặt phần tử chính theo chiều dọc */
     }
 
@@ -154,9 +154,9 @@ body {
 
 /* Giao diện cho Mobile */
 @media only screen and (max-width: 768px) {
-    
+
     /* -------------------------------------------------------------------------------------------------- */
-    .main {
+    .mainpageuser {
         flex-direction: column; /* Đặt phần tử chính theo chiều dọc */
     }
 
@@ -166,7 +166,7 @@ body {
 
     .register .register-menu1{
         width: 100%;
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
         margin: 0px;
     }
 
@@ -176,7 +176,7 @@ body {
         border: 0px black solid;
 
     }
-    
+
     .register .register-menu2 .column1, .column2{
         margin-right: 0; /* Bỏ khoảng cách bên phải cho cột */
         margin-left: 0px;
@@ -184,7 +184,7 @@ body {
     }
 
     button {
-        width: 100%; 
+        width: 100%;
     }
     .footer-large{
         display: flex;
@@ -205,7 +205,7 @@ body {
     }
     .footer-large h3{
         font-size: 11px;
-    } 
+    }
     .footer-large .title-logo .img{
         width: 100px;
         height: 100px;
