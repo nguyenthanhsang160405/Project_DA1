@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./public/css/footer.css">
     <link rel="stylesheet" href="./public/css/index.css">
     <link rel="stylesheet" href="./public/css/all.css">
+    <link rel="stylesheet" href="./public/css/lookbook.css">
     <link rel="stylesheet" href="./public/webfonts/all.css">
-    <link rel="stylesheet" href="./public/css/title-img.css">
     <link rel="stylesheet" href="./public/css/cart.css">
     <title>Document</title>
 </head>
@@ -73,74 +73,123 @@
                 <li><a href="#">Liên Hệ</a></li>
             </ul>
             <div class="main">
-              
+                <div class="danhmuc">
+                    <a href="#"><i class="fa-solid fa-house"></i>Trang chủ</a>
+                    <span>/</span>
+                    <span>Giỏ Hàng</span>
+                </div>
                 <div class="img-title">
                     <div class="overlay"></div>
-                        <p>Giỏ hàng của bạn - DWIN STORE - Thương hiệu veston may sẵn hàng đầu Việt Nam
-                        </p>
-                    </div>
-
-<!-- Giỏ Hàng  -->
-                    <!-- Giỏ hàng -->
-                     <!-- Tiêu đề -->
-                    <div class="title-cart"><h3>Giỏ Hàng</h3></div>
-                    <!-- Thành phần các giỏ hàng -->
-                    <div class="form-cart">
-                        <div class="chitiet-cart">
-                            <div class="grid-cart">
-                                <!-- Tiêu đề nhỏ -->
-                                    <div class="grid-item "></div>
-                                    <div class="grid-item" style="justify-content: left;">Thông tin chi tiết sản phẩm</div>
-                                    <div class="grid-item">Đơn giá</div>  
-                                    <div class="grid-item">Số lượng </div>
-                                    <div class="grid-item item-row-2">Tổng giá</div>
-                                    <!-- Sản phẩm trong giỏ hàng -->
-                                     <!-- Hình ảnh giỏ hàng -->
-                                    <div class="grid-item item1">
-                                        <img style="width: 100%;" src="./public/img/hnc1_img_2_grande.webp" alt="">
-                                    </div>  
-                                    <!-- Tên giỏ hàng -->
-                                    <div class="grid-item item2">
-                                        <h4>VEST NHUNG ĐEN Ô TRÁM - TXVN25</h4>
-                                        <p>48</p>
-                                        <a href="">Xóa</a>
-                                    </div>
-                                    <!-- Đơn giá -->
-                                    <div class="grid-item input-main item2">
-                                        <span id="dongia" hidden>100000</span>
-                                        <label for="">100.000đ</label>
-                                    </div>
-                                    <!-- Số lượng & Tổng giá tiền -->
-                                    <div class="grid-item input-main item2"><input type="number" name="soluong" value="1" id="soluong" min="1" max="10">
-                                    </div>   
-                                    <div class="grid-item input-main item2 item-row2-column2">                                        
-                                        <span id="total-price-product" hidden>100000</span>
-                                        <label for="total-price-product">100.000đ</label>
-                                    </div>
-                                    <!-- Phần chú thích  // Phần này cần chỉnh sửa thành terabox -->
-                                    <div  class="grid-item item-row-2">
-                                        <input style="font-size: 14px;" type="text" name="note" placeholder="Chú thích cho cửa hàng" id="">
-                                    </div>  
-                                    <div class="grid-item item-row-2"></div> 
-                                    <!-- Tổng tiền các sản phẩm cần thanh toán -->
-                                    <div class="grid-item-button item-row2-column2">
-                                        <div style="width: 200px; display: flex;justify-content: flex-end;">
-                                            <p style="width: 100px;">Tổng Tiền:</p>
-                                            <label for="total-price-pay">100.000đ</label>
-                                            <span id="total-price-pay" hidden>100000</span>
-                                        </div>
-                                        <div>
-                                            <p style="font-style: italic;font-weight: 300;font-size: 16px;">Vận chuyển</p></div>
-                                        <div class="button-pay-cart">
-                                            <a href="" class="button-pay">Cập nhật</a>
-                                            <a href="" class="button-pay">Thanh Toán</a>
-                                        </div>
-                                    </div> 
+                    <h2>Giỏ Hàng</h2>
+                </div>
+                <div class="box-cart">
+                    <div class="title-cart"><h1>Giỏ Hàng</h1></div>
+                    <div class="detail-cart">
+                            <div class="title-product-cart mobile">
+                                <div class="col1">Sản phẩm</div>
+                                <div class="col2">Thông tin chi tiết sản phẩm</div>
+                                <div class="col3">Số lượng</div>
+                                <div class="col4">Đơn giá</div>
+                                <div class="col5">Tổng giá</div>
                             </div>
-                        </div>
+                            <div class="infor-product-cart">
+                                <!-- class="layout-mobile" chỉ có ở css mobile -->
+                                    <div class="layout-mobile">
+                                        <div class="col1 img-prod-cart"><img src="./public/img/anh1.webp" alt="" id=""></div>
+                                        
+                                        <!--  -->
+                                        <div class="layout-mobile-child1">
+                                        <div class="col2 detail-prod-cart" >
+                                            <h3 id="">
+                                                <!-- Tiêu đề sản phẩm -->
+                                                VEST NHUNG ĐEN Ô TRÁM - TXVN25
+                                            </h3>
+                                            <p>Size: 
+                                                <span id="">
+                                                    <!-- Giá trị size sản phẩm -->
+                                                    49
+                                                </span>
+                                            </p>
+                                            <!-- Nút xóa sản phẩm -->
+                                            <a href="" id="">Xóa</a>
+                                        </div>
+
+                                        <!-- class="layout-mobile-child" chỉ có ở css mobile -->
+                                        <div class="layout-mobile-child2"> 
+                                            <!-- Tăng giảm số lượng -->
+                                            <div class="col3 count-prod-cart">
+                                                    <button class="btn-cout" id="decrease-cout-cart">-</button>
+                                                    <span class="quantity" id="quantity-cout-cart">0</span>
+                                                    <button class="btn-cout" id="increase-cout-cart">+</button>
+                                            </div>
+                                            <div class="col4 price-prod-cart">
+                                                <p><span id="">1000000</span> đ</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                        <div class="col5 price-prod-cart totalprice-prod">
+                                            <p><span id="">1000000</span> đ</p>
+                                        </div>
+                            </div>
+                            <div class="payments-cart">
+                                    <div class="custom-note-cart">
+                                        <label onclick="shownote()" for="">Chú thích cho chủ cửa hàng:</label>
+                                        <div id="form-note">
+                                            <form action="" method="post">
+                                                <textarea placeholder="" name="" id=""></textarea>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="payment-cart">
+                                        <div class="total-price-cart">
+                                            <label for="">Tổng Tiền:</label>
+                                            <span id="">100000 đ</span>
+                                        </div>
+                                        <p>Voucher</p>
+                                        <div class="btn-payment">
+                                            <a class="btn-pay btn-link" href="">Thanh Toán</a>
+                                            <a class="btn-update btn-link" href="">Cập Nhật</a>
+                                        </div>
+
+
+                                        <!-- ẩn hiện ghi chú -->
+                                        <script>
+                                            document.getElementById('form-note').style.display = 'block';
+                                                shownote();
+                                                function shownote() {
+                                                    var x = document.getElementById('form-note');
+                                                    if(x.style.display == 'none'){
+                                                        x.style.display = 'block'
+                                                    }else{
+                                                        x.style.display = 'none'
+                                                    }
+                                                }
+                                        </script>
+                                    </div>
+                            </div>
                     </div>
                 </div>
 
+
+
+                <!-- Điều chỉnh số lượng -->
+                 <script>
+                     let quantity = 0;
+
+                    document.getElementById('increase-cout-cart').addEventListener('click', function() {
+                        quantity++;
+                        document.getElementById('quantity-cout-cart').textContent = quantity;
+                    });
+
+                    document.getElementById('decrease-cout-cart').addEventListener('click', function() {
+                        if (quantity > 0) {
+                            quantity--;
+                            document.getElementById('quantity-cout-cart').textContent = quantity;
+                        }
+                    });
+                 </script>
+                    
 
                 <!-- Footer -->
                 <footer>

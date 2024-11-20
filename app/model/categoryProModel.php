@@ -4,7 +4,7 @@
         public function __construct(){
             $this->db = new Database();
         }
-        public function InsertCategoryPro($param){
+        public function InsertCategoryPro($param): bool{
             $sql = "INSERT INTO loai_sanpham (ten_loai,mota_loai) VALUES (?,?)";
             return $this->db->query($sql,$param);
         }

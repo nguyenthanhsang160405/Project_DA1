@@ -2,28 +2,7 @@
 @media only screen and (min-width:1024px)
 /* Đăng nhập */
 {
-    .container .main .img-title {
-        width: 100vw;
-        height: 300px;
-        padding-top: 95px;
-        background-image: url('../img/t-shirt_grande.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative; /* Để lớp phủ có thể được đặt chính xác */
-
-    }
-    .container .main .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
-        pointer-events: none; /* Không chặn sự kiện chuột */
-    }
+   
     .container .main .img-title p {
         text-align: center;
 
@@ -35,8 +14,8 @@
         z-index: 1; /* Đảm bảo chữ nằm trên lớp phủ */
     }
     .container .main .form-information {
-        width: 100vw;
-        height: 395px;
+        width: 100%;
+        height: 450px;
         margin: 30px 0;
         display: flex;
         justify-content: center;
@@ -64,7 +43,7 @@
         width: 100%;
         padding: 8px 10px;
         background-color: rgb(232,240,254);
-        margin: 0 0 10px;
+        margin: 10px 0px;
         font-size: 16px;
         font-weight: 200;
         color: black;
@@ -74,7 +53,7 @@
     
     .container .main .form-information .form #button-sigin {
         width: 100%;
-        margin: 0 0 10px;
+        margin: 10px 0;
         padding: 8px 10px;
         height: 40px;
         font-size: 16px;
@@ -91,7 +70,7 @@
     .container .main .form-information .form .button-link{
         width: 200px;
         height: 40px;
-        margin: 0 0 8px;
+        margin: 10px 0px;
         padding: 0 10px 0 0;
         display: flex;
         font-size: 15px;
@@ -152,28 +131,7 @@
 @media only screen and (max-width:1024px)
 /* Đăng nhập */
 {
-    .container .main .img-title {
-        margin: 0;
-        width: 100vw;
-        height: 260px;
-        padding-top: 85px;
-        background-image: url('../img/t-shirt_grande.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative; /* Để lớp phủ có thể được đặt chính xác */
-    }
-    .container .main .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
-        pointer-events: none; /* Không chặn sự kiện chuột */
-    }
+   
     .container .main .img-title p {
         text-align: center;
         /* width: 500px; */
@@ -185,7 +143,7 @@
         z-index: 1; /* Đảm bảo chữ nằm trên lớp phủ */
     }
     .container .main .form-information {
-        width: 100vvw;
+        width: 100vw;
         height: 395px;
         margin: 30px 0;
         display: flex;
@@ -213,7 +171,7 @@
         width: 100%;
         padding: 8px 10px;
         background-color: rgb(232,240,254);
-        margin: 0 0 10px;
+        margin: 10px 0px;
         font-size: 16px;
         font-weight: 200;
         color: black;
@@ -223,7 +181,7 @@
     
     .container .main .form-information .form #button-sigin {
         width: 100%;
-        margin: 0 0 10px;
+        margin: 10px 0px;
         padding: 8px 10px;
         height: 40px;
         font-size: 16px;
@@ -241,7 +199,7 @@
     .container .main .form-information .form .button-link{
         width: 200px;
         height: 40px;
-        margin: 0 0 8px;
+        margin: 10px 0px;
         padding: 0 10px 0 0;
         display: flex;
         font-size: 15px;
@@ -300,34 +258,11 @@
 /* Mobile */
 @media only screen and (max-width: 600px) {
     /* Đăng nhập */
-    .container .main .img-title {
-        width: 100vw; /* Chiếm toàn bộ chiều rộng của màn hình */
-        height: 250px; /* Chiều cao cố định, có thể điều chỉnh nếu cần */
-        padding-top: 78px; /* Padding trên */
-        background-image: url('../img/t-shirt_grande.jpg');
-        background-repeat: no-repeat;
-        background-size: cover; /* Sử dụng cover để hình ảnh lấp đầy phần tử */
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative; /* Để lớp phủ có thể được đặt chính xác */
-        overflow: hidden; /* Đảm bảo không có nội dung nào tràn ra ngoài */
-    }
-
-    .container .main .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
-        pointer-events: none; /* Không chặn sự kiện chuột */
-    }
+   
     .container .main .img-title p {
         text-align: center;
 
-        margin: 0 30px 0 30px 30px; /* Xóa khoảng cách bên ngoài */
+        margin: 0 30px 0 30px; /* Xóa khoảng cách bên ngoài */
         padding: 0;
         color: white;
         font-weight: 500;
@@ -335,8 +270,8 @@
         z-index: 1; /* Đảm bảo chữ nằm trên lớp phủ */
     }
     .container .main .form-information {
-        width: 100vvw;
-        height: 395px;
+        width: 100vw;
+        height: 450px;
         margin: 30px 0;
         display: flex;
         justify-content: center;
@@ -363,7 +298,7 @@
         width: 100%;
         padding: 8px 10px;
         background-color: rgb(232,240,254);
-        margin: 0 0 10px;
+        margin: 10px 0px;
         font-size: 16px;
         font-weight: 200;
         color: black;
@@ -373,7 +308,7 @@
     
     .container .main .form-information .form #button-sigin {
         width: 100%;
-        margin: 0 0 10px;
+        margin: 10px 0px;
         padding: 8px 10px;
         height: 40px;
         font-size: 16px;
@@ -390,7 +325,7 @@
     .container .main .form-information .form .button-link{
         width: 200px;
         height: 40px;
-        margin: 0 0 8px;
+        margin: 10px 0px;
         padding: 0 10px 0 0;
         display: flex;
         font-size: 15px;
