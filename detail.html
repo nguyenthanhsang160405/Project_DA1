@@ -5,40 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/all.css">
+    <link rel="stylesheet" href="./public/css/header.css">
     <link rel="stylesheet" href="./public/css/detail.css">
     <link rel="stylesheet" href="./public/css/footer.css">
 </head>
 <body>
-            <header>
-            <div><img src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></div>
-            <div>
-                <nav>
-                    <ul class="menu-large">
-                        <li class="sub-menu-left"><a href="#">Trang chủ</a></li>
-                        <li class="sub-menu-left"><a href="#">Giới thiệu</a></li>
-                        <li class="sub-menu-left" ><a href="#">Sản phẩm<i class="fa-solid fa-chevron-down"></i></a>
-                            <ul class="menu-small">
-                                <li class="menu-smaller"><a href="#">Áo Vest</a></li>
-                                <li class="menu-smaller"><a href="#">Áo Polo</a></li>
-                                <li class="menu-smaller"><a href="#">Áo Thun</a></li>
-                            </ul>
-                        </li>
-                        <li class="sub-menu-left"><a href="#">Lookbook</a></li>
-                        <li class="sub-menu-left"><a href="#">Về chúng tôi</a></li>
-                        <li class="sub-menu-left"><a href="#">Liên Hệ</a></li>
-                </ul>
-                </nav>
-            </div>
-            <div>
+    <header>
+        <div><img onclick="AnHienConMenu(this)" src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></div>
+        <div id="navigation">
+            <nav>
                 <ul class="menu-large">
-                    <form action="" method="get">
-                        <li class="sub-menu-right"><a href="#"> <input type="text" name="timkem" id="timkem" placeholder="Tìm Kiếm"><i class="fa-solid fa-magnifying-glass search"></i></a></li>
-                    </form>
-                    <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-user"></i></a></li>
-                    <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+                    <li class="sub-menu-left active"><a href="index.html">Trang chủ</a></li>
+                    <li class="sub-menu-left"><a href="#">Giới thiệu</a></li>
+                    <li class="sub-menu-left" ><a href="product.html">Sản phẩm<i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="menu-small">
+                            <li class="menu-smaller"><a href="#">Áo Vest</a></li>
+                            <li class="menu-smaller"><a href="#">Áo Polo</a></li>
+                            <li class="menu-smaller"><a href="#">Áo Thun</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-left"><a href="lookbook.html">Lookbook</a></li>
+                    <li class="sub-menu-left"><a href="about.html">Về chúng tôi</a></li>
+                    <li class="sub-menu-left"><a href="contact.html">Liên Hệ</a></li>
                 </ul>
-            </div>
-        </header>
+            </nav>
+        </div>
+        <div>
+            <ul class="menu-large">
+                <form id="form-desktop" action="" method="get">
+                    <li  class="sub-menu-right">
+                        <input type="text" name="timkem" id="timkem" placeholder="Tìm Kiếm">
+                        <i class="fa-solid fa-magnifying-glass search"></i>
+                    </li>
+                </form>
+                <form id="form-mobile" action="" method="get">
+                    <li class="sub-menu-right">
+                        <input type="text" name="timkem" id="timkem">
+                        <i class="fa-solid fa-magnifying-glass search"></i>
+                    </li>
+                </form>
+                <li class="sub-menu-right"><a href="sigin.html"><i class="fa-solid fa-user"></i></a></li>
+                <li class="sub-menu-right"><a href="cart.html"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+                <li  onclick="AnHienMobile()" id="icon-mobile" class="sub-menu-right">
+                    <i class="fa-solid fa-bars"></i>
+                </li>
+            </ul>
+        </div>
+    </header>
         <div class="danhmuc">
             <a href="index.html"><i class="fa-solid fa-house"></i>Trang chủ</a>
             <span>| BỘ SƯU TẬP SUIT DWIN 2024 |</span>
@@ -66,20 +79,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-details">
+                <form class="product-details" action="#" method="post" >
                     <div class="product-title">Áo Vest Xanh Kẻ Đen - AV341</div>
                     <div class="masp">TXVN2550</div>
                     <div class="price">3,500,000₫</div>
-
-        
                     <div class="size-selection">
                         <label>Kích thước:</label>
                         <div class="size-buttons">
-                            <button>48</button>
-                            <button>50</button>
-                            <button>52</button>
-                            <button>54</button>
-                            <button>56</button>
+                            <div id ="size" >48</div >
+                            <div id ="size">50</div >
+                            <div id ="size">52</div >
+                            <div id="size">54</div >
+                            <div id="size">56</div >
                         </div>
                     </div>
                     <div class="quantity-size">
@@ -93,12 +104,10 @@
                             <button class="plus-btn" onclick="handleplus()">+</button>
                         </div>
                     </div>
-        
-                    <button class="add-to-cart">THÊM VÀO GIỎ</button>
-                    <button class="buy-now"><a href="./payment.html">MUA NGAY</a></button>
-                </div>
+                    <input type="submit" name="add-to-cart" value="THÊM VÀO GIỎ">
+                    <input type="submit" name="buy-now" value="MUA NGAY">
+                </form>
             </div>
-        
             <div class="tabs">
                 <div class="tab1">THÔNG SỐ</div>
                 <div class="tab">CHI TIẾT SẢN PHẨM</div>
@@ -107,24 +116,28 @@
             </div>
             <div class="size">
                 <img class="luachonsize" src="./public/img/size.webp" alt="">
-
             </div>
             <div class="related-products">
                 <h3>SẢN PHẨM LIÊN QUAN</h3>
-                <div class="product">
-                    <img src="./public/img/sp1.webp" alt="Vest Nhung Đen">
-                    <h1>VEST NHUNG ĐEN<h1>
-                    <p>2,800,000₫<p> 
-                </div>
-                <div class="product">
-                    <img src="./public/img/sp2.webp" alt="Vest Nhung Xanh">
-                    <h1>VEST NHUNG XANH<h1>
-                    <p>2,800,000₫</p>
-                </div>
-                <div class="product">
-                    <img src="./public/img/sp3.webp" alt="Vest Xám">
-                    <h1>TOV 22059 - ĐEN VÀNG ĐỎ<h1>
-                    <p>4,700,000₫</p>
+                <div class="wrapp-related-products">
+                    <div class="product">
+                        <a href="#"></a>
+                        <img src="./public/img/sp1.webp" alt="Vest Nhung Đen">
+                        <h1>VEST NHUNG ĐEN<h1>
+                        <p>2,800,000₫<p> 
+                    </div>
+                    <div class="product">
+                        <a href="#"></a>
+                        <img src="./public/img/sp2.webp" alt="Vest Nhung Xanh">
+                        <h1>VEST NHUNG XANH<h1>
+                        <p>2,800,000₫</p>
+                    </div>
+                    <div class="product">
+                        <a href="#"></a>
+                        <img src="./public/img/sp3.webp" alt="Vest Xám"  accesske>
+                        <h1>TOV 22059 - ĐEN VÀNG ĐỎ<h1>
+                        <p>4,700,000₫</p>
+                    </div>
                 </div>
             </div>
         </div> 

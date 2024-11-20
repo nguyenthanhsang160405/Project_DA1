@@ -1,403 +1,692 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body{
-    font-family:sans-serif;
-    font-weight: 300;
-    font-style: normal;
-
-}
-.container{
-    width: 1500px;
-    margin: 0 auto;
-    /* border: 1px red solid; */
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
-}
-header img {
-    width: 110px;
-    height: 90px;
-    margin-right: 20px;
-}
-header .menu-large{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-header .menu-large .sub-menu-left{
-    list-style: none;
-    width: 120px;
-    text-align: center;
-    height: 15px;
-}
-header ul .sub-menu-left::after{
-    content: "";
-    width: 0px;
-    height: 1px;
-    background-color: #000000;
-    display: block;
-    position: relative;
-    /* transition: width 0.5s; */
-}
-header ul .sub-menu-left .menu-smaller::after{
-    content: "";
-    width: 0px;
-    height: 1px;
-    background-color: #000000;
-    display: block;
-    position: relative;
-    /* transition: width 0.5s; */
-}
-header ul .sub-menu-left:hover::after{
-    width: 100%;
-    animation: example 0.5s alternate;
-}
-header ul .sub-menu-left .menu-smaller:hover::after{
-    width: 100%;
-    animation: example 0.5s alternate;
-}
-@keyframes example{
-    0%{width: 0%;background-color: rgb(0, 0, 0);}
-    25%{width: 25%;background-color: rgb(0, 0, 0);}
-    50%{width: 50%;background-color: rgb(0, 0, 0);}
-    75%{width: 75%;background-color: rgb(0, 0, 0);}
-    100%{width: 100%;background-color: rgb(0, 0, 0);}
-}
-header ul li:hover{
-    cursor: pointer;
-}
-header .menu-large .sub-menu-left .menu-small{
-    /* display: none; */
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    transition: 0.2s;
-    width: 120px;
-}
-header .menu-large .sub-menu-left:hover .menu-small{
-    /* display: block; */
-    opacity: 1;
-    visibility: visible;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    margin-top: 10px;
-    width: 120px;
-}
-header .menu-large .sub-menu-left .menu-small .menu-smaller{
-    height: 30px;
-    line-height: 29px;
-    list-style: none;
-
-}
-header .menu-large li a{
-    color: #000;
-    text-decoration: none;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-}
-input[type="placeholder"]{
-    color: #000;
-    font-size: 14px;
-    width: 100px;
-}
-.menu-large li{
-    list-style: none;
-    position: relative;
-}
-.menu-large input {
-    border-bottom: 2px solid black;
-    border-top: none;                       
-    border-left: none;
-    border-right: none;
-    height: 25px;
-    width: 130px;
-    padding: 5px;
-}
-.menu-large li .search{
-    position: absolute;
-    right: 2px;
-    bottom: 2px;
-}
-.menu-large .sub-menu-right{
-    margin: 0 15px;
-}
-.menu-large .sub-menu-right i{
-    font-size: 20px;
-}
-.danhmuc{
-    top: 0px;
-    padding: 15px;
-    width: 100%;
-    background: #ffffff;
-    z-index: 1;
-    color: #000000;
-    line-height: 20px;
-    white-space: nowrap;
-    overflow-x: auto;
-}
-.danhmuc a{
-    text-decoration: none;
-    color: black;
-}
-.danhmuc span{
-    font-weight: 500;
-}
-.img-title {
-    width: 100%;
-    height: 300px;
-    background-image: url('../img/t-shirt_grande.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Để lớp phủ có thể được đặt chính xác */
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
-    pointer-events: none; /* Không chặn sự kiện chuột */
-}
-
-.img-title h2 {
-    margin: 0; /* Xóa khoảng cách bên ngoài */
-    padding: 0;
-    color: white;
-    font-weight: 500;
-    font-size: 24px;
-    z-index: 1; /* Đảm bảo chữ nằm trên lớp phủ */
-}
-
-.product-section {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 15px;
-    padding: 0 30px;
-    height: 700px;
-}
-.image-container {
-    display: flex;
-    gap: 30px;
-}
-
-
-.main-image {
-    width: 450px;
-    height: 450px;
-    background-color: #ddd;
-}
-.main-image  img{
-    width: 100%;
-}
-.small-images {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-
-}
-
-
-.small-image {
-    width: 130px;
-    height: 150px;
-    background-color: #ccc;
-    margin-top: 0px;
-}
-.small-image img{
-    width: 100%;
-    height: 100%;
-
-}
-.product-images img {
-    width: 50%;
-    height: auto;
-    display: flex;
-}
-
-.product-details {
-    flex: 1;
-    padding: 10px;
-    max-width: 50%;
-    margin-left: 85px;
-}
-
-.product-title {
-    font-size: 28px;
-    font-weight: bold;
-}
-.quantity-size{
-    margin-top: 20px;
-}
-.price {
-    color:#e60c0c;
-    font-size: 24px;
-    margin-top: 20px;
-    font-weight: bolder;
-}
-.masp{
-    font-size: 20px;
-    margin-top: 25px;
-}
-.size-selection, .quantity-selection {
-    margin-top: 40px;
-    display: flex;
-}
-
-.size-selection label, .quantity-selection label {
-    /* font-weight: bold; */
-    margin-right: 10px;
-    font-size: 20px;
-}
-
-.size-buttons button {
-    margin: 5px;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    cursor: pointer;
-    border-radius: 50px;
-    font-size: 20px;
-}
-.quantity-buttons{
-    display: flex;
-}
-.quantity-buttons #amount{
-    width: 70px;
-    text-align: center;
-    font-size: 20px;
-}
-.quantity-buttons button{
-    /* margin: 5px; */
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    cursor: pointer;
-    font-size: 20px;
-}
-.add-to-cart{
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 50px;
-    background-color: black;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 30px;
-    margin-top: 150px;
-}
-.buy-now a{
-    width: 10px;
-    padding: 15px 50px;
-    background-color: black;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 30px;
-    margin-top: 150px;
-    text-decoration: none;
-}
-.tabs {
-    margin-top: 5px;
-    padding: 0 30px;
-    /* border: 1px red solid; */
-}
-.size img{
-    position: relative;
-    left: 50px;
-    padding: 30px;
-    width: 50%;
-}
-.tab {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 5px 5px;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    font-size: 15px
-}
-.tab:hover{
-    background-color: #000000;
-    color: #ddd;
-}
-.tab1 {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 5px 5px;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    font-size: 15px;
-    color: #ddd;
-    background-color: #000000;
-}
-
-.related-products {
-    /* margin-top: 40px; */
-    width: 1500px;
-    margin: 0 auto;
-    /* border: 1px red solid; */
+@media only screen and (min-width: 1024px){
+    .danhmuc{
+        top: 0px;
+        padding: 15px;
+        width: 100%;
+        background: #ffffff;
+        z-index: 1;
+        color: #000000;
+        line-height: 20px;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+    .danhmuc a{
+        text-decoration: none;
+        color: black;
+    }
+    .danhmuc span{
+        font-weight: 500;
+    }
+    .img-title {
+        width: 100%;
+        height: 400px;
+        background-image: url('../img/t-shirt_grande.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Để lớp phủ có thể được đặt chính xác */
+    }
     
-}
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+        pointer-events: none; /* Không chặn sự kiện chuột */
+    }
+    
+    .img-title h2 {
+        margin: 0; /* Xóa khoảng cách bên ngoài */
+        padding: 0;
+        color: white;
+        font-weight: 500;
+        font-size: 24px;
+        z-index: 1; /* Đảm bảo chữ nằm trên lớp phủ */
+    }
+    
+    .product-section {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        padding: 0 130px;
+        height: 700px;
+        justify-content: center;
+    }
+    .image-container {
+        display: flex;
+        gap: 30px;
+    }
+    
+    
+    .main-image {
+        width: 400px;
+        height: 400px;
+        background-color: #ddd;
+    }
+    .main-image  img{
+        width: 100%;
+    }
+    .small-images {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    
+    }
+    .small-image {
+        width: 130px;
+        height: 150px;
+        background-color: #ccc;
+        margin-top: 0px;
+    }
+    .small-image img{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .product-images img {
+        width: 50%;
+        height: auto;
+        display: flex;
+    }
+    
+    .product-details {
+        flex: 1;
+        padding: 10px;
+        /* max-width: 30%; */
+        margin-left: 70px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .product-title {
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .quantity-size{
+        margin-top: 20px;
+    }
+    .price {
+        color:#e60c0c;
+        font-size: 24px;
+        margin-top: 20px;
+        font-weight: bolder;
+    }
+    .masp{
+        font-size: 20px;
+        margin-top: 25px;
+    }
+    .size-selection{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
 
-.related-products h3 {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    margin-bottom: 25px;
-    font-size: 25px;
-}
+    }
+    .size-selection label{
+        align-items: center;
+    }
+    .quantity-selection label {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .size-buttons {
+        display: flex;
+        gap: 10px;
+        /* margin-right:5px ; */
+        margin-left:20px ;
+    }
+    .size-buttons div {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #000000;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: #f8f8f8;
+    }
+    .quantity-size{
+        margin-top: 20px;
+    }
+    .quantity-selection{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .quantity-buttons{
+        display: flex;
+        margin-left: 10px;
+    }
+    .quantity-buttons #amount{
+        width: 70px;
+        height: 50px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .quantity-buttons button{
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    input[type="submit"] {
+        width: 30%;
 
-.related-products .product {
-    display: inline-block;
-    width: calc(29% - 0px);
-    margin: 0 10px 0 40px;
+        padding: 10px;
+        font-size: 1rem;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+        margin-top: 20% ;
+    }
+    
+    input[name="add-to-cart"] {
+        background-color: #000000;
+        margin-right: 10px;
+    }
+    
+    input[name="buy-now"] {
+        background-color: #000000;
+    }
+    .tabs {
+        padding: 0 30px;
+        margin: 0px 0 0 60px;
+    }
+    .size img{
+        position: relative;
+        left: 60px;
+        padding: 30px;
+        width: 50%;
+    }
+    .tab {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 5px 5px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        font-size: 20px
+    }
+    .tab:hover{
+        background-color: #000000;
+        color: #ddd;
+    }
+    .tab1 {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 5px 5px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        font-size: 20px;
+        color: #ddd;
+        background-color: #000000;
+    }
+    
+    .related-products {
+        /* margin-top: 40px; */
+        width: 1500px;
+        margin: 0 auto;
+        /* border: 1px red solid; */
+        
+    }
+    
+    .related-products h3 {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 25px;
+        font-size: 25px;
+    }
+    
+    .related-products .product {
+        display: inline-block;
+        width: calc(29% - 0px);
+        margin: 0 10px 0 40px;
+    
+    }
+    
+    .related-products img {
+        width: 100%;
+        height: auto;
+    }
+    .related-products h1{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        font-weight: bolder;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .related-products p{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #e60c0c;
+    }
+}
+ @media screen and (min-width: 601px) and (max-width: 1024px) {
+    .img-title {
+        width: 100%;
+        height: 300px;
+        background-image: url('../img/t-shirt_grande.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Để lớp phủ có thể được đặt chính xác */
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+        pointer-events: none; /* Không chặn sự kiện chuột */
+    }
+    
+    .img-title h2 {
+        margin: 0; /* Xóa khoảng cách bên ngoài */
+        padding: 0;
+        color: white;
+        font-weight: 500;
+        font-size: 24px;
+        z-index: 1; /* Đảm bảo chữ nằm trên lớp phủ */
+    }
+    .product-section {
+        display: flex;
+        padding: 0 20px;
+    }
+
+    .image-container {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .main-image {
+        width: 100%;
+        height: 80%;
+       
+    }
+    .main-image img{
+        width: 100%;
+    }
+    .small-images {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    
+    }
+
+    .small-image {
+        width: 75px;
+        height: 90px;
+        background-color: #ccc;
+        margin-top: 0px;
+    }
+    .small-image img{
+        width: 100%;
+        gap: 10px;
+        height: 100%;
+    }
+   
+    .product-details {
+        width: 90%;
+        margin: 20px;
+    }
+
+    .product-title {
+        font-size: 24px;
+    }   
+
+    .price {
+        font-size: 20px;
+        color: #e60c0c;
+        margin-top: 10px;
+    }
+
+    .masp {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .size-selection{
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    
+    }
+    .quantity-selection {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .size-buttons div {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 50%;
+        border: 1px solid #000000;
+    }
+    .size-buttons{
+        display: flex;
+        gap: 10px;
+    }
+    .quantity-buttons #amount {
+        width: 50px;
+        height: 40px;
+        text-align: center;
+        font-size: 16px;
+    }
+    .quantity-size{
+        margin-top: 10px;
+    }
+    .quantity-buttons button {
+        padding: 7px 10px;  
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        width: 40%; 
+        height: 40px;
+        padding: 10px;
+        font-size: 13px;
+        margin-top: 20px;
+        margin-left: 5px;
+        border-radius: 20px;
+        background-color: #000000;
+        color: white;
+    }
+
+  
+    .size img {
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        font-size: 20px;
+        width: 60%;
+    }
+
+   
+    .tabs {
+        padding: 0 10px;
+        margin: 20px 0 0 5px;
+    }
+    .tab {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 5px 5px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        font-size: 13px
+    }
+    .tab:hover{
+        background-color: #000000;
+        color: #ddd;
+    }
+    .tab1 {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 5px 5px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        font-size: 13px;
+        color: #ddd;
+        background-color: #000000;
+    }
+
+    
+    .related-products {
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .related-products h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .related-products .product {
+        width: 30%; 
+        display: inline-block;
+        margin: 0 1%; 
+        vertical-align: top; 
+    }
+
+    .related-products img {
+        width: 100%;
+        height: auto;
+    }
+
+    .related-products h1 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .related-products p {
+        font-size: 16px;
+        color: #e60c0c;
+    }
 
 }
+@media (max-width: 600px) {
+    .img-title {
+        width: 100%;
+        height: 250px;
+        background-image: url('../img/t-shirt_grande.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Để lớp phủ có thể được đặt chính xác */
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+        pointer-events: none; /* Không chặn sự kiện chuột */
+    }
+    
+    .img-title h2 {
+        margin: 0; /* Xóa khoảng cách bên ngoài */
+        padding: 0;
+        color: white;
+        font-weight: 500;
+        font-size: 30px;
+        z-index: 1; /* Đảm bảo chữ nằm trên lớp phủ */
+    }
+    .product-section {
+        flex-direction: column;
+        padding: 10px;
+        gap: 20px;
+    }
 
-.related-products img {
-    width: 100%;
-    height: auto;
-}
-.related-products h1{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-.related-products p{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #e60c0c;
+    .image-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .small-images {
+        display: none;
+    }
+
+    .small-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .small-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .product-details {
+        padding: 10px;
+    }
+
+    .product-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #e60c0c;
+        margin-top: 10px;
+    }
+
+    .masp {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .size-buttons{
+        display: flex;
+        gap: 10px;
+    }
+    .size-selection{
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    
+    }
+    .size-buttons div {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 50%;
+        border: 1px solid #000000;
+    }
+    .size img {
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        font-size: 20px;
+        width: 100%;
+    }
+    .quantity-selection {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .quantity-size{
+        margin-top: 10px;
+    }
+    .quantity-buttons {
+        display: flex;
+        /* gap: 15px; */
+        margin-top: 10px;
+    }
+
+    .quantity-buttons #amount {
+        width: 50px;
+        height: 35px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .quantity-buttons button {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 15px;
+        border-radius: 20px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+    }
+    .tabs {
+        padding: 0 10px;
+        margin: 30px 0 0 5px;
+    }
+
+    .tab {
+        font-size: 14px;
+        margin: 7px 0;
+        padding: 5px;
+        background: #f8f8f8;
+    }
+
+    .tab1 {
+        background-color: #000;
+        color: #fff;
+    }
+    .related-products {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .related-products h3 {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .related-products .product {
+        display: inline-block;
+        width: 48%;
+        margin-bottom: 15px;
+    }
+    .related-products .product:nth-child(3) {
+        display: none;
+    }
+
+    .related-products img {
+        width: 100%;
+        height: auto;
+    }
+
+    .related-products h1 {
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .related-products p {
+        font-size: 14px;
+        color: #e60c0c;
+        text-align: center;
+    }
 }

@@ -30,3 +30,21 @@ amountElement.addEventListener('input', () =>{
     render(amount);
     console.log(amount);
 });
+
+
+
+// function handleminus() {
+//     const amountInput = document.getElementById("amount");
+//     let amount = parseInt(amountInput.value);
+//     if (amount > 1) {
+//       amount--;
+//       amountInput.value = amount;
+//     }
+//   }
+  
+//   function handleplus() {
+//     const amountInput = document.getElementById("amount");
+//     let amount = parseInt(amountInput.value);
+//     amount++;
+//     amountInput.value = amount;
+//   }

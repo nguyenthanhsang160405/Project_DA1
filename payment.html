@@ -11,32 +11,44 @@
 </head>
 <body>
     <header>
-        <div><img src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></div>
-        <div>
+        <div><img onclick="AnHienConMenu(this)" src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></div>
+        <div id="navigation">
             <nav>
                 <ul class="menu-large">
-                    <li class="sub-menu-left"><a href="#">Trang chủ</a></li>
+                    <li class="sub-menu-left active"><a href="index.html">Trang chủ</a></li>
                     <li class="sub-menu-left"><a href="#">Giới thiệu</a></li>
-                    <li class="sub-menu-left" ><a href="#">Sản phẩm<i class="fa-solid fa-chevron-down"></i></a>
+                    <li class="sub-menu-left" ><a href="product.html">Sản phẩm<i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="menu-small">
                             <li class="menu-smaller"><a href="#">Áo Vest</a></li>
                             <li class="menu-smaller"><a href="#">Áo Polo</a></li>
                             <li class="menu-smaller"><a href="#">Áo Thun</a></li>
                         </ul>
                     </li>
-                    <li class="sub-menu-left"><a href="#">Lookbook</a></li>
-                    <li class="sub-menu-left"><a href="#">Về chúng tôi</a></li>
-                    <li class="sub-menu-left"><a href="#">Liên Hệ</a></li>
-            </ul>
+                    <li class="sub-menu-left"><a href="lookbook.html">Lookbook</a></li>
+                    <li class="sub-menu-left"><a href="about.html">Về chúng tôi</a></li>
+                    <li class="sub-menu-left"><a href="contact.html">Liên Hệ</a></li>
+                </ul>
             </nav>
         </div>
         <div>
             <ul class="menu-large">
-                <form action="" method="get">
-                    <li class="sub-menu-right"><a href="#"> <input type="text" name="timkem" id="timkem" placeholder="Tìm Kiếm"><i class="fa-solid fa-magnifying-glass search"></i></a></li>
+                <form id="form-desktop" action="" method="get">
+                    <li  class="sub-menu-right">
+                        <input type="text" name="timkem" id="timkem" placeholder="Tìm Kiếm">
+                        <i class="fa-solid fa-magnifying-glass search"></i>
+                    </li>
                 </form>
-                <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-user"></i></a></li>
-                <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+                <form id="form-mobile" action="" method="get">
+                    <li class="sub-menu-right">
+                        <input type="text" name="timkem" id="timkem">
+                        <i class="fa-solid fa-magnifying-glass search"></i>
+                    </li>
+                </form>
+                <li class="sub-menu-right"><a href="sigin.html"><i class="fa-solid fa-user"></i></a></li>
+                <li class="sub-menu-right"><a href="cart.html"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+                <li  onclick="AnHienMobile()" id="icon-mobile" class="sub-menu-right">
+                    <i class="fa-solid fa-bars"></i>
+                </li>
             </ul>
         </div>
     </header>
@@ -46,85 +58,61 @@
     </div>
     <div class="container">
         <div class="checkout-form">
-            <h2>Dwin Store - Thương hiệu bán đồ hàng đầu Việt Nam</h2>
-            <h3>Thông tin thanh toán</h3>
-            <div class="user-info">
-                <img src="./public/img/1.webp" alt="User Icon">
-                <p>Tên Đăng Nhập (email.com)</p>
-                <a href="#">Đăng xuất</a>
-            </div>
-            <form>
-                <input type="text" placeholder="Việt Nam">
-                <input type="text" placeholder="Họ và Tên*">
-                <input type="text" placeholder="Điện thoại*">
-                <input type="text" placeholder="Địa chỉ*">
-                <div class="location-select">
-                    <select>
-                        <option>Chọn tỉnh thành</option>
-                        <option>Ninh Thuận</option>
-                        <option>Hồ Chí Minh</option>
-                        <option>Hà Nội</option>
-                        <option>Bình Định</option>
-                        <option>Phú Yên</option>
-                        <option>Đồng Tháp</option>
-                    </select>
-                    <select>
-                        <option>Quận 1</option>
-                        <option>Quận 2</option>
-                        <option>Quận 4</option>
-                        <option>Quận 9</option>
-                        <option>Quận 12</option>
-                        <option>Quận Bình Thạnhn</option>
-                    </select>
-                    <select>
-                        <option>Đông Hưng Thuận</option>
-                        <option>Tân Hưng Thuận</option>
-                        <option>An Phú Đông</option>
-                        <option>Tân Chánh Hiệp</option>
-                        <option>Thạnh Lộc</option>
-                        <option>Thạnh Xuân</option>
-                        <option>Trưng Mỹ Tây</option>
-                    </select>
+            <form action="" method="post"></form>
+                <h2>Dwin Store - Thương hiệu bán đồ hàng đầu Việt Nam</h2>
+                <h3>Thông tin thanh toán</h3>
+                <form>
+                    <input type="text" placeholder="Việt Nam" required>
+                    <input type="text" placeholder="Họ và Tên*" required>
+                    <input type="text" placeholder="Điện thoại*" required>
+                    <input type="text" placeholder="Địa chỉ*"  required>   
+                    <input type="text" placeholder="Email*" required> 
+                    
+                    <h4>Phương thức thanh toán</h4>
+                    <label>
+                        <input type="radio" name="payment" checked>
+                        Thanh toán khi nhận hàng (COD)
+                    </label>
+                </form>
+                <div class="cart-checkout">
+                    <input type="submit" name="cart-link" value="Giỏ Hàng"  class="cart-link">
+                    <input type="submit" name="checkout-button" value="Đặt Hàng" class="checkout-button">
+            
+         
                 </div>
-                <h4>Phương thức thanh toán</h4>
-                <label>
-                    <input type="radio" name="payment" checked>
-                    Thanh toán khi nhận hàng (COD)
-                </label>
-            </form>
-            <div class="cart-checkout">
-                <a href="#" class="cart-link">Giỏ hàng</a>
-                <button class="checkout-button">Đặt hàng</button>
-            </div>
+            </form>      
         </div>
+        
         <div class="order-summary">
-            <table>
-                <tr>
-                    <th></th>
-                    <th>SIZE</th>
-                    <th>SỐ LƯỢNG</th>
-                    <th>TÊN SẢN PHẨM</th>
-                    <th>GIÁ</th>
-                </tr>
-                <tr>
-                    <td><img src="./public/img/áo xanh kẻ đen.webp" alt=""></td>
-                    <td>48</td>
-                    <td>2</td>
-                    <td>Áo vest xanh kẻ đen</td>
-                    <td>7,000,000 VNĐ</td>
-                </tr>
-            </table>
-            <input type="text" placeholder="Mã giảm giá">
-            <button>Sử dụng</button>
-            <div class="total">
-                <span class="total-label">Tổng tiền</span>
-                <span class="total-amount">7,000,000 VNĐ</span>
-            </div>
+            <form action="" method="post"></form>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>SIZE</th>
+                        <th>SỐ LƯỢNG</th>
+                        <th>TÊN SẢN PHẨM</th>
+                        <th>GIÁ</th>
+                    </tr>
+                    <tr>
+                        <td><img src="./public/img/áo xanh kẻ đen.webp" alt=""></td>
+                        <td>48</td>
+                        <td>2</td>
+                        <td>Áo vest xanh kẻ đen</td>
+                        <td>7,000,000 VNĐ</td>
+                    </tr>
+                </table>
+                <input type="text" class="order-summaryinput1"  placeholder="Mã giảm giá">
+                <input type="submit" name = "order-summary submit" value="Sử Dụng" class="order-summarysubmit">
+                <div class="total">
+                    <span class="total-label">Tổng tiền</span>
+                    <span class="total-amount">7,000,000 VNĐ</span>
+                </div>
 
-            <ul>
-                <li>Khách hàng vui lòng thanh toán phí vận chuyển khi nhận hàng.</li>
-                <li>Freeship toàn quốc đối với đơn hàng >1.000.000 chuyển khoản trước.</li>
-            </ul>
+                <ul>
+                    <li>Khách hàng vui lòng thanh toán phí vận chuyển khi nhận hàng.</li>
+                    <li>Freeship toàn quốc đối với đơn hàng >1.000.000 chuyển khoản trước.</li>
+                </ul>
+            </form>    
         </div>
     </div>
     <footer>
