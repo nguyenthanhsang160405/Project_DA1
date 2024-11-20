@@ -14,39 +14,135 @@
                 $id_cate = $_GET['id_cate'];
                 $this->data['product'] = $this->product->getAllProForIdCate($id_cate);
                 $this->data['image'] = [];
-                $arr_pro = $this->data['product'];
-                for($i = 0 ; $i < count($arr_pro) ; $i++){
-                    $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
-                    array_push($this->data['image'],$one_image); 
-                }
-            }
-            else{
-                if(isset($_GET['timkiem'])){
-                    echo 10;
-                    $name_pro  = $_GET['timkiem'];
-                    $this->data['product'] = $this->product->SearchNamePro($name_pro);
-                    $this->data['image'] = [];
-                    $arr_pro = $this->data['product'];
+                if(isset($_POST['sapxep'])){
+                    $id_sapxep = $_POST['arrange'];
+                    if($id_sapxep == 2){
+                        uasort($this->data['product'], function($a,$b){
+                            return strcasecmp($a['ten_sanpham'],$b['ten_sanpham']);
+                        });
+                    }else if($id_sapxep == 3){
+                        uasort($this->data['product'], function($a,$b){
+                            return strcasecmp($b['ten_sanpham'],$a['ten_sanpham']);
+                        });
+                    }else if($id_sapxep == 4){
+                        uasort($this->data['product'], function($a,$b){
+                            return $a['gia_sanpham'] <=> $b['gia_sanpham'];
+                        });
+                    }else if($id_sapxep == 5){
+                        uasort($this->data['product'], function($a,$b){
+                            return $b['gia_sanpham'] <=> $a['gia_sanpham'];
+                        });
+                    }
+                    $arr_pro = [];
+                        foreach($this->data['product'] as $item){
+                            array_push($arr_pro,$item);
+                        }
+                        $this->data['product'] = $arr_pro;
                     for($i = 0 ; $i < count($arr_pro) ; $i++){
                         $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                         array_push($this->data['image'],$one_image); 
                     }
                 }else{
-                    echo 20;
-                    $this->data['product'] = $this->product->getAllPro();
-                    $this->data['image'] = [];
-                    $arr_pro = $this->data['product'];
+                    $arr_pro = [];
+                        foreach($this->data['product'] as $item){
+                            array_push($arr_pro,$item);
+                        }
+                        $this->data['product'] = $arr_pro;
                     for($i = 0 ; $i < count($arr_pro) ; $i++){
                         $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
-                    array_push($this->data['image'],$one_image); 
+                        array_push($this->data['image'],$one_image); 
                     }
                 }
-            }
-        }
-        function ArrRange(){
-            if(isset($_POST['sapxep'])){
-                $id_arrange = $_POST['arrange'];
-                if()
+                $this->data['id_cate'] = $id_cate;
+            }else{
+                if(isset($_GET['timkiem']) && !empty($_GET['timkiem'])){
+                    $name_pro  = $_GET['timkiem'];
+                    $this->data['product'] = $this->product->SearchNamePro($name_pro);
+                    $this->data['image'] = [];
+                    if(isset($_POST['sapxep'])){
+                        $id_sapxep = $_POST['arrange'];
+                        if($id_sapxep == 2){
+                            uasort($this->data['product'], function($a,$b){
+                                return strcasecmp($a['ten_sanpham'],$b['ten_sanpham']);
+                            });
+                        }else if($id_sapxep == 3){
+                            uasort($this->data['product'], function($a,$b){
+                                return strcasecmp($b['ten_sanpham'],$a['ten_sanpham']);
+                            });
+                        }else if($id_sapxep == 4){
+                            uasort($this->data['product'], function($a,$b){
+                                return $a['gia_sanpham'] <=> $b['gia_sanpham'];
+                            });
+                        }else if($id_sapxep == 5){
+                            uasort($this->data['product'], function($a,$b){
+                                return $b['gia_sanpham'] <=> $a['gia_sanpham'];
+                            });
+                        }
+                        $arr_pro = [];
+                        foreach($this->data['product'] as $item){
+                            array_push($arr_pro,$item);
+                        }
+                        $this->data['product'] = $arr_pro;
+                        for($i = 0 ; $i < count($arr_pro) ; $i++){
+                            $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
+                            array_push($this->data['image'],$one_image); 
+                        }
+                    }else{
+                        $arr_pro = [];
+                        foreach($this->data['product'] as $item){
+                            array_push($arr_pro,$item);
+                        }
+                        $this->data['product'] = $arr_pro;
+                        for($i = 0 ; $i < count($arr_pro) ; $i++){
+                            $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
+                            array_push($this->data['image'],$one_image); 
+                        }
+                    }
+                    $this->data['name_timkiem'] = $name_pro;
+                }else{
+                    $this->data['product'] = $this->product->getAllPro();
+                    $this->data['image'] = [];
+                    if(isset($_POST['sapxep'])){
+                        $id_sapxep = $_POST['arrange'];
+                        if($id_sapxep == 2){
+                            echo 20;
+                            uasort($this->data['product'], function($a,$b){
+                                return strcasecmp($a['ten_sanpham'],$b['ten_sanpham']);
+                            });
+                        }else if($id_sapxep == 3){
+                            uasort($this->data['product'], function($a,$b){
+                                return strcasecmp($b['ten_sanpham'],$a['ten_sanpham']);
+                            });
+                        }else if($id_sapxep == 4){
+                            uasort($this->data['product'], function($a,$b){
+                                return $a['gia_sanpham'] <=> $b['gia_sanpham'];
+                            });
+                        }else if($id_sapxep == 5){
+                            uasort($this->data['product'], function($a,$b){
+                                return $b['gia_sanpham'] <=> $a['gia_sanpham'];
+                            });
+                        }
+                        $arr_pro = [];
+                        foreach($this->data['product'] as $item){
+                            array_push($arr_pro,$item);
+                        }
+                        $this->data['product'] = $arr_pro;
+                        for($i = 0 ; $i < count($arr_pro) ; $i++){
+                            $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
+                            array_push($this->data['image'],$one_image); 
+                        }
+                    }else{
+                        $arr_pro = [];
+                        foreach($this->data['product'] as $item){
+                            array_push($arr_pro,$item);
+                        }
+                        $this->data['product'] = $arr_pro;
+                        for($i = 0 ; $i < count($arr_pro) ; $i++){
+                            $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
+                            array_push($this->data['image'],$one_image); 
+                        }
+                    }
+                }
             }
         }
         public function RenderView($data,$view){

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./public/css/cart.css">
     <link rel="stylesheet" href="./public/css/title-img.css">
     <link rel="stylesheet" href="./public/css/pageuser.css">
+    <link rel="stylesheet" href="./public/css/detail.css">
     
     <title>Document</title>
 </head>
@@ -48,7 +49,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div>
+                <div id="okkkk">
                     <ul class="menu-large">
                         <form id="form-desktop" action="index.php" method="get">
                             <li  class="sub-menu-right">

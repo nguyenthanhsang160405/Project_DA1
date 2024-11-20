@@ -22,13 +22,14 @@
     include_once 'app/controller/alikeCtl.php';
     include_once 'app/controller/siginCtl.php';
     include_once 'app/controller/usermanageCtl.php';
+    include_once 'app/controller/detailCtl.php';
 
     $header = new HeaderCtl();
     $header->ViewHeader();
 
     if(isset($_GET['page'])){
         $page = $_GET['page'];
-        if($page != 'product' && $page != 'sigin' && $page != 'usermanage'){
+        if($page != 'product' && $page != 'sigin' && $page != 'usermanage' && $page != 'detail'){
             $alike = new AlikeCtl();
             $alike->ViewAlike();
         }
@@ -51,6 +52,10 @@
             case 'sigin':
                 $sigin = new SiginCtl();
                 $sigin->ViewSigIn();
+                break;
+            case 'detail':
+                $detail = new DetailCtl();
+                $detail->ViewDetail();
                 break;
             default:
                 $home = new homeController();

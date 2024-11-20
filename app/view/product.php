@@ -6,6 +6,12 @@
         if(isset($data['image']) && !empty($data['image'])){
             $image = $data['image'];
         }
+        if(isset($data['name_timkiem']) && !empty($data['name_timkiem'])){
+            $name_timkiem = $data['name_timkiem'];
+        }
+        if(isset($data['id_cate']) && !empty($data['id_cate'])){
+            $id_cate = $data['id_cate'];
+        }
     }
 ?>
 <div class="back-home">
@@ -29,7 +35,7 @@
                 BỘ SƯU TẬP SUIT DWIN 2024
             </h2>
             <div class="arrange">
-                <form action="index.php?page=product" method="post">
+                <form action="index.php?page=product&&id_cate=<?php if(isset($id_cate) && !empty($id_cate)) echo $id_cate?>&&timkiem=<?php if(isset($name_timkiem) && !empty($name_timkiem)) echo $name_timkiem ?>" method="post">
                     <label for="">Sắp xếp: </label>
                     <select name="arrange" id="">
                         <option value="1">Tùy chọn</option>
@@ -37,7 +43,7 @@
                         <option value="3">Theo bảng chữ cái A->Z</option>
                         <option value="4">Giá từ thấp đến cao</option>
                         <option value="5">Giá từ cao đến thấp</option>
-                        <input name="sapxep" type="button" value="Chọn">
+                        <input name="sapxep" type="submit" value="Chọn">
                     </select>
                 </form>
             </div>
@@ -50,7 +56,7 @@
                                     echo '<div class="wrapp-product">';
                                     for($j = $i * 3 ; $j < $i * 3 + 3  ; $j++ ){
                                         echo '<div class="fame-product">
-                                                <a href="#"><img src="public/img/'.$image[$j]['link_anh'].'" alt="">
+                                                <a href="index.php?page=detail&&id_pro='.$product[$j]['id_sanpham'].'"><img src="public/img/'.$image[$j]['link_anh'].'" alt="">
                                                     <div class="content-product">
                                                         <p class="name-product">'.$product[$j]['ten_sanpham'].'</p>
                                                         <p class="price-product">'.number_format($product[$j]['gia_sanpham']).'đ</p>
