@@ -31,7 +31,7 @@
                                 <input type="number" name="price_pro" value="<?php if(isset($ifm['price']) && !empty($ifm['price'])) echo $ifm['price'] ?>"><br>
                                 <label for="">Số lượng sản phẩm</label><span><?php if(isset($err['err_quantity']) && !empty($err['err_quantity'])) echo $err['err_quantity'] ?></span><br>
                                 <input type="number" name="quantity_pro" value="<?php if(isset($ifm['quantity']) && !empty($ifm['quantity'])) echo $ifm['quantity'] ?>"><br>
-                                <label for="">Danh mục</label><br>
+                                <label for="">Danh mục</label><span><?php if(isset($err['err_idcate']) && !empty($err['err_idcate'])) echo $err['err_idcate'] ?></span><br>
                                 <select name="id_catepro" id=""><br>
                                     <?php 
                                         if(isset($cate_pro) && !empty($cate_pro)){

@@ -4,9 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./public/css/about.css">
+    <link rel="stylesheet" href="./public/css/header.css">
+    <link rel="stylesheet" href="./public/css/footer.css">
+    <link rel="stylesheet" href="./admin/public/webfonts/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic+Coding&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>TEST</h1>
-	<h1>TEST11111</h1>
+    <div class="container">
+        <header>
+            <div><img onclick="AnHienConMenu(this)" src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></div>
+            <div id="navigation">
+                <nav>
+                    <ul class="menu-large">
+                        <li class="sub-menu-left active"><a href="#">Trang chủ</a></li>
+                        <li class="sub-menu-left"><a href="#">Giới thiệu</a></li>
+                        <li class="sub-menu-left" ><a href="#">Sản phẩm<i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="menu-small">
+                                <li class="menu-smaller"><a href="#">Áo Vest</a></li>
+                                <li class="menu-smaller"><a href="#">Áo Polo</a></li>
+                                <li class="menu-smaller"><a href="#">Áo Thun</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-left"><a href="#">Lookbook</a></li>
+                        <li class="sub-menu-left"><a href="#">Về chúng tôi</a></li>
+                        <li class="sub-menu-left"><a href="#">Liên Hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <ul class="menu-large">
+                    <form id="form-desktop" action="" method="get">
+                        <li  class="sub-menu-right">
+                            <input type="text" name="timkem" id="timkem" placeholder="Tìm Kiếm">
+                            <i class="fa-solid fa-magnifying-glass search"></i>
+                        </li>
+                    </form>
+                    <form id="form-mobile" action="" method="get">
+                        <li class="sub-menu-right">
+                            <input type="text" name="timkem" id="timkem">
+                            <i class="fa-solid fa-magnifying-glass search"></i>
+                        </li>
+                    </form>
+                    <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                    <li class="sub-menu-right"><a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+                    <li  onclick="AnHienMobile()" id="icon-mobile" class="sub-menu-right">
+                        <i class="fa-solid fa-bars"></i>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <ul id="menu-mobile-visi-hid">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li>
+                <a href="#">Sản phẩm</a>
+                <i onclick="AnHienConMenu()" class="fa-solid fa-plus"></i>
+                <ul id="menu_con-icon-mobile">
+                    <li class="menu-smaller"><a href="#">Áo Vest</a></li>
+                    <li class="menu-smaller"><a href="#">Áo Polo</a></li>
+                    <li class="menu-smaller"><a href="#">Áo Thun</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Lookbook</a></li>
+            <li><a href="#">Về chúng tôi</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+        </ul>
+
+
+
+
+
+
+        <div class="banner">
+            <div style="" class="img-title">
+                <div class="overlay"></div>
+                    <p>ĐỒNG HÀNG CÙNG KHÁCH HÀNG LÀ NIỀM HÀNH PHÚC CỦA CHÚNG TÔI</p>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="part1">
+                <div class="left">
+                    <h2>CÂU CHUYỆN THƯƠNG HIỆU</h2>
+                    <P>
+                    Dwin, viết tắt của “Dream Win”, là thương hiệu thời trang dành cho người trẻ dám mơ lớn và luôn hướng tới chiến thắng. Với các thiết kế hiện đại, năng động như áo sơ mi, quần tây và áo vest, Dwin không chỉ cung cấp trang phục mà còn truyền tải thông điệp tự tin, khát vọng và cá tính,trưởng thành. Mỗi sản phẩm là sự kết hợp giữa chất lượng và phong cách, giúp người mặc thể hiện tinh thần chinh phục giấc mơ của chính mình.
+    Dwin hướng đến việc tạo ra những bộ sưu tập hiện đại, thoải mái, phù hợp với xu hướng nhưng vẫn mang dấu ấn riêng.
+                    </P>
+                </div>
+                <div class="right">
+                    <img src="public/img/abou1.jpg" alt="">
+                </div>
+            </div>
+            <div class="part2">
+                <div class="left">
+                    <img src="public/img/abou2.jpg" alt="">
+                </div>
+                <div class="right">
+                    <h2>GIÁ TRỊ MANG LẠI</h2>
+                    <P>
+                        Dịch vụ bán quần áo mang lại nhiều giá trị thiết thực cho cả người mua lẫn doanh nghiệp. Trước hết, nó đáp ứng nhu cầu thiết yếu của con người về thời trang và tự tin khi giao tiếp. Khách hàng không chỉ tìm thấy các sản phẩm chất lượng mà còn được trải nghiệm những xu hướng mới, thể hiện cá tính và phong cách riêng của mình.
+                        Với dịch vụ tư vấn chuyên nghiệp, khách hàng có thể chọn được trang phục phù hợp với vóc dáng và sở thích, giúp tăng thêm sự hài lòng. Đối với doanh nghiệp, việc cung cấp dịch vụ bán quần áo xây dựng lòng tin từ khách hàng, duy trì mối quan hệ lâu dài, và phát triển thương hiệu mạnh mẽ trên thị trường. Nhờ đó, doanh nghiệp tạo nên một cộng đồng trung thành và góp phần nâng cao chất lượng cuộc sống qua sản phẩm và dịch vụ thời trang.
+                    </P>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="evaluate">
+                <h2>YẾU TỐ CỐT LỖI</h2>
+                <div class=danhgia>
+                    <div class="ellipes">
+                            <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <div class="ellipes">
+                        <div class="hinhvuong">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="ellipes">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                    </div>
+                </div>
+                <div class=danhgia1>
+                    <div class="ellipes">
+                        <h3>1.CHẤT LƯỢNG HÀNG ĐÂU</h3>
+                        <br>
+                        <span>
+                            Chất lượng áo của chúng tôi được đảm bảo qua từng khâu sản xuất, từ chất liệu vải mềm mịn, thoáng mát đến đường may chắc chắn, tinh xảo. Mỗi sản phẩm đều mang lại cảm giác thoải mái và bền bỉ theo thời gian.
+                        </span>
+                    </div>
+                    <div class="ellipes">
+                        <h3>2.DỊCH VỤ THÂN THIỆN & CHUYÊN NGHIỆP</h3>
+                        <span>
+                            Chất lượng áo của chúng tôi được đảm bảo qua từng khâu sản xuất, từ chất liệu vải mềm mịn, thoáng mát đến đường may chắc chắn, tinh xảo. Mỗi sản phẩm đều mang lại cảm giác thoải mái và bền bỉ theo thời gian.
+                        </span>
+                    </div>
+                    <div class="ellipes">
+                        <h3>3.THƯƠNG HIỆU ĐÁNG TIN CẬY</h3>
+                        <span>
+                            Chất lượng áo của chúng tôi được đảm bảo qua từng khâu sản xuất, từ chất liệu vải mềm mịn, thoáng mát đến đường may chắc chắn, tinh xảo. Mỗi sản phẩm đều mang lại cảm giác thoải mái và bền bỉ theo thời gian.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-large">
+            <div class="title-logo">
+                <img class="img" src="public/img/Remove-bg.ai_1730792910599.png" alt="">
+                <p><i class="fa-solid fa-phone"></i> 0363599809</p>
+                <p><i class="fa-brands fa-instagram"></i> wuan.ch</p>
+                <img id="bocongthuong" src="public/img/ft_bct_img_medium.webp" alt="">
+            </div>
+            <div class="title">
+                <h3>GIỚI THIỆU</h3>
+                <p>Hệ thống cửa hàng</p>
+                <p>Tuyển dụng</p>
+                <p>Sản phẩm</p>
+            </div>
+            <div class="title">
+                <h3>CHƯƠNG TRÌNH & CHÍNH SÁCH</h3>
+                <p>Chương trình ưu đãi</p>
+                <p>Chính sách bảo hành</p>
+                <p>Chính sách đổi hàng</p>
+                <p>Chính sách bảo mật</p>
+                <p>Quy định thanh toán</p>
+            </div>
+            <div class="title">
+                <h3>TIN TỨC</h3>
+                <p>Dwin và Báo chí</p>
+                <p>Sao Việt và Khách hàng</p>
+                <p>Dwin Videos</p>
+            </div>
+            <div class="title" style="background-color: #f6f6f6;text-align: center;width: 320px;height: 100%;">
+                <h3>THEO DÕI DWIN TRÊN MẠNG XÃ HỘI</h3>
+                <div class="wrapp">
+                    <img src="public/img/social_facebook_image_small.png" alt="">
+                    <img src="public/img/social_instagram_image_small.png" alt="">
+                    <img src="public/img/social_youtube_image_small.png" alt="">
+                    <img src="public/img/social_zalo_image_small.png" alt="">
+                </div>
+                <hr style="color: #f3f3f3;">
+                <div>
+                    <h3 style="text-align: center; margin: 19px 0;">ĐĂNG KÝ NHẬN THÔNG TIN MỚI TỪ DWIN STORE</h3>
+                    <form action="#" method="post">
+                        <input type="email" name="email" id="email" placeholder="Nhập email của bạn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

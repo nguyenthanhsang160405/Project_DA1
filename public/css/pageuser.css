@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    /* height: 1175px; */
+    border: 1px white solid;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+
+.mainpageuserpageuser {
+    display: flex; /* Sử dụng flexbox cho phần tử chính */
+    width: 100%; /* Chiều rộng đầy đủ cho phần tử chính */
+    max-width: 1800px; /* Giới hạn chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa phần tử chính */
+    /* border: 1px red solid; */
+    /* margin-top: 0px; */
+    height: 545px;
+    margin-top: 50px;
+}
+
+.register {
+    display: flex; /* Sử dụng flexbox cho phần tử đăng ký */
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.register .register-menu1 {
+    width: 300px; /* Chiều rộng cố định cho menu bên trái */
+    /* border: 1px black solid; */
+    margin-right: 30px; /* Khoảng cách giữa hai cột */
+    /* padding-right: 20px;  */
+
+}
+
+.register .register-menu2 {
+    display: flex; /* Sử dụng flexbox cho hai cột */
+    justify-content: space-between; /* Đặt khoảng cách giữa hai cột */
+    /* flex: 1; Chiếm không gian còn lại */
+    width: 100%;
+    border: 2px black solid;
+    height: 485px;
+
+}
+.container .danhmuc{
+    margin: 100px 0 0 50px
+
+}
+.container .danhmuc a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.register .register-menu1 .menu-item {
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-start; */
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #e7e7e7;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.register .register-menu1 .menu-item a{
+    text-decoration: none;
+    color: black;
+}
+.register .register-menu1 .menu-item:hover {
+    background-color: #d3d3d3;
+}
+
+.register .register-menu2 .column1, .column2 {
+    width: 100%;
+    /* border: 1px red solid; */
+    margin-right: 30px; /* Khoảng cách giữa hai cột */
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #ccc; /* Thay đổi màu sắc border */
+}
+
+.register .register-menu2 .column2 {
+    margin-right: 0; /* Không cần khoảng cách bên phải cho cột thứ hai */
+}
+
+.register .register-menu2 .column1 input, .column2 input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.register .register-menu2 button {
+    padding: 15px 30px;
+    background-color: #4291b1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+/* Giao diện cho Tablet */
+@media only screen and (max-width: 1024px) {
+
+/* -------------------------------------------------------------------------------------------------- */
+
+    .mainpageuser {
+        flex-direction: column; /* Đặt phần tử chính theo chiều dọc */
+    }
+
+    .register {
+        /* flex-direction: column; Đặt các phần tử đăng ký theo chiều dọc */
+    }
+
+    .register .register-menu1{
+        width: 40%; /* Chiều rộng menu 100% */
+        margin-bottom: 15px; /* Khoảng cách phía dưới menu */
+        margin: 10px;
+    }
+
+    .register .register-menu2{
+        flex-direction: row; /* Đặt các cột theo chiều ngang */
+        justify-content: space-between; /* Đặt khoảng cách giữa hai cột */
+        margin: 10px;
+    }
+
+    .register .register-menu2 .column1, .column2{
+        border: 1px solid #ccc; /* Thay đổi màu sắc border */
+        padding-right: 20px;
+    }
+
+    .footer-large{
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        box-shadow: 0 0 7px 0 gray;
+        height: 225px;
+    }
+
+}
+
+/* Giao diện cho Mobile */
+@media only screen and (max-width: 768px) {
+
+    /* -------------------------------------------------------------------------------------------------- */
+    .mainpageuser {
+        flex-direction: column; /* Đặt phần tử chính theo chiều dọc */
+    }
+
+    .register {
+        flex-direction: column; /* Đặt các phần tử đăng ký theo chiều dọc */
+    }
+
+    .register .register-menu1{
+        width: 100%;
+        margin-bottom: 20px;
+        margin: 0px;
+    }
+
+    .register .register-menu2{
+        flex-direction: column; /* Đặt các cột theo chiều dọc */
+        margin: 0px;
+        border: 0px black solid;
+
+    }
+
+    .register .register-menu2 .column1, .column2{
+        margin-right: 0; /* Bỏ khoảng cách bên phải cho cột */
+        margin-left: 0px;
+        margin-bottom: 20px; /* Thêm khoảng cách dưới mỗi cột */
+    }
+
+    button {
+        width: 100%;
+    }
+    .footer-large{
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        box-shadow: 0 0 7px 0 gray;
+        height: 215px;
+    }
+    .footer-large .title-logo{
+        width: 22%;
+    }
+    /* .footer-large div{
+        padding: 10px;
+    } */
+    .footer-large p{
+        margin: 5px 0;
+        font-size: 7px;
+    }
+    .footer-large h3{
+        font-size: 11px;
+    }
+    .footer-large .title-logo .img{
+        width: 100px;
+        height: 100px;
+    }
+    .wrapp-title{
+        height: 200px;
+    }
+    .wrapp-title .title{
+        background-color: #f6f6f6;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+
+}

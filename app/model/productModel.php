@@ -25,5 +25,13 @@
             $sql = "UPDATE san_pham SET ten_sanpham = ? , gia_sanpham = ?  , soluong_sanpham  = ? , id_loaisp = ?  WHERE id_sanpham = $id_pro";
             return $this->db->query($sql,$param);
         }
+        public function getAllProForIdCate($id_loaisp){
+            $sql = "SELECT * FROM san_pham WHERE id_loaisp = $id_loaisp";
+            return $this->db->getAll($sql);
+        }
+        public function SearchNamePro($name_pro){
+            $sql = "SELECT * FROM san_pham WHERE ten_sanpham LIKE '%$name_pro%'";
+            return $this->db->getAll($sql);
+        }
     }
 ?>

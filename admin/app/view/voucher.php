@@ -40,7 +40,7 @@
                                                     <td><input class="get-id-product-delete"  name="checkid_pro[]" value="'.$item['id_giamgia'].'" type="checkbox"></th>
                                                     <td>'.$stt.'</td>
                                                     <td>'.$item['code_giamgia'].'</td>
-                                                    <td>'.$item['so_tiengiam'].'</td>
+                                                    <td>'.number_format($item['so_tiengiam']).'đ</td>
                                                     <td>'.$item['ngay_gio_tao'].'</td>
                                                     <td><a href="index.php?page_adm=editvoucher&&id_edit_voucher='.$item['id_giamgia'].'"><i class="fa-regular fa-pen-to-square"></i></a></td>
                                                     <td><a href="index.php?page_adm=voucher&&id_delete_voucher='.$item['id_giamgia'].'"><i class="fa-solid fa-trash"></i></a></td>
