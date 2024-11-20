@@ -29,15 +29,15 @@
                 BỘ SƯU TẬP SUIT DWIN 2024
             </h2>
             <div class="arrange">
-                <form action="#" method="get">
+                <form action="index.php?page=product" method="post">
                     <label for="">Sắp xếp: </label>
-                    <select name="" id="">
-                        <option value="-1">Tùy chọn</option>
-                        <option value="Theo bảng chữ cái A->Z">Theo bảng chữ cái Z->A</option>
-                        <option value="Theo bảng chữ cái Z->A">Theo bảng chữ cái A->Z</option>
-                        <option value="Giá từ thấp đến cao">Giá từ thấp đến cao</option>
-                        <option value="Giá từ cao đến thấp">Giá từ cao đến thấp</option>
-                        <input type="button" value="Chọn">
+                    <select name="arrange" id="">
+                        <option value="1">Tùy chọn</option>
+                        <option value="2">Theo bảng chữ cái Z->A</option>
+                        <option value="3">Theo bảng chữ cái A->Z</option>
+                        <option value="4">Giá từ thấp đến cao</option>
+                        <option value="5">Giá từ cao đến thấp</option>
+                        <input name="sapxep" type="button" value="Chọn">
                     </select>
                 </form>
             </div>

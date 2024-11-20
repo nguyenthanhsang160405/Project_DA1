@@ -43,9 +43,12 @@
                 }
             }
         }
-        // function ArrRange(){
-
-        // }
+        function ArrRange(){
+            if(isset($_POST['sapxep'])){
+                $id_arrange = $_POST['arrange'];
+                if()
+            }
+        }
         public function RenderView($data,$view){
             $seen = 'app/view/'.$view.'.php';
             include_once $seen;
