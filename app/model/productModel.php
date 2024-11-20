@@ -29,5 +29,9 @@
             $sql = "SELECT * FROM san_pham WHERE id_loaisp = $id_loaisp";
             return $this->db->getAll($sql);
         }
+        public function SearchNamePro($name_pro){
+            $sql = "SELECT * FROM san_pham WHERE ten_sanpham LIKE '%$name_pro%'";
+            return $this->db->getAll($sql);
+        }
     }
 ?>

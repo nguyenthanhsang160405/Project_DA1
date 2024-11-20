@@ -16,6 +16,10 @@
             $sql = "SELECT * FROM anh_san_pham WHERE id_sanpham = $id_pro";
             return $this->db->getAll($sql);
         }
+        public function getOneImageForIdPro($id_pro){
+            $sql = "SELECT * FROM anh_san_pham WHERE id_sanpham = $id_pro";
+            return $this->db->getOne($sql);
+        }
         public function deleteImage($id_pro){
             $sql = "DELETE FROM anh_san_pham WHERE id_sanpham = $id_pro";
             return $this->db->delete($sql);

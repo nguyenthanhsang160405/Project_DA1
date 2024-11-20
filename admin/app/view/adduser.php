@@ -27,7 +27,7 @@
                                 <label for="">Email:</label><span><?php if(isset($err['err_email']) && !empty($err['err_email'])) echo $err['err_email'] ?></span><br>
                                 <input type="email" name="email" value="<?php if(isset($ifm['email']) && !empty($ifm['email'])) echo $ifm['email'] ?>"><br>
                                 <label for="">Mật khẩu:</label><span><?php if(isset($err['err_pass']) && !empty($err['err_pass'])) echo $err['err_pass'] ?></span><br>
-                                <input type="password" name="pass" value="<?php if(isset($ifm['pass']) && !empty($ifm['pass'])) echo $ifm['pass'] ?>"><br>
+                                <input type="text" name="pass" value="<?php if(isset($ifm['pass']) && !empty($ifm['pass'])) echo $ifm['pass'] ?>"><br>
                                 <label for="">Địa chỉ:</label><span><?php if(isset($err['err_address']) && !empty($err['err_address'])) echo $err['err_address'] ?></span><br>
                                 <input type="text" name="address" value="<?php if(isset($ifm['address']) && !empty($ifm['address'])) echo $ifm['address'] ?>"><br>
                                 <label for="">Số điện thoại:</label><span><?php if(isset($err['err_phone']) && !empty($err['err_phone'])) echo $err['err_phone'] ?></span><br>
