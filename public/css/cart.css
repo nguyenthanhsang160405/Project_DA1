@@ -40,18 +40,18 @@
     grid-column: span 1; /* Không trộn cột */
     grid-row: span 2; /* Trộn 2 hàng */
 }
-.container .main .item2 {
+.container .main .item_nnn {
     grid-column: span 1; /* Không trộn cột */
     grid-row: span 2; /* Trộn 2 hàng */
     display: block;
     align-items: start;
     color: black;
 }
-.container .main .item2 p{
+.container .main .item_nnn p{
     margin-top: 20px;
     font-weight: 100;
 }
-.container .main .item2 a{
+.container .main .item_nnn a{
     margin-top: 20px;
     display: block;
     color: black;
