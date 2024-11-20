@@ -153,43 +153,13 @@
                                         </div>
 
 
-                                        <!-- ẩn hiện ghi chú -->
-                                        <script>
-                                            document.getElementById('form-note').style.display = 'block';
-                                                shownote();
-                                                function shownote() {
-                                                    var x = document.getElementById('form-note');
-                                                    if(x.style.display == 'none'){
-                                                        x.style.display = 'block'
-                                                    }else{
-                                                        x.style.display = 'none'
-                                                    }
-                                                }
-                                        </script>
                                     </div>
                             </div>
                     </div>
                 </div>
 
 
-
-                <!-- Điều chỉnh số lượng -->
-                 <script>
-                     let quantity = 0;
-
-                    document.getElementById('increase-cout-cart').addEventListener('click', function() {
-                        quantity++;
-                        document.getElementById('quantity-cout-cart').textContent = quantity;
-                    });
-
-                    document.getElementById('decrease-cout-cart').addEventListener('click', function() {
-                        if (quantity > 0) {
-                            quantity--;
-                            document.getElementById('quantity-cout-cart').textContent = quantity;
-                        }
-                    });
-                 </script>
-                    
+ 
 
                 <!-- Footer -->
                 <footer>
@@ -240,6 +210,7 @@
                             </footer>
                             <script src="./public/js/index.js"></script>
                             <script src="./public/js/header.js"></script>
+                            <script src="./public/js/cart.js"></script>
                         </div>
                 </body>
                 </html>
