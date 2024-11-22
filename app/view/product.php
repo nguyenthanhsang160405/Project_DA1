@@ -69,7 +69,7 @@
                                     echo '<div class="wrapp-product">';
                                     for($j = $row * 3 ; $j < count($product); $j++ ){
                                         echo '<div class="fame-product">
-                                                <a href="#"><img src="public/img/'.$image[$j]['link_anh'].'" alt="">
+                                                <a href="index.php?page=detail&&id_pro='.$product[$j]['id_sanpham'].'"><img src="public/img/'.$image[$j]['link_anh'].'" alt="">
                                                     <div class="content-product">
                                                         <p class="name-product">'.$product[$j]['ten_sanpham'].'</p>
                                                         <p class="price-product">'.number_format($product[$j]['gia_sanpham']).'đ</p>
@@ -82,6 +82,7 @@
                                 
                             }
                         }
+                        // random_int()
                     ?>
                 
                 

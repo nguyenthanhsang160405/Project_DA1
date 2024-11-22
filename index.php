@@ -4,6 +4,12 @@
     if(!isset($_SESSION['user'])){
         $_SESSION['user'] = [];
     }
+    if(!isset($_SESSION['cart'])){
+        $_SESSION['cart'] = [];
+    }
+    // unset($_SESSION['cart']);
+    include_once 'app/controller/paymentCtl.php';
+    include_once 'app/model/cartModel.php';
     include_once 'app/model/database.php';
     include_once 'app/model/productModel.php';
     include_once 'app/model/categoryProModel.php';
@@ -23,13 +29,15 @@
     include_once 'app/controller/siginCtl.php';
     include_once 'app/controller/usermanageCtl.php';
     include_once 'app/controller/detailCtl.php';
+    include_once 'app/controller/registerCtl.php';
+    include_once 'app/controller/cartCtl.php';
 
     $header = new HeaderCtl();
     $header->ViewHeader();
 
     if(isset($_GET['page'])){
         $page = $_GET['page'];
-        if($page != 'product' && $page != 'sigin' && $page != 'usermanage' && $page != 'detail'){
+        if($page != 'product' && $page != 'sigin' && $page != 'usermanage' && $page != 'detail' && $page != 'register' && $page != 'cart'){
             $alike = new AlikeCtl();
             $alike->ViewAlike();
         }
@@ -37,7 +45,6 @@
         $alike = new AlikeCtl();
         $alike->ViewAlike();
     }
-    $header->ViewHeader();
     if(isset($_GET['page']) && $_GET['page']){
         $page = $_GET['page'];
         switch($page){
@@ -56,6 +63,18 @@
             case 'detail':
                 $detail = new DetailCtl();
                 $detail->ViewDetail();
+                break;
+            case 'register':
+                $register = new RegisterCtl();
+                $register->ViewRegister();
+                break;
+            case 'cart':
+                $cart = new CartCtl();
+                $cart->ViewCart();
+                break;
+            case 'payment':
+                $payment = new PaymentCtl();
+                $payment->ViewPayment();
                 break;
             default:
                 $home = new homeController();

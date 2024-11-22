@@ -32,14 +32,15 @@
                     $user = [];
                     for($i = 0 ; $i < count($arr_user) ; $i++){
                         if($email == $arr_user[$i]['email_kh'] &&  password_verify($pass,$arr_user[$i]['matkhau_kh'])==true){
-                            
-                            array_push($user,$arr_user[$i]);
+                            $user = $arr_user[$i];
                         }
                     }
                     if(!empty($user)){
                         print_r($user);
-                        if($user[0]['vai_tro'] == 1){
-                            header('location:index.php?page=usermanage&&id_user='.$user[0]['id_kh'].'');
+                        if($user['vai_tro'] == 1){
+                            $_SESSION['user'] = $user;
+                            header('location:index.php?page=usermanage');
+
                         }else{
                             header('location:./admin/index.php?id_admin='.$user[0]['id_kh'].'');
                         }
@@ -53,11 +54,18 @@
                 
             }
         }
+        public function Logout(){
+            if(isset($_GET['logout'])){
+                unset($_SESSION['user']);
+                header('location:index.php?page=sigin');
+            }
+        }
         public function RenderView($data,$view){
             $seen = 'app/view/'.$view.'.php';
             include_once $seen;
         }
         public function ViewSigIn(){
+            $this->Logout();
             $this->SigIn();
             $this->RenderView($this->data,'sigin');
         }

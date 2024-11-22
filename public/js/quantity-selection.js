@@ -31,6 +31,19 @@ amountElement.addEventListener('input', () =>{
     console.log(amount);
 });
 
+function getIFMandCheckSize(vt,size){
+    var inputt = document.getElementById('select_size_product');
+    var arr_size = document.getElementsByClassName('size');
+    for(i = 0 ; i < arr_size.length ; i++){
+      arr_size[i].style.backgroundColor = 'white';
+      arr_size[i].style.color = 'black';
+    }
+    arr_size[vt].style.color = 'white';
+    arr_size[vt].style.backgroundColor = 'black';
+    inputt.value = size;
+    console.log(inputt.value);
+  }
+
 
 
 // function handleminus() {

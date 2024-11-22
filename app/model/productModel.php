@@ -33,5 +33,9 @@
             $sql = "SELECT * FROM san_pham WHERE ten_sanpham LIKE '%$name_pro%'";
             return $this->db->getAll($sql);
         }
+        public function getAllProByIdCateDifferentIdPro($id_loaisp,$id_sanpham){
+            $sql = "SELECT * FROM san_pham WHERE id_loaisp = $id_loaisp AND id_sanpham != $id_sanpham LIMIT 3";
+            return $this->db->getAll($sql);
+        }
     }
 ?>

@@ -24,5 +24,13 @@
             $sql = "UPDATE khach_hang SET ten_kh = ? , matkhau_kh = ? , diachi_kh = ? , sdt_kh = ? , vai_tro = ? WHERE id_kh = $id_user";
             return $this->db->query($sql,$param);
         }
+        public function InsertUser_User($param){
+            $sql = "INSERT INTO khach_hang (ten_kh,email_kh,matkhau_kh,vai_tro) VALUES (?,?,?,?)";
+            return $this->db->query($sql,$param);
+        }
+        public function getUserByEmailUser($email){
+            $sql = "SELECT * FROM khach_hang WHERE email_kh = $email";
+            return $this->db->getOne($sql);
+        }
     }
 ?>

@@ -12,14 +12,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/header.css">
     <link rel="stylesheet" href="./public/css/footer.css">
-    <link rel="stylesheet" href="./public/css/index.css">
     <link rel="stylesheet" href="./public/css/all.css">
     <link rel="stylesheet" href="./public/webfonts/all.css">
-    <link rel="stylesheet" href="./public/css/product.css">
-    <link rel="stylesheet" href="./public/css/cart.css">
-    <link rel="stylesheet" href="./public/css/title-img.css">
-    <link rel="stylesheet" href="./public/css/pageuser.css">
-    <link rel="stylesheet" href="./public/css/detail.css">
+    <?php
+        if(isset($_GET['page']) && !empty($_GET['page'])){
+            $page = $_GET['page'];
+            switch($page){
+                case 'product':
+                    echo '<link rel="stylesheet" href="./public/css/product.css">';
+                    break;
+                case 'cart':
+                    echo '<link rel="stylesheet" href="./public/css/cart.css">';
+                    break;
+                case 'usermanage':
+                    echo '<link rel="stylesheet" href="./public/css/pageuser.css">';
+                    break;
+                case 'detail':
+                    echo '<link rel="stylesheet" href="./public/css/detail.css">';
+                    break;
+                case 'payment':
+                    echo '<link rel="stylesheet" href="./public/css/payment.css">';
+                    break;
+                case 'sigin':
+                    echo '<link rel="stylesheet" href="./public/css/title-img.css">
+                        <link rel="stylesheet" href="./public/css/index.css">
+                        <link rel="stylesheet" href="./public/css/all.css">
+                        <link rel="stylesheet" href="./public/css/lookbook.css">';
+                    break;
+                case 'register':
+                        echo '<link rel="stylesheet" href="./public/css/title-img.css">
+                            <link rel="stylesheet" href="./public/css/index.css">
+                            <link rel="stylesheet" href="./public/css/all.css">
+                            <link rel="stylesheet" href="./public/css/lookbook.css">';
+                        break;
+                case 'cart':
+                    echo '<link rel="stylesheet" href="./public/css/cart.css">';
+                    break;
+                default:
+                    echo '<link rel="stylesheet" href="./public/css/index.css">';
+                    
+            }
+        }else{
+            echo '<link rel="stylesheet" href="./public/css/index.css">';
+        }
+    ?>
+    
+    
+  
+
+    
+    
     
     <title>Document</title>
 </head>
@@ -64,8 +106,15 @@
                                 <i class="fa-solid fa-magnifying-glass search"></i>
                             </li>
                         </form>
-                        <li class="sub-menu-right"><a href="index.php?page=sigin"><i class="fa-solid fa-user"></i></a></li>
-                        <li class="sub-menu-right"><a href="cart.html"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+                        <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+                            echo '<li class="sub-menu-right"><a href="index.php?page=usermanage"><i class="fa-solid fa-user"></i></a></li>';
+                        }else{
+                            echo '<li class="sub-menu-right"><a href="index.php?page=sigin"><i class="fa-solid fa-user"></i></a></li>';
+                        }
+                        
+                        ?>
+                        
+                        <li class="sub-menu-right"><a href="index.php?page=cart"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
                         <li  onclick="AnHienMobile()" id="icon-mobile" class="sub-menu-right">
                             <i class="fa-solid fa-bars"></i>
                         </li>

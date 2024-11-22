@@ -8,5 +8,6 @@
         public function ViewAlike(){
             $this->RenderView($this->data,'alike');
         }
+        
     }
 ?>
