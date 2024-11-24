@@ -38,13 +38,14 @@
     include_once 'app/controller/aboutCtl.php';
     include_once 'app/controller/contactCtl.php';
     include_once 'app/model/MaillerUser.php';
+    include_once 'app/controller/detaillookbookCtl.php';
 
     $header = new HeaderCtl();
     $header->ViewHeader();
 
     if(isset($_GET['page'])){
         $page = $_GET['page'];
-        if($page != 'product' && $page != 'sigin' && $page != 'usermanage' && $page != 'detail' && $page != 'register' && $page != 'cart' && $page != 'lookbook' && $page !='about' && $page != 'contact'){
+        if($page != 'product' && $page != 'sigin' && $page != 'usermanage' && $page != 'detail' && $page != 'register' && $page != 'cart' && $page != 'lookbook' && $page !='about' && $page != 'contact' && $page != 'detaillookbook'){
             $alike = new AlikeCtl();
             $alike->ViewAlike();
         }
@@ -94,6 +95,10 @@
             case 'contact';
                 $contact = new ContactCtl();
                 $contact->ViewContact();
+                break;
+            case 'detaillookbook';
+                $detail_lookbook = new DetaillookbookCtl();
+                $detail_lookbook->ViewDetailLookBook();
                 break;
             default:
                 $home = new homeController();

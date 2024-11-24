@@ -21,6 +21,19 @@
         public function getAllImage(){
             $this->data['image'] = $this->image->getAll_Image();
         }
+        public function setProSpecial(){
+            if(isset($_GET['id_pro_check']) && !empty($_GET['id_pro_check'])){
+                $id_pro = $_GET['id_pro_check'];
+                $pro = $this->product->getOneProForIDPro($id_pro);
+                if($pro['kiemtra_sanpham']==1){
+                    $check_pro = 2;
+                }else{
+                    $check_pro = 1;
+                }
+                $this->product->UpdateCheckPro($id_pro,[$check_pro]);
+
+            }
+        }
         public function deleteProForIdPro(){
             if(isset($_GET['id_pro_delete']) && !empty($_GET['id_pro_delete'])){
                 if(isset($_SESSION['admin']) && !empty($_SESSION['admin'])){
@@ -107,6 +120,7 @@
             }
         }
         public function ViewProduct(){
+            $this->setProSpecial();
             $this->deleteProForIdPro();
             $this->getAllImage();
             $this->deleteBoxCheckedPro();

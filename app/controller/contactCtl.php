@@ -56,6 +56,7 @@
                 if($flag == 0){
                     $this->mailler->GetIfm($content);
                     $this->mailler->Replace($email,$name,$content);
+                    $this->data['notification'] = 'Tên đăng nhập hoặc mật khẩu không chính xác';
                 }else{
                     $this->data['err'] = ['name'=>$err_name,'err_email'=>$err_email,'err_phone'=>$err_phone,'err_conten'=>$err_content];
                     $this->data['ifm'] = ['name'=>$name,'email'=>$email,'content'=>$content,'phone'=>$phone];

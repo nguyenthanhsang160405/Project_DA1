@@ -47,7 +47,7 @@
                                                     <td>'.$item['diachi_nguoinhan'].'</td>
                                                     <td>'.$item['sdt_nguoinhan'].'</td>
                                                     <td>'.number_format($item['gia_tong_don_hang']).'đ</td>
-                                                    <td><a href="index.php?page_adm=pendingorder&&id_order_ct='.$item['id_donhang'].'">Xem chi tiết</a></td>
+                                                    <td><a href="index.php?page_adm=detailorder&&id_order_ct='.$item['id_donhang'].'">Xem chi tiết</a></td>
                                                     <td><a href="index.php?page_adm=pendingorder&&id_order_accept='.$item['id_donhang'].'"><i class="fa-solid fa-circle-check"></i></a></td>
                                                     <td><a href="index.php?page_adm=pendingorder&&id_order_delete='.$item['id_donhang'].'"><i class="fa-solid fa-circle-xmark"></i></a></td>
                                                 </tr>';

@@ -3,6 +3,13 @@
         if(isset($data['product']) && !empty($data['product'])){
             $product = $data['product'];
         }
+        if(count($product )% 12 == 0){
+            $page_number = count($product) / 12;
+        }else{
+            $page_number = intval(count($product) / 12) + 1;
+        }
+        $page_number = count($product) / 12;
+        echo $page_number;
         if(isset($data['image']) && !empty($data['image'])){
             $image = $data['image'];
         }
@@ -89,15 +96,21 @@
             </div>
             <div class="next-page">
                 <div class="number-page">
-                    <span class="page">1</span>
+                    <?php
+                        for($i = 0 ; $i < $page_number ; $i++){
+                            echo '<a style="color:black" href="index.php?page=product&&id_page='.($i+1).'&&id_cate='.(isset($id_cate) && !empty($id_cate) ? $id_cate : '').'&&timkem='.(isset($name_timkiem) && !empty($name_timkiem) ? $name_timkiem : '').'"><span class="page">'.($i+1).'</span></a>';
+                        }
+                    ?>
+                    <!-- <a href=""><span class="page">1</span></a>
                     <span class="page">2</span>
                     <span class="page">3</span>
                     <span class="page">...</span>
                     <span class="page"><i class="fa-solid fa-angle-right"></i></span>
-                    <span class="page"><i class="fa-solid fa-angles-right"></i></span>
+                    <span class="page"><i class="fa-solid fa-angles-right"></i></span> -->
                 </div>
             </div>
             <div class="image-background">
+                
                 <div class="overlay">
                     
                 </div>

@@ -3,6 +3,12 @@
         if(isset($data['cate']) && !empty($data['cate'])){
             $cate = $data['cate'];
         }
+        if(isset($data['pro_special']) && !empty($data['pro_special'])){
+            $pro_special = $data['pro_special'];
+        }
+        if(isset($data['image']) && !empty($data['image'])){
+            $image = $data['image'];
+        }
     }
 ?>
 
@@ -47,27 +53,48 @@
                         </div>
                     </div>
                 </section>
-                <section class="suits">
-                    <h2>BST SUIT MỚI</h2>
-                    <div class="wrapper">
-                        <div class="new-suit">
-                            <img src="public/img/hnc1_img_1_grande.webp" alt="">
-                            <span>new</span>
-                        </div>
-                        <div class="new-suit">
-                            <img src="public/img/hnc1_img_2_grande.webp" alt="">
-                            <span>new</span>
-                        </div>
-                        <div class="new-suit">
-                            <img src="public/img/hnc1_img_3_grande.webp" alt="">
-                            <span>new</span>
-                        </div>
-                        <div class="new-suit img">
-                            <img src="public/img/hnc1_img_4_grande.webp" alt="">
-                            <span>new</span>
-                        </div>
-                    </div>
-                </section>
+                <?php
+                if(isset($pro_special) && !empty($pro_special)){
+                        echo '<section class="suits">
+                        <h2>BST SẢN PHẨM ĐẶC BIỆT</h2>
+                        <div class="wrapper">';
+                                if(isset($pro_special[0]) && !empty($pro_special[0])){
+                                    echo '<a href="index.php?page=detail&&id_pro='.$pro_special[0]['id_sanpham'].'">
+                                            <div class="new-suit">
+                                                    <img src="public/img/'.$image[0]['link_anh'].'" alt="">
+                                                    <span>special</span>
+                                                </div>
+                                            </a>';
+                                }
+                                if(isset($pro_special[1]) && !empty($pro_special[1])){
+                                    echo '<a href="index.php?page=detail&&id_pro='.$pro_special[1]['id_sanpham'].'">
+                                            <div class="new-suit">
+                                                    <img src="public/img/'.$image[1]['link_anh'].'" alt="">
+                                                    <span>special</span>
+                                                </div>
+                                            </a>';
+                                }
+                                if(isset($pro_special[2]) && !empty($pro_special[2])){
+                                    echo '<a href="index.php?page=detail&&id_pro='.$pro_special[2]['id_sanpham'].'">
+                                            <div class="new-suit">
+                                                    <img src="public/img/'.$image[2]['link_anh'].'" alt="">
+                                                    <span>special</span>
+                                                </div>
+                                            </a>';
+                                }
+                                if(isset($pro_special[3]) && !empty($pro_special[3])){
+                                    echo '<a href="index.php?page=detail&&id_pro='.$pro_special[3]['id_sanpham'].'">
+                                            <div class="new-suit">
+                                                    <img src="public/img/'.$image[3]['link_anh'].'" alt="">
+                                                    <span>special</span>
+                                                </div>
+                                            </a>';
+                                }
+                        echo '</div>
+                    </section>';
+                }
+                
+                ?>
                 <section class="lookbook">
                     <h2>Lookbook</h2>
                     <div class="wrapper">

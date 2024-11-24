@@ -37,5 +37,13 @@
             $sql = "SELECT * FROM san_pham WHERE id_loaisp = $id_loaisp AND id_sanpham != $id_sanpham LIMIT 3";
             return $this->db->getAll($sql);
         }
+        public function UpdateCheckPro($id_sanpham,$param){
+            $sql = "UPDATE san_pham SET kiemtra_sanpham = ? WHERE id_sanpham = $id_sanpham";
+            return $this->db->query($sql,$param);
+        }
+        public function getAllSpecialPro(){
+            $sql = "SELECT * FROM san_pham WHERE kiemtra_sanpham = 2";
+            return $this->db->getAll($sql);
+        }
     }
 ?>

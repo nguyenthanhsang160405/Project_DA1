@@ -49,6 +49,7 @@
     include_once './app/controller/addcateCtl.php';
     include_once './app/controller/cateproCtl.php';
     include_once './app/controller/LoginOutCtl.php';
+    include_once './app/controller/viewOrderDetail.php';
     $loginout = new LoginOutCtl();
     $loginout->ViewLogInOut();
     include_once './app/view/header.php';
@@ -162,6 +163,10 @@
             case 'editblog':
                 $editblog = new EditblogCtl();
                 $editblog->ViewEditBlog();
+                break;
+            case 'detailorder':
+                $viewdetai_order = new ViewOrderDetail();
+                $viewdetai_order->ViewDetailOrder();
                 break;
             default:
                 $addcate = new AddcateCtl();

@@ -58,6 +58,9 @@
                 case 'contact':
                     echo '<link rel="stylesheet" href="./public/css/contact.css">';
                     break;
+                case 'detaillookbook':
+                    echo '<link rel="stylesheet" href="./public/css/ctlookbook.css">';
+                    break;
                 default:
                     echo '<link rel="stylesheet" href="./public/css/index.css">';
                     

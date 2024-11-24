@@ -1,4 +1,5 @@
-<?php 
+<?php
+print_r($data); 
     if(isset($data) && !empty($data)){
         if(isset($data['ifm']) && !empty($data['ifm'])){
             $ifm = $data['ifm'];
@@ -6,6 +7,10 @@
         if(isset($data['err']) && !empty($data['err'])){
             $err = $data['err'];
         }
+        if(isset($data[' notification']) && !empty($data[' notification'])){
+            $notification = $data[' notification'];
+        }
+       
     }
 ?>
 <div class="img-title">
@@ -25,19 +30,20 @@
         </div>
         <div class="gird-form">
             <form action="index.php?page=contact" method="post" class="contact-form">
-                <label for="name">Họ và Tên:</label><span><?php if(isset($err['err_name']) && !empty($ifm['err_name'])) echo $ifm['err_name']?></span>
+                <label for="name">Họ và Tên:</label><span><?php if(isset($err['err_name']) && !empty($err['err_name'])) echo $err['err_name']?></span>
                 <input type="text" id="name" name="name" value="<?php if(isset($ifm['name']) && !empty($ifm['name'])) echo $ifm['name']?>" placeholder="Họ và Tên*" required>
 
-                <label for="email">Gmail:</label><span><?php if(isset($err['err_email']) && !empty($ifm['err_email'])) echo $ifm['err_email']?></span>
+                <label for="email">Gmail:</label><span><?php if(isset($err['err_email']) && !empty($err['err_email'])) echo $err['err_email']?></span>
                 <input type="email" id="email" name="email" value="<?php if(isset($ifm['email']) && !empty($ifm['email'])) echo $ifm['email']?>" placeholder="Email*" required>
 
-                <label for="phone">Số Điện Thoại:</label><span><?php if(isset($err['err_phone']) && !empty($ifm['err_phone'])) echo $ifm['err_phone']?></span>
-                <input type="tel" id="phone" <?php if(isset($ifm['phone']) && !empty($ifm['phone'])) echo $ifm['phone']?> name="phone" placeholder="Số điện thoại*" required>
+                <label for="phone">Số Điện Thoại:</label><span><?php if(isset($err['err_phone']) && !empty($err['err_phone'])) echo $err['err_phone']?></span>
+                <input type="tel" id="phone" value="<?php if(isset($ifm['phone']) && !empty($ifm['phone'])) echo $ifm['phone']?>" name="phone" placeholder="Số điện thoại*" required>
 
-                <label for="message">Nội Dung:</label><span><?php if(isset($err['err_content']) && !empty($ifm['err_content'])) echo $ifm['err_content']?></span>
+                <label for="message">Nội Dung:</label><span><?php if(isset($err['err_content']) && !empty($err['err_content'])) echo $err['err_content']?></span>
                 <textarea id="message" name="message"  placeholder="Nội dung*" required><?php if(isset($ifm['content']) && !empty($ifm['content'])) echo $ifm['content']?></textarea>
 
                 <input type="submit" name="submit-btn" class="submit-btn" value="Gửi">
+                <span><?php if(isset($notification) && !empty($notification)) echo $notification  ?></span>
             </form>
            
         </div>

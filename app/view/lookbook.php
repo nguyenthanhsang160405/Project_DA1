@@ -45,7 +45,7 @@
                                                     echo '<div class="wrapper-lookbook-item">';
                                                     for($j = $i * 3 ; $j < $i * 3 + 3  ; $j++ ){
                                                         echo '<div class="lookbook-item">
-                                                                    <a href=""><img src="./public/img/'.$blog[$j]['anh_baiviet'].'" alt="Ảnh Lookbook 2"></a>
+                                                                    <a href="index.php?page=detaillookbook&&id_blog='.$blog[$j]['id_baiviet'].'"><img src="./public/img/'.$blog[$j]['anh_baiviet'].'" alt="Ảnh Lookbook 2"></a>
                                                                     <h1 class="item-title">'.$blog[$j]['ten_baiviet'].'</h1>
                                                                     <p class="item-date">'.$blog[$j]['ngay_gio_tao'].'</p>
                                                                     <p class="item-description">ADAMS SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</>
@@ -56,7 +56,7 @@
                                                     echo '<div class="wrapper-lookbook-item">';
                                                     for($j = $row * 3 ; $j < count($blog); $j++ ){
                                                         echo '<div class="lookbook-item">
-                                                                <a href=""><img src="./public/img/'.$blog[$j]['anh_baiviet'].'" alt="Ảnh Lookbook 2"></a>
+                                                                <a href="index.php?page=detaillookbook&&id_blog='.$blog[$j]['id_baiviet'].'"><img src="./public/img/'.$blog[$j]['anh_baiviet'].'" alt="Ảnh Lookbook 2"></a>
                                                                 <h1 class="item-title">'.$blog[$j]['ten_baiviet'].'</h1>
                                                                 <p class="item-date">'.$blog[$j]['ngay_gio_tao'].'</p>
                                                                 <p class="item-description">ADAMS SWEATER 24 | TIẾP NỐI CẢM HỨNG THỜI TRANG HIỆN ĐẠI...</>

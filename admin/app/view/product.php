@@ -32,6 +32,7 @@
                                         <th>STT</th>
                                         <th>Hình ảnh</th>
                                         <th>Tên</th>
+                                        <th>Đặc biệt</th>
                                         <th>Số lượng</th>
                                         <th>Giá</th>
                                         <th>Bình Luận</th>
@@ -57,6 +58,7 @@
                                                     <td>'.$stt.'</td>
                                                     <td><a href="index.php?page_adm=image&&id_pro_image='.$item['id_sanpham'].'"><img id="image_table" src="../public/img/'.$image_pro.'" alt=""></a></td>
                                                     <td>'.$item['ten_sanpham'].'</td>
+                                                    <td><a href="index.php?page_adm=product&&id_pro_check='.$item['id_sanpham'].'">'.($item['kiemtra_sanpham']==1 ? '<i class="fa-solid fa-star"></i>' : '<i style="color:#e3e300" class="fa-solid fa-star"></i>') .'</a></td>
                                                     <td>'.$item['soluong_sanpham'].'</td>
                                                     <td>'.number_format($item['gia_sanpham']).'đ</td>
                                                     <td><a href="index.php?page_adm=comment&&id_comment_pro='.$item['id_sanpham'].'">Xem bình luận</a></td>
