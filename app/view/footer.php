@@ -47,6 +47,7 @@
             <script src="./public/js/index.js"></script>
             <script src="./public/js/header.js"></script>
             <script src="public/js/quantity-selection.js"></script>
+            <script src="./public/js/cart.js"></script>
         </div>
 </body>
 </html>

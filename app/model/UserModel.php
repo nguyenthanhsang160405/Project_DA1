@@ -32,5 +32,17 @@
             $sql = "SELECT * FROM khach_hang WHERE email_kh = $email";
             return $this->db->getOne($sql);
         }
+        public function UpdateIfmUser($id_kh,$param){
+            $sql = "UPDATE khach_hang SET ten_kh = ? , sdt_kh = ? , diachi_kh = ? WHERE id_kh = $id_kh";
+            return $this->db->query($sql,$param);
+        }
+        public function UpdatePassUser($id_kh,$param){
+            $sql = "UPDATE khach_hang SET matkhau_kh = ? WHERE id_kh = $id_kh ";
+            return $this->db->query($sql,$param);
+        }
+        public function getAllAdmin(){
+            $sql = "SELECT * FROM khach_hang WHERE vai_tro = 2";
+            return $this->db->getAll($sql);
+        }
     }
 ?>

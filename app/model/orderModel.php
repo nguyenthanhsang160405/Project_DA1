@@ -28,5 +28,13 @@
             $sql = "SELECT * FROM don_hang WHERE id_donhang = $id_donhang";
             return $this->db->getOne($sql);
         }
+        public function InsertOrderUser($param){
+            $sql = "INSERT INTO don_hang (ten_nguoinhan,sdt_nguoinhan,diachi_nguoinhan,email_nguoinhan,gia_tong_don_hang,id_kh,id_giamgia) VALUES (?,?,?,?,?,?,?)";
+            return $this->db->InsertGetIdInsert($sql,$param);
+        }
+        public function getAllOrderByIdKh($id_kh){
+            $sql = "SELECT * FROM don_hang WHERE id_kh = $id_kh";
+            return $this->db->getAll($sql);
+        }
     }
 ?>

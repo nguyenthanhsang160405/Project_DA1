@@ -1,5 +1,5 @@
 // <!-- Điều chỉnh số lượng -->
-    let quantity = 0;
+    let quantity = document.getElementById('quantity-cout-cart').textContent;
 
    document.getElementById('increase-cout-cart').addEventListener('click', function() {
        quantity++;

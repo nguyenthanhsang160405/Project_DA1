@@ -4,10 +4,12 @@
         public $product;
         public $cate;
         public $image;
+        public $order_detail;
         public function __construct(){
             $this->product = new ProductModel();
             $this->cate = new CategoryModel();
             $this->image = new ImageProModel();
+            $this->order_detail = new DetailOrderModel();
         }
         public function RenderView($data,$view){
             $page = './app/view/'.$view.'.php';
@@ -23,28 +25,33 @@
             if(isset($_GET['id_pro_delete']) && !empty($_GET['id_pro_delete'])){
                 if(isset($_SESSION['admin']) && !empty($_SESSION['admin'])){
                     $id_pro = $_GET['id_pro_delete'];
-                    $arr_image = $this->image->getImageForIdPro($id_pro);
-                    if(empty($arr_image)){
-                        $this->data['notification'] ='Sản phẩm không tồn tại';
+                    $arr_order_by_id_pro =  $this->order_detail->getAllDetailOrderByIdPro($id_pro);
+                    if(count($arr_order_by_id_pro)>0){
+                        $this->data['notification'] ='Sản phẩm đã được mua không thể xóa';
                     }else{
-                        if($this->product->DeleteProForIdPro($id_pro) == true){
-                            $target = "../public/img/";
-                            $flag = 0;
-                            foreach ($arr_image as $image){
-                                $target_image = $target.$image['link_anh'];
-                                if(file_exists($target_image)){
-                                    unlink($target_image);
-                                }else{
-                                    $flag =1;
+                        $arr_image = $this->image->getImageForIdPro($id_pro);
+                        if(empty($arr_image)){
+                            $this->data['notification'] ='Sản phẩm không tồn tại';
+                        }else{
+                            if($this->product->DeleteProForIdPro($id_pro) == true){
+                                $target = "../public/img/";
+                                $flag = 0;
+                                foreach ($arr_image as $image){
+                                    $target_image = $target.$image['link_anh'];
+                                    if(file_exists($target_image)){
+                                        unlink($target_image);
+                                    }else{
+                                        $flag =1;
+                                    }
                                 }
-                            }
-                            if($flag==0){
-                                $this->data['notification'] ='Xóa sản phẩm thành công';
+                                if($flag==0){
+                                    $this->data['notification'] ='Xóa sản phẩm thành công';
+                                }else{
+                                    $this->data['notification'] ='Xóa sản phẩm không thành công';
+                                }
                             }else{
                                 $this->data['notification'] ='Xóa sản phẩm không thành công';
                             }
-                        }else{
-                            $this->data['notification'] ='Xóa sản phẩm không thành công';
                         }
                     }
                 }else{
@@ -60,23 +67,35 @@
                     }else{
                         try{
                             $arr_id_pro = $_POST['checkid_pro'];
-                            for($i = 0 ; $i < count($arr_id_pro) ; $i++ ){
-                                $arr_image_for_id_pro = $this->image->getImageForIdPro($arr_id_pro[$i]);
-                                if($this->product->DeleteProForIdPro($arr_id_pro[$i] )== true){
-                                    $target = "../public/img/";
-                                    foreach($arr_image_for_id_pro as $image_){
-                                        $target_old = $target.$image_['link_anh'];
-                                        if(file_exists($target_old)){
-                                            unlink($target_old);
-                                            $this->data['notification'] = 'Xóa sản phẩm thành công';
-                                        }else{
-                                            $this->data['notification'] = 'Đường dẫn ảnh không tồn tại';
-                                        }
-                                    }
-                                }else{
-                                    $this->data['notification'] = 'Xóa sản phẩm không thành công';
+                            $flag = 0;
+                            for($i = 0 ; $i < count($arr_id_pro) ; $i++){
+                                $arr_order_detail = $this->order_detail->getAllDetailOrderByIdPro($arr_id_pro[$i]);
+                                if(count($arr_order_detail)>0){
+                                    $flag = 1;
                                 }
                             }
+                            if($flag == 0){
+                                for($i = 0 ; $i < count($arr_id_pro) ; $i++ ){
+                                    $arr_image_for_id_pro = $this->image->getImageForIdPro($arr_id_pro[$i]);
+                                    if($this->product->DeleteProForIdPro($arr_id_pro[$i] )== true){
+                                        $target = "../public/img/";
+                                        foreach($arr_image_for_id_pro as $image_){
+                                            $target_old = $target.$image_['link_anh'];
+                                            if(file_exists($target_old)){
+                                                unlink($target_old);
+                                                $this->data['notification'] = 'Xóa sản phẩm thành công';
+                                            }else{
+                                                $this->data['notification'] = 'Đường dẫn ảnh không tồn tại';
+                                            }
+                                        }
+                                    }else{
+                                        $this->data['notification'] = 'Xóa sản phẩm không thành công';
+                                    }
+                                }
+                            }else{
+                                $this->data['notification'] ='Những sản phẩm bạn chọn có sản phẩm đã được mua không thể xóa';
+                            }
+                            
                         }catch(Exception $e){
                             echo 'Mã lỗi: ' . $e;
                             $this->data['notification'] = 'Xóa không thành công';

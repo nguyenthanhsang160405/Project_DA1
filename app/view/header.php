@@ -26,6 +26,7 @@
                     break;
                 case 'usermanage':
                     echo '<link rel="stylesheet" href="./public/css/pageuser.css">';
+                    echo '<link rel="stylesheet" href="./public/css/puchasecart.css">';
                     break;
                 case 'detail':
                     echo '<link rel="stylesheet" href="./public/css/detail.css">';
@@ -95,7 +96,7 @@
                     <ul class="menu-large">
                         <form id="form-desktop" action="index.php" method="get">
                             <li  class="sub-menu-right">
-                                <input type="hidden" name="page" id="timkem" value="product" placeholder="Tìm Kiếm">
+                                <input type="hidden" name="page" id="timkiem" value="product" placeholder="Tìm Kiếm">
                                 <input type="text" name="timkiem" id="timkem1" placeholder="Tìm Kiếm">
                                 <i class="fa-solid fa-magnifying-glass search"></i>
                             </li>

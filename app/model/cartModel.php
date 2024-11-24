@@ -20,5 +20,9 @@
             $sql = "DELETE FROM gio_hang WHERE id_ctgiohang = $id_ctgiohang";
             return $this->db->delete($sql);
         }
+        public function UpdateCart($id_giohang,$param){
+            $sql = "UPDATE gio_hang SET soluong_sanpham = ? WHERE id_ctgiohang = $id_giohang";
+            return $this->db->query($sql,$param);
+        }
     }
 ?>

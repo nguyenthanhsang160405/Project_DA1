@@ -2,8 +2,10 @@
     class SiginCtl{
         public $data;
         public $user;
+        public $cart;
         public function __construct(){
             $this->user = new UserModel();
+            $this->cart = new CartModel();
         }
         public function SigIn(){
             if(isset($_POST['login'])){
@@ -12,10 +14,8 @@
 
 
                 $email = $_POST['email'];
-                echo $email;
                 
                 $pass = $_POST['pass'];
-                echo $pass;
                 $flag = 0;
 
                 if(empty($email)){
@@ -36,13 +36,34 @@
                         }
                     }
                     if(!empty($user)){
-                        print_r($user);
                         if($user['vai_tro'] == 1){
                             $_SESSION['user'] = $user;
-                            header('location:index.php?page=usermanage');
-
+                            if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
+                                $id_kh =$_SESSION['user']['id_kh'];
+                                $arr_pro_cart = $this->cart->getAllCartByIdUser($id_kh);
+                                print_r($_SESSION['cart']);
+                                for($i = 0 ; $i < count($_SESSION['cart']) ; $i++){
+                                    $param = [$_SESSION['cart'][$i]['size'],$_SESSION['cart'][$i]['quantity'],$_SESSION['cart'][$i]['price'],$_SESSION['cart'][$i]['id_pro'],$user['id_kh'],$_SESSION['cart'][$i]['name'],$_SESSION['cart'][$i]['image']];
+                                    $flag = 0;
+                                    for($j = 0 ; $j < count($arr_pro_cart) ; $j++){
+                                        if($_SESSION['cart'][$i]['size'] == $arr_pro_cart[$j]['size_sanpham'] && $_SESSION['cart'][$i]['id_pro'] == $arr_pro_cart[$j]['id_sanpham'] ){
+                                            $this->cart->UpdateCart($arr_pro_cart[$j]['id_ctgiohang'],[$arr_pro_cart[$j]['soluong_sanpham'] + $_SESSION['cart'][$i]['quantity']]);
+                                            $flag = 1;
+                                        }
+                                    }
+                                    if($flag==0){
+                                        $this->cart->InsertCart($param);
+                                    }
+                                }
+                                unset($_SESSION['cart']);
+                                header('location:index.php?page=usermanage');
+                            }else{
+                                header('location:index.php?page=usermanage');
+                            }
                         }else{
-                            header('location:./admin/index.php?id_admin='.$user[0]['id_kh'].'');
+                            echo $user['id_kh'];
+                            $id = password_hash($user['id_kh'],PASSWORD_DEFAULT);
+                            header('location:./admin/index.php?id_admin='.$id.'');
                         }
                     }else{
                         $this->data['notification'] = 'Tên đăng nhập hoặc mật khẩu không chính xác';

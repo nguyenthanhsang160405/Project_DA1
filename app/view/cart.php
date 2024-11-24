@@ -26,10 +26,12 @@
                                 <div class="col4">Đơn giá</div>
                                 <div class="col5">Tổng giá</div>
                             </div>
-                            <?php 
+                            <?php
+                            $total = 0;
                             if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
                                 if(isset($cart) && !empty($cart)){
                                     for($i = 0 ; $i < count($cart) ; $i++){
+                                        $total += $cart[$i]['soluong_sanpham'] * $cart[$i]['gia_sanpham'];
                                         echo '<div class="infor-product-cart">
                                                 <!-- class="layout-mobile" chỉ có ở css mobile -->
                                                     <div class="layout-mobile">
@@ -75,6 +77,7 @@
                             }else{
                                 if(isset($cart) && !empty($cart)){
                                     for($i = 0 ; $i < count($cart) ; $i++){
+                                        $total += $cart[$i]['price'] * $cart[$i]['quantity'];
                                         echo '<div class="infor-product-cart">
                                                 <!-- class="layout-mobile" chỉ có ở css mobile -->
                                                     <div class="layout-mobile">
@@ -132,11 +135,11 @@
                                     <div class="payment-cart">
                                         <div class="total-price-cart">
                                             <label for="">Tổng Tiền:</label>
-                                            <span id="">100000 đ</span>
+                                            <span id=""><?php echo $total ?> đ</span>
                                         </div>
                                         <p>Voucher</p>
                                         <div class="btn-payment">
-                                            <a class="btn-pay btn-link" href="">Thanh Toán</a>
+                                            <a class="btn-pay btn-link" href="index.php?page=payment">Thanh Toán</a>
                                             <a class="btn-update btn-link" href="">Cập Nhật</a>
                                         </div>
 

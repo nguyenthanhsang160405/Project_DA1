@@ -53,9 +53,14 @@
                 $stmt->execute();
                 return true;
             }catch(PDOException $e){
-                echo "Lỗi khi insert SQL =>" . $e->getMessage();
+                echo "Lỗi khi delete =>" . $e->getMessage();
                 return false;
             }
+        }
+        public function InsertGetIdInsert($sql,$param){
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute($param);
+            return $this->conn->lastInsertId();
         }
     }
 ?>

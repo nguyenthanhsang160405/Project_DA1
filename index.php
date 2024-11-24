@@ -31,6 +31,9 @@
     include_once 'app/controller/detailCtl.php';
     include_once 'app/controller/registerCtl.php';
     include_once 'app/controller/cartCtl.php';
+    include_once 'app/controller/IfmUserCtl.php';
+    include_once 'app/controller/historyOrderCtl.php';
+    include_once 'app/controller/detailorderUserCtl.php';
 
     $header = new HeaderCtl();
     $header->ViewHeader();

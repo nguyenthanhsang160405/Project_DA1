@@ -27,6 +27,7 @@
                                         <th><input onclick="checkAll()" id="box-checkall-delete-pro" type="checkbox"></th>
                                         <th>STT</th>
                                         <th>Họ tên</th>
+                                        <th>Email</th>
                                         <th>Địa chỉ</th>
                                         <th>Số điện thoại</th>
                                         <th>Giá tổng đơn hàng</th>
@@ -42,6 +43,7 @@
                                                     <td><input class="get-id-product-delete"  name="checkid_pro[]" value="'.$item['id_donhang'].'" type="checkbox"></th>
                                                     <td>'.$stt.'</td>
                                                     <td>'.$item['ten_nguoinhan'].'</td>
+                                                    <td>'.$item['email_nguoinhan'].'</td>
                                                     <td>'.$item['diachi_nguoinhan'].'</td>
                                                     <td>'.$item['sdt_nguoinhan'].'</td>
                                                     <td>'.number_format($item['gia_tong_don_hang']).'đ</td>

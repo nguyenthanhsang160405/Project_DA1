@@ -91,7 +91,6 @@
                     $id_product = $_POST['id_product'];
                     $flag = 0;
                     if(empty($size_pro)){
-                        $err_size = 'Vui lòng chọn size sản phẩm';
                         $flag = 1;
                     }
                     if($flag == 0){

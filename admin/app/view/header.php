@@ -46,6 +46,6 @@
                     <div class="admin-name">
                         <div class="admin-background-name">
                             <p>ADMIN</p>
-                            <a href=""><i class="fa-solid fa-right-from-bracket"></i></a>
+                            <a href="index.php?logout_adm"><i class="fa-solid fa-right-from-bracket"></i></a>
                         </div>
                     </div>
