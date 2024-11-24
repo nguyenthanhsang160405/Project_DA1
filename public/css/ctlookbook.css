@@ -1,0 +1,463 @@
+@media only screen and (min-width: 1024px){
+    .danhmuc{
+        top: 0px;
+        padding: 100px 0 0px 20px;
+        width: 100%;
+        background: #ffffff;
+        z-index: 1;
+        color: #000000;
+        line-height: 20px;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+    .danhmuc a{
+        text-decoration: none;
+        color: black;
+    }
+    .danhmuc span{
+        font-weight: 500;
+    }
+    .img-title {
+        width: 100%;
+        height: 300px;
+        background-image: url('../img/breadcrumb-blog_master.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Để lớp phủ có thể được đặt chính xác */
+        top: 20px;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+        pointer-events: none; /* Không chặn sự kiện chuột */
+    }
+    
+    .img-title  h2 {
+        margin: 0; /* Xóa khoảng cách bên ngoài */
+        padding: 0;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        font-size: 24px;
+        z-index: 1; /* Đảm bảo chữ nằm trên lớp phủ */
+    }
+    .lookbook-container {
+        display: flex;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 16px auto;
+    }
+    
+    .sidebar {
+        width: 35%;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    .banner img{
+        width: 100%;
+    }
+    .banner img:hover{
+        transform: scale(1);
+    }
+    
+    .sidebar h2 {
+        /* font-size: 18px; */
+        /* margin-bottom: 15px; */
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    
+    .sidebar ul {
+        list-style: none;
+        width: 100%;
+    }
+    
+    .sidebar ul li {
+        margin-bottom: 10px;
+    }
+    
+    .sidebar ul li a {
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .lookbook-content {
+        flex: 1;
+        margin-left: 20px;
+    }
+    
+    .lookbook-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .lookbook-content .toc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f1f1f1;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .lookbook-content .toc .toc-title h2 {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+    }
+    
+    .lookbook-content .toc .toc-toggle {
+        font-size: 18px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #555;
+    }
+    
+    .lookbook-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+    .fashion-image {
+        width: 50%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        margin-left: 30%;
+    }
+    
+    .description {
+        font-size: 20px;
+        color: #555;
+        text-align: justify;
+        padding: 0 10px;
+        width: 100%;
+    }
+}
+@media (min-width: 601px) and (max-width: 1024px){
+    .danhmuc{
+        top: 0px;
+        padding: 100px 0 0px 20px;
+        width: 100%;
+        background: #ffffff;
+        z-index: 1;
+        color: #000000;
+        line-height: 20px;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+    .danhmuc a{
+        text-decoration: none;
+        color: black;
+    }
+    .danhmuc span{
+        font-weight: 500;
+    }
+    .img-title {
+        width: 100%;
+        height: 300px;
+        background-image: url('../img/breadcrumb-blog_master.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Để lớp phủ có thể được đặt chính xác */
+        top: 20px;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+        pointer-events: none; /* Không chặn sự kiện chuột */
+    }
+    
+    .img-title  h2 {
+        margin: 0; /* Xóa khoảng cách bên ngoài */
+        padding: 0;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        font-size: 24px;
+        z-index: 1; /* Đảm bảo chữ nằm trên lớp phủ */
+    }
+    .lookbook-container {
+        display: flex;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 16px auto;
+    }
+    
+    .sidebar {
+        width: 35%;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    .banner img{
+        width: 100%;
+    }
+    .banner img:hover{
+        transform: scale(1);
+    }
+    
+    .sidebar h2 {
+        /* font-size: 18px; */
+        /* margin-bottom: 15px; */
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    
+    .sidebar ul {
+        list-style: none;
+        width: 100%;
+    }
+    
+    .sidebar ul li {
+        margin-bottom: 10px;
+    }
+    
+    .sidebar ul li a {
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .lookbook-content {
+        flex: 1;
+        margin-left: 20px;
+    }
+    
+    .lookbook-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .lookbook-content .toc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f1f1f1;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .lookbook-content .toc .toc-title h2 {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+    }
+    
+    .lookbook-content .toc .toc-toggle {
+        font-size: 18px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #555;
+    }
+    
+    .lookbook-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+    .fashion-image {
+        width: 50%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        margin-left: 30%;
+    }
+    
+    .description {
+        font-size: 20px;
+        color: #555;
+        text-align: justify;
+        padding: 0 10px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .danhmuc{
+        top: 0px;
+        padding: 100px 0 0px 20px;
+        width: 100%;
+        background: #ffffff;
+        z-index: 1;
+        color: #000000;
+        line-height: 20px;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+    .danhmuc a{
+        text-decoration: none;
+        color: black;
+    }
+    .danhmuc span{
+        font-weight: 500;
+    }
+    .img-title {
+        width: 100%;
+        height: 300px;
+        background-image: url('../img/breadcrumb-blog_master.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Để lớp phủ có thể được đặt chính xác */
+        top: 20px;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+        pointer-events: none; /* Không chặn sự kiện chuột */
+    }
+    
+    .img-title  h2 {
+        margin: 0; /* Xóa khoảng cách bên ngoài */
+        padding: 0;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        font-size: 24px;
+        z-index: 1; /* Đảm bảo chữ nằm trên lớp phủ */
+    }
+    .lookbook-container {
+        display: flex;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 16px auto;
+    }
+    
+    .sidebar {
+        width: 35%;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    .banner img{
+        width: 100%;
+    }
+    .banner img:hover{
+        transform: scale(1);
+    }
+    
+    .sidebar h2 {
+        /* font-size: 18px; */
+        /* margin-bottom: 15px; */
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    
+    .sidebar ul {
+        list-style: none;
+        width: 100%;
+    }
+    
+    .sidebar ul li {
+        margin-bottom: 10px;
+    }
+    
+    .sidebar ul li a {
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .lookbook-content {
+        flex: 1;
+        margin-left: 20px;
+    }
+    
+    .lookbook-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .lookbook-content .toc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f1f1f1;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .lookbook-content .toc .toc-title h2 {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+    }
+    
+    .lookbook-content .toc .toc-toggle {
+        font-size: 18px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #555;
+    }
+    
+    .lookbook-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+    .fashion-image {
+        width: 50%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        margin-left: 30%;
+    }
+    
+    .description {
+        font-size: 20px;
+        color: #555;
+        text-align: justify;
+        padding: 0 10px;
+        width: 100%;
+    }
+}
