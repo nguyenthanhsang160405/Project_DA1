@@ -49,6 +49,15 @@
                 case 'cart':
                     echo '<link rel="stylesheet" href="./public/css/cart.css">';
                     break;
+                case 'lookbook':
+                    echo '<link rel="stylesheet" href="./public/css/lookbook.css">';
+                    break;
+                case 'about':
+                    echo '<link rel="stylesheet" href="./public/css/about.css">';
+                    break;
+                case 'contact':
+                    echo '<link rel="stylesheet" href="./public/css/contact.css">';
+                    break;
                 default:
                     echo '<link rel="stylesheet" href="./public/css/index.css">';
                     
@@ -86,9 +95,9 @@
                                     ?>
                                 </ul>
                             </li>
-                            <li class="sub-menu-left"><a href="lookbook.html">Lookbook</a></li>
-                            <li class="sub-menu-left"><a href="about.html">Về chúng tôi</a></li>
-                            <li class="sub-menu-left"><a href="contact.html">Liên Hệ</a></li>
+                            <li class="sub-menu-left"><a href="index.php?page=lookbook">Lookbook</a></li>
+                            <li class="sub-menu-left"><a href="index.php?page=about">Về chúng tôi</a></li>
+                            <li class="sub-menu-left"><a href="index.php?page=contact">Liên Hệ</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -134,7 +143,7 @@
                         <li class="menu-smaller"><a href="#">Áo Thun</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Lookbook</a></li>
+                <li><a href="index.php?page=lookbook">Lookbook</a></li>
                 <li><a href="#">Về chúng tôi</a></li>
                 <li><a href="#">Liên Hệ</a></li>
             </ul>

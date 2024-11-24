@@ -34,13 +34,17 @@
     include_once 'app/controller/IfmUserCtl.php';
     include_once 'app/controller/historyOrderCtl.php';
     include_once 'app/controller/detailorderUserCtl.php';
+    include_once 'app/controller/lookbookCtl.php';
+    include_once 'app/controller/aboutCtl.php';
+    include_once 'app/controller/contactCtl.php';
+    include_once 'app/model/MaillerUser.php';
 
     $header = new HeaderCtl();
     $header->ViewHeader();
 
     if(isset($_GET['page'])){
         $page = $_GET['page'];
-        if($page != 'product' && $page != 'sigin' && $page != 'usermanage' && $page != 'detail' && $page != 'register' && $page != 'cart'){
+        if($page != 'product' && $page != 'sigin' && $page != 'usermanage' && $page != 'detail' && $page != 'register' && $page != 'cart' && $page != 'lookbook' && $page !='about' && $page != 'contact'){
             $alike = new AlikeCtl();
             $alike->ViewAlike();
         }
@@ -78,6 +82,18 @@
             case 'payment':
                 $payment = new PaymentCtl();
                 $payment->ViewPayment();
+                break;
+            case 'lookbook':
+                $lookbook=  new LookbookCtl();
+                $lookbook->ViewLookBook();
+                break;
+            case 'about';
+                $about = new AboutCtl();
+                $about->ViewAbout();
+                break;
+            case 'contact';
+                $contact = new ContactCtl();
+                $contact->ViewContact();
                 break;
             default:
                 $home = new homeController();
