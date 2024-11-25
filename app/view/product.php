@@ -9,7 +9,6 @@
             $page_number = intval(count($product) / 12) + 1;
         }
         $page_number = count($product) / 12;
-        echo $page_number;
         if(isset($data['image']) && !empty($data['image'])){
             $image = $data['image'];
         }
@@ -18,6 +17,13 @@
         }
         if(isset($data['id_cate']) && !empty($data['id_cate'])){
             $id_cate = $data['id_cate'];
+        }
+        if(isset($data['product_ht']) && !empty($data['product_ht'])){
+            $product_ht = $data['product_ht'];
+        }
+        if(isset($data['image_ht']) && !empty($data['image_ht'])){
+            $image_ht = $data['image_ht'];
+
         }
     }
 ?>
@@ -57,16 +63,16 @@
             <div class="wrapp-product-large">
                     <?php 
                         if(isset($product) && !empty($product) && isset($image) && !empty($image)){
-                            $row = intval(count($product) / 3);
+                            $row = intval(count($product_ht) / 3);
                             for($i = 0 ; $i <= $row ; $i++){
                                 if($i < $row ){
                                     echo '<div class="wrapp-product">';
                                     for($j = $i * 3 ; $j < $i * 3 + 3  ; $j++ ){
                                         echo '<div class="fame-product">
-                                                <a href="index.php?page=detail&&id_pro='.$product[$j]['id_sanpham'].'"><img src="public/img/'.$image[$j]['link_anh'].'" alt="">
+                                                <a href="index.php?page=detail&&id_pro='.$product_ht[$j]['id_sanpham'].'"><img src="public/img/'.$image_ht[$j]['link_anh'].'" alt="">
                                                     <div class="content-product">
-                                                        <p class="name-product">'.$product[$j]['ten_sanpham'].'</p>
-                                                        <p class="price-product">'.number_format($product[$j]['gia_sanpham']).'đ</p>
+                                                        <p class="name-product">'.$product_ht[$j]['ten_sanpham'].'</p>
+                                                        <p class="price-product">'.number_format($product_ht[$j]['gia_sanpham']).'đ</p>
                                                     </div>
                                                 </a>
                                             </div>';
@@ -74,12 +80,12 @@
                                     echo '</div>';
                                 }else if($i==$row){
                                     echo '<div class="wrapp-product">';
-                                    for($j = $row * 3 ; $j < count($product); $j++ ){
+                                    for($j = $row * 3 ; $j < count($product_ht); $j++ ){
                                         echo '<div class="fame-product">
-                                                <a href="index.php?page=detail&&id_pro='.$product[$j]['id_sanpham'].'"><img src="public/img/'.$image[$j]['link_anh'].'" alt="">
+                                                <a href="index.php?page=detail&&id_pro='.$product_ht[$j]['id_sanpham'].'"><img src="public/img/'.$image_ht[$j]['link_anh'].'" alt="">
                                                     <div class="content-product">
-                                                        <p class="name-product">'.$product[$j]['ten_sanpham'].'</p>
-                                                        <p class="price-product">'.number_format($product[$j]['gia_sanpham']).'đ</p>
+                                                        <p class="name-product">'.$product_ht[$j]['ten_sanpham'].'</p>
+                                                        <p class="price-product">'.number_format($product_ht[$j]['gia_sanpham']).'đ</p>
                                                     </div>
                                                 </a>
                                             </div>';
@@ -98,7 +104,7 @@
                 <div class="number-page">
                     <?php
                         for($i = 0 ; $i < $page_number ; $i++){
-                            echo '<a style="color:black" href="index.php?page=product&&id_page='.($i+1).'&&id_cate='.(isset($id_cate) && !empty($id_cate) ? $id_cate : '').'&&timkem='.(isset($name_timkiem) && !empty($name_timkiem) ? $name_timkiem : '').'"><span class="page">'.($i+1).'</span></a>';
+                            echo '<a style="color:black" href="index.php?page=product&&id_page='.($i+1).'&&id_cate='.(isset($id_cate) && !empty($id_cate) ? $id_cate : '').'&&timkiem='.(isset($name_timkiem) && !empty($name_timkiem) ? $name_timkiem : '').'"><span class="page">'.($i+1).'</span></a>';
                         }
                     ?>
                     <!-- <a href=""><span class="page">1</span></a>

@@ -42,6 +42,38 @@
                         $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                         array_push($this->data['image'],$one_image); 
                     }
+                    //newwww
+                    if(isset($_GET['id_page'])&& !empty($_GET['id_page'])){
+                        $id_page = $_GET['id_page'];
+                        $this->data['product_ht'] = [];
+                        $this->data['image_ht'] = [];
+                        if(intval(count($this->data['product']) / 12) == $id_page){
+                            for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                array_push($this->data['image_ht'],$this->data['image'][$i]);
+                            }
+                        }else{
+                            for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                array_push($this->data['image_ht'],$this->data['image'][$i]);
+                            }
+                        }
+                    }else{
+                        $this->data['product_ht'] = [];
+                        $this->data['image_ht'] = [];
+                        if(count($this->data['product'])< 12){
+                            for($i = 0; $i < count($this->data['product']) ; $i ++){
+                                array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                array_push($this->data['image_ht'],$this->data['image'][$i]);
+                            }
+                        }else{
+                            for($i = 0; $i < 12 ; $i ++){
+                                array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                array_push($this->data['image_ht'],$this->data['image'][$i]);
+                            }
+                        }
+                        
+                    }
                 }else{
                     $arr_pro = [];
                         foreach($this->data['product'] as $item){
@@ -51,6 +83,38 @@
                     for($i = 0 ; $i < count($arr_pro) ; $i++){
                         $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                         array_push($this->data['image'],$one_image); 
+                    }
+                    //new 
+                    if(isset($_GET['id_page'])&& !empty($_GET['id_page'])){
+                        $id_page = $_GET['id_page'];
+                        $this->data['product_ht'] = [];
+                        $this->data['image_ht'] = [];
+                        if(intval(count($this->data['product']) / 12) == $id_page){
+                            for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                array_push($this->data['image_ht'],$this->data['image'][$i]);
+                            }
+                        }else{
+                            for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                array_push($this->data['image_ht'],$this->data['image'][$i]);
+                            }
+                        }
+                    }else{
+                        $this->data['product_ht'] = [];
+                        $this->data['image_ht'] = [];
+                        if(count($this->data['product'])< 12){
+                            for($i = 0; $i < count($this->data['product']) ; $i ++){
+                                array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                array_push($this->data['image_ht'],$this->data['image'][$i]);
+                            }
+                        }else{
+                            for($i = 0; $i < 12 ; $i ++){
+                                array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                array_push($this->data['image_ht'],$this->data['image'][$i]);
+                            }
+                        }
+                        
                     }
                 }
                 $this->data['id_cate'] = $id_cate;
@@ -87,6 +151,38 @@
                             $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                             array_push($this->data['image'],$one_image); 
                         }
+                        //neww
+                        if(isset($_GET['id_page'])&& !empty($_GET['id_page'])){
+                            $id_page = $_GET['id_page'];
+                            $this->data['product_ht'] = [];
+                            $this->data['image_ht'] = [];
+                            if(intval(count($this->data['product']) / 12) == $id_page){
+                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }else{
+                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }
+                        }else{
+                            $this->data['product_ht'] = [];
+                            $this->data['image_ht'] = [];
+                            if(count($this->data['product'])< 12){
+                                for($i = 0; $i < count($this->data['product']) ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }else{
+                                for($i = 0; $i < 12 ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }
+                            
+                        }
                     }else{
                         $arr_pro = [];
                         foreach($this->data['product'] as $item){
@@ -96,6 +192,38 @@
                         for($i = 0 ; $i < count($arr_pro) ; $i++){
                             $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                             array_push($this->data['image'],$one_image); 
+                        }
+                        //new
+                        if(isset($_GET['id_page'])&& !empty($_GET['id_page'])){
+                            $id_page = $_GET['id_page'];
+                            $this->data['product_ht'] = [];
+                            $this->data['image_ht'] = [];
+                            if(intval(count($this->data['product']) / 12) == $id_page){
+                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }else{
+                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }
+                        }else{
+                            $this->data['product_ht'] = [];
+                            $this->data['image_ht'] = [];
+                            if(count($this->data['product'])< 12){
+                                for($i = 0; $i < count($this->data['product']) ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }else{
+                                for($i = 0; $i < 12 ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }
+                            
                         }
                     }
                     $this->data['name_timkiem'] = $name_pro;
@@ -131,6 +259,38 @@
                             $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                             array_push($this->data['image'],$one_image); 
                         }
+                        //newwww
+                        if(isset($_GET['id_page'])&& !empty($_GET['id_page'])){
+                            $id_page = $_GET['id_page'];
+                            $this->data['product_ht'] = [];
+                            $this->data['image_ht'] = [];
+                            if(intval(count($this->data['product']) / 12) == $id_page){
+                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }else{
+                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }
+                        }else{
+                            $this->data['product_ht'] = [];
+                            $this->data['image_ht'] = [];
+                            if(count($this->data['product'])< 12){
+                                for($i = 0; $i < count($this->data['product']) ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }else{
+                                for($i = 0; $i < 12 ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }
+                            
+                        }
                     }else{
                         $arr_pro = [];
                         foreach($this->data['product'] as $item){
@@ -140,6 +300,38 @@
                         for($i = 0 ; $i < count($arr_pro) ; $i++){
                             $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                             array_push($this->data['image'],$one_image); 
+                        }
+                        //newww
+                        if(isset($_GET['id_page'])&& !empty($_GET['id_page'])){
+                            $id_page = $_GET['id_page'];
+                            $this->data['product_ht'] = [];
+                            $this->data['image_ht'] = [];
+                            if(intval(count($this->data['product']) / 12) == $id_page){
+                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }else{
+                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }
+                        }else{
+                            $this->data['product_ht'] = [];
+                            $this->data['image_ht'] = [];
+                            if(count($this->data['product'])< 12){
+                                for($i = 0; $i < count($this->data['product']) ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }else{
+                                for($i = 0; $i < 12 ; $i ++){
+                                    array_push($this->data['product_ht'],$this->data['product'][$i]);
+                                    array_push($this->data['image_ht'],$this->data['image'][$i]);
+                                }
+                            }
+                            
                         }
                     }
                 }

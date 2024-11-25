@@ -25,12 +25,45 @@
             }
             
         }
- 
+        public function Tang(){
+            if(isset($_POST['cong'])){
+                $position = $_POST['vt_product'];
+                echo $position;
+                if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+                    $cart = $this->cart->getOneCartByIdCart($position);
+                    $quantity = $cart['soluong_sanpham'] + 1;
+                    $this->cart->UpdateCart($position,[$quantity]);
+                }else{
+                    $_SESSION['cart'][$position]['quantity'] = $_SESSION['cart'][$position]['quantity'] + 1;
+                }
+            }
+        }
+        public function Giam(){
+            if(isset($_POST['tru'])){
+                $position = $_POST['vt_product'];
+                echo $position;
+                if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+                    $cart = $this->cart->getOneCartByIdCart($position);
+                    $quantity = $cart['soluong_sanpham'] - 1;
+                    if($quantity <= 0){
+                        $quantity = 1;
+                    }
+                    $this->cart->UpdateCart($position,[$quantity]);
+                }else{
+                    $_SESSION['cart'][$position]['quantity'] = $_SESSION['cart'][$position]['quantity'] - 1;
+                    if($_SESSION['cart'][$position]['quantity'] <= 0){
+                        $_SESSION['cart'][$position]['quantity'] = 1;
+                    }
+                }
+            }
+        }
         public function RenderView($data,$view){
             $seen = 'app/view/'.$view.'.php';
             include_once $seen;
         }
         public function ViewCart(){
+            $this->Tang();
+            $this->Giam();
             $this->DeleteCart();
             $this->getAllCate();
             $this->RenderView($this->data,'cart');

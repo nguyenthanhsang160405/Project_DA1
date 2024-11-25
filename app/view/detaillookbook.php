@@ -1,5 +1,4 @@
 <?php 
-    print_r($data); 
     if(isset($data) && !empty($data)){
         if(isset($data['blog']) && !empty($data['blog'])){
             $blog = $data['blog'];

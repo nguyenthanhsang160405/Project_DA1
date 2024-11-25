@@ -24,5 +24,9 @@
             $sql = "UPDATE gio_hang SET soluong_sanpham = ? WHERE id_ctgiohang = $id_giohang";
             return $this->db->query($sql,$param);
         }
+        public function getOneCartByIdCart($id_giohang){
+            $sql = "SELECT * FROM gio_hang WHERE id_ctgiohang = $id_giohang";
+            return $this->db->getOne($sql);
+        }
     }
 ?>

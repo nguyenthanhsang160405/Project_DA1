@@ -58,9 +58,12 @@
                                                         <div class="layout-mobile-child2"> 
                                                             <!-- Tăng giảm số lượng -->
                                                             <div class="col3 count-prod-cart">
-                                                                    <button class="btn-cout" id="decrease-cout-cart">-</button>
+                                                                 <form style="display:flex" action="index.php?page=cart" method="post">
+                                                                    <button class="btn-cout" name="tru" id="decrease-cout-cart">-</button>
                                                                     <span class="quantity" id="quantity-cout-cart">'.$cart[$i]['soluong_sanpham'].'</span>
-                                                                    <button class="btn-cout" id="increase-cout-cart">+</button>
+                                                                    <input type="hidden" name="vt_product" value="'.$cart[$i]['id_ctgiohang'].'">
+                                                                    <button class="btn-cout" name="cong" id="increase-cout-cart">+</button>
+                                                                </form>
                                                             </div>
                                                             <div class="col4 price-prod-cart">
                                                                 <p><span id="">'.number_format($cart[$i]['gia_sanpham']).'</span> đ</p>
@@ -104,9 +107,12 @@
                                                         <div class="layout-mobile-child2"> 
                                                             <!-- Tăng giảm số lượng -->
                                                             <div class="col3 count-prod-cart">
-                                                                    <button class="btn-cout" id="decrease-cout-cart">-</button>
+                                                                <form style="display:flex" action="index.php?page=cart" method="post">
+                                                                    <button class="btn-cout" name="tru" id="decrease-cout-cart">-</button>
                                                                     <span class="quantity" id="quantity-cout-cart">'.$cart[$i]['quantity'].'</span>
-                                                                    <button class="btn-cout" id="increase-cout-cart">+</button>
+                                                                    <input type="hidden" name="vt_product" value="'.$i.'">
+                                                                    <button class="btn-cout" name="cong" id="increase-cout-cart">+</button>
+                                                                </form>
                                                             </div>
                                                             <div class="col4 price-prod-cart">
                                                                 <p><span id="">'.number_format($cart[$i]['price']).'</span> đ</p>
@@ -135,12 +141,12 @@
                                     <div class="payment-cart">
                                         <div class="total-price-cart">
                                             <label for="">Tổng Tiền:</label>
-                                            <span id=""><?php echo $total ?> đ</span>
+                                            <span id=""><?php echo number_format($total) ?> đ</span>
                                         </div>
                                         <p>Voucher</p>
                                         <div class="btn-payment">
                                             <a class="btn-pay btn-link" href="index.php?page=payment">Thanh Toán</a>
-                                            <a class="btn-update btn-link" href="">Cập Nhật</a>
+                                            <a class="btn-update btn-link" href="index.php?page=product">Cập Nhật</a>
                                         </div>
 
 
