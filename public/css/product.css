@@ -81,7 +81,8 @@
     }
     .main .wrapp-product-large .wrapp-product{
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10%;
     }
     .main .wrapp-product-large .wrapp-product .fame-product{
         width: 370px;
@@ -159,7 +160,7 @@
     }
 }
 /* của những màn hình lớn */
-@media only screen and (max-width:1024px){
+@media (min-width:601px) and (max-width:1024px){
 
 
 
@@ -242,12 +243,13 @@
     }
     .main .wrapp-product-large .wrapp-product{
         display: flex;
-        justify-content: center;
+        margin-left: 11%;
+        flex-wrap: wrap;
     }
     .main .wrapp-product-large .wrapp-product .fame-product{
         width: 370px;
         height: 550px;
-        margin: 0 8px;
+        margin: 50px 8px;
     }
     .main .wrapp-product-large .wrapp-product .fame-product a{
         text-decoration: none;

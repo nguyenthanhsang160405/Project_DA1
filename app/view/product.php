@@ -61,42 +61,23 @@
                 </form>
             </div>
             <div class="wrapp-product-large">
+                <div class="wrapp-product">
                     <?php 
                         if(isset($product) && !empty($product) && isset($image) && !empty($image)){
-                            $row = intval(count($product_ht) / 3);
-                            for($i = 0 ; $i <= $row ; $i++){
-                                if($i < $row ){
-                                    echo '<div class="wrapp-product">';
-                                    for($j = $i * 3 ; $j < $i * 3 + 3  ; $j++ ){
+                            for($i = 0 ; $i < count($product) ; $i++){
                                         echo '<div class="fame-product">
-                                                <a href="index.php?page=detail&&id_pro='.$product_ht[$j]['id_sanpham'].'"><img src="public/img/'.$image_ht[$j]['link_anh'].'" alt="">
+                                                <a href="index.php?page=detail&&id_pro='.$product_ht[$i]['id_sanpham'].'"><img src="public/img/'.$image_ht[$i]['link_anh'].'" alt="">
                                                     <div class="content-product">
-                                                        <p class="name-product">'.$product_ht[$j]['ten_sanpham'].'</p>
-                                                        <p class="price-product">'.number_format($product_ht[$j]['gia_sanpham']).'đ</p>
+                                                        <p class="name-product">'.$product_ht[$i]['ten_sanpham'].'</p>
+                                                        <p class="price-product">'.number_format($product_ht[$i]['gia_sanpham']).'đ</p>
                                                     </div>
                                                 </a>
                                             </div>';
-                                        }
-                                    echo '</div>';
-                                }else if($i==$row){
-                                    echo '<div class="wrapp-product">';
-                                    for($j = $row * 3 ; $j < count($product_ht); $j++ ){
-                                        echo '<div class="fame-product">
-                                                <a href="index.php?page=detail&&id_pro='.$product_ht[$j]['id_sanpham'].'"><img src="public/img/'.$image_ht[$j]['link_anh'].'" alt="">
-                                                    <div class="content-product">
-                                                        <p class="name-product">'.$product_ht[$j]['ten_sanpham'].'</p>
-                                                        <p class="price-product">'.number_format($product_ht[$j]['gia_sanpham']).'đ</p>
-                                                    </div>
-                                                </a>
-                                            </div>';
-                                        }
-                                    echo '</div>';
-                                }
-                                
+                                    
                             }
                         }
-                        // random_int()
                     ?>
+                </div>
                 
                 
             </div>
