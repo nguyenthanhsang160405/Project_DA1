@@ -6,13 +6,25 @@
         }
         if(isset($data['image']) && !empty($data['image'])){
             $image = $data['image'];
-            print_r($image);
         }
         if(isset($data['all_product']) && !empty($data['all_product'])){
             $all_product = $data['all_product'];
         }
         if(isset($data['all_image']) && !empty($data['all_image'])){
             $all_image = $data['all_image'];
+        }
+        if(isset($data['comment']) && !empty($data['comment'])){
+            $comment = $data['comment'];
+        }
+        if(isset($data['user_comment']) && !empty($data['user_comment'])){
+            $user_comment = $data['user_comment'];
+        }
+        
+        if(isset($data['id_detail_order']) && !empty($data['id_detail_order'])){
+            $id_detail_order = $data['id_detail_order'];
+        }
+        if(isset($data['err']) && !empty($data['err'])){
+            $err = $data['err'];
         }
     }
 ?>
@@ -105,5 +117,42 @@
                     ?>
                 </div>
             </div>
+            <div class="tab2">
+                <div id="comment-section">
+                    <h3>Bình luận</h3> 
+                    <?php 
+                    if(isset($err['err_comment']) && !empty($err['err_comment'])){
+                        echo '<span>'.$err['err_comment'].'</span>';
+                    }
+                        if(isset($_SESSION['user']) && !empty($_SESSION['user']) && isset($id_detail_order) && !empty($id_detail_order)){
+                            echo '
+                                    <form action="index.php?page=detail&&id_pro='.$product['id_sanpham'].'" method="post" id="comment-form">
+                                        <textarea name="comment" id="comment-input" placeholder="Nhập bình luận của bạn..." required></textarea>
+                                        <input type="hidden" name="id_detai_order" value="'.$id_detail_order.'">
+                                        <input type="hidden" name="id_product" value="'.$product['id_sanpham'].'">
+                                        <input type="submit" name="add_comment" value="Gửi" class="gui">
+                                    </form>';
+                        }
+                    
+                    ?>
+                    <div id="comment-list">
+                        <?php 
+                           if(isset($comment) && !empty($comment) && isset($user_comment) && !empty($user_comment)){
+                            for($i = 0 ; $i < count($comment) ; $i++){
+                                echo '<div class="comment-item">
+                                            <img class="avatar" src="./public/img/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png" alt="Avatar">
+                                            <div class="comment-content">
+                                                <strong class="username">'.$user_comment[$i]['ten_kh'].'</strong>
+                                                <span class="comment-time">'.$comment[$i]['ngay_gio_tao'].', 15:45</span>
+                                                <p class="comment-text">'.$comment[$i]['noidung_binhluan'].'</p>
+                                            </div>
+                                        </div>';
+                            }
+                        }     
+                        ?>
+                        
+                    </div>
+                </div>
+        </div>
         </div> 
     </div>

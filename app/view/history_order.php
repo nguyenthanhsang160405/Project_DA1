@@ -21,6 +21,7 @@
                                         <th>Giá tổng</th>
                                         <th>Chi tiết</th>
                                         <th>Trạng thái</th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -34,7 +35,7 @@
                                                         <td>'.$order[$i]['email_nguoinhan'].'</td>
                                                         <td>'.$order[$i]['diachi_nguoinhan'].'</td>
                                                         <td>'.number_format($order[$i]['gia_tong_don_hang']).'đ</td>
-                                                        <td><a href="index.php?page=usermanage&&page_usermanage=detailorderUser&&id_order='.$order[$i]['id_donhang'].'">Xem chi tiết</a></td>
+                                                        <td><a href="index.php?page=usermanage&&page_usermanage=detailorderUser&&id_order='.$order[$i]['id_donhang'].'&&checkOrder='.($order[$i]['ten_nhanvien']== '' && $order[$i]['id_nhanvien'] == '' ? 1 : 2 ).'">Xem chi tiết</a></td>
                                                         <td>'.($order[$i]['ten_nhanvien']== '' && $order[$i]['id_nhanvien'] == '' ? 'Chờ xác nhận' : 'Đã xác nhận').'</td>
                                                     </tr>';
                                             }

@@ -81,7 +81,7 @@
 <body>
         <div class="container">
             <header>
-                <div><img onclick="AnHienConMenu(this)" src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></div>
+                <div><a href="index.php"><img onclick="AnHienConMenu(this)" src="public/img/Remove-bg.ai_1730792910599.png" alt="logo"></a></div>
                 <div id="navigation">
                     <nav>
                         <ul class="menu-large">

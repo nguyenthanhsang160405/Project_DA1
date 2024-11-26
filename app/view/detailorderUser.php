@@ -10,6 +10,9 @@
         if($data['voucher'] && !empty($data['voucher'])){
             $voucher = $data['voucher'];
         }
+        if($data['checkOrder'] && !empty($data['checkOrder'])){
+            $checkOrder = $data['checkOrder'];
+        }
     }
 ?>
 <div class="mainpuchase">
@@ -21,12 +24,17 @@
                                 <br>
                                 <h3>Các sản phẩm</h3>
                                 <thead>
-                                    <tr>
                                         <th>Tên sản phẩm</th>
                                         <th>Ảnh sản phẩm</th>
                                         <th>Giá sản phẩm</th>
                                         <th>Số lượng</th>
                                         <th>Size</th>
+                                        <?php 
+                                            if(isset($checkOrder) && !empty($checkOrder) && $checkOrder == 2){
+                                                echo '<th>Bình luận</th>';
+                                            }
+                                        ?>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -38,8 +46,12 @@
                                                         <td><img style="width: 20px;" src="./public/img/'.$arr_detaiorder[$i]['anh_sanpham'].'" alt=""></td>
                                                         <td>'.number_format($arr_detaiorder[$i]['gia_sanpham']).'đ</td>
                                                         <td>'.$arr_detaiorder[$i]['soluong_sanpham'].'</td>
-                                                        <td>'.$arr_detaiorder[$i]['size_sanpham'].'</td>
-                                                    </tr>';
+                                                        <td>'.$arr_detaiorder[$i]['size_sanpham'].'</td>';
+                                                        if(isset($checkOrder) && !empty($checkOrder) && $checkOrder == 2){
+                                                            echo '<td>'.($arr_detaiorder[$i]['kiemtra_comment'] == 1 ? '<a href="index.php?page=detail&&id_pro='.$arr_detaiorder[$i]['id_sanpham'].'&&id_detail_order='.$arr_detaiorder[$i]['id_ctdonhang'].'">Bình luận</a>' : 'Đã bình luận').'</td>';
+                                                        }
+                                                        
+                                                   echo '</tr>';
                                             }
                                         }
                                     ?>

@@ -16,8 +16,11 @@
                 include_once $seen;
         }
         public function GetIfmOrder(){
-            if(isset($_GET['id_order']) && !empty($_GET['id_order'])){
+            if(isset($_GET['id_order']) && !empty($_GET['id_order']) && isset($_GET['checkOrder'])){
                 $id_order = $_GET['id_order'];
+                // 1 không cho comment , 2 cho comment
+                $checkOrder = $_GET['checkOrder'];
+                $this->data['checkOrder'] = $checkOrder;
                 $order = $this->order->getOneOrderByIdOrder($id_order);
                 
                 $this->data['arr_detaiorder'] = $this->detai_order->getAllDetailOrderByIdOrder($id_order);
@@ -36,6 +39,9 @@
                 
             }
         }
+        // public function GetCheckOrder(){
+        //     if(is)
+        // }
         public function ViewDetailOrederUser(){
             $this->GetIfmOrder();
             $this->RenderView($this->data,'detailorderUser');

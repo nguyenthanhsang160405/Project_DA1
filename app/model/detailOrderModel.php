@@ -16,6 +16,11 @@
             $sql = "SELECT * FROM chi_tiet_don_hang WHERE id_sanpham = $id_sanpham";
             return $this->db->getAll($sql);
         }
+        public function UpdateCheckCommentDetaiOrderByIdDetailOrder($id_ctdonhang,$param){
+            $sql = "UPDATE chi_tiet_don_hang SET kiemtra_comment = ? WHERE id_ctdonhang = $id_ctdonhang";
+            return $this->db->query($sql,$param);
+
+        }
         
     }
 ?>
