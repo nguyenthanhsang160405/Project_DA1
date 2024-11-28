@@ -59,36 +59,36 @@
                         <h2>BST SẢN PHẨM ĐẶC BIỆT</h2>
                         <div class="wrapper">';
                                 if(isset($pro_special[0]) && !empty($pro_special[0])){
-                                    echo '<a href="index.php?page=detail&&id_pro='.$pro_special[0]['id_sanpham'].'">
+                                    echo '
                                             <div class="new-suit">
-                                                    <img src="public/img/'.$image[0]['link_anh'].'" alt="">
+                                                    <a href="index.php?page=detail&&id_pro='.$pro_special[0]['id_sanpham'].'"><img src="public/img/'.$image[0]['link_anh'].'" alt=""></a>
                                                     <span>special</span>
                                                 </div>
-                                            </a>';
+                                            ';
                                 }
                                 if(isset($pro_special[1]) && !empty($pro_special[1])){
-                                    echo '<a href="index.php?page=detail&&id_pro='.$pro_special[1]['id_sanpham'].'">
+                                    echo '
                                             <div class="new-suit">
-                                                    <img src="public/img/'.$image[1]['link_anh'].'" alt="">
+                                                    <a href="index.php?page=detail&&id_pro='.$pro_special[1]['id_sanpham'].'"><img src="public/img/'.$image[1]['link_anh'].'" alt=""></a>
                                                     <span>special</span>
                                                 </div>
-                                            </a>';
+                                            ';
                                 }
                                 if(isset($pro_special[2]) && !empty($pro_special[2])){
-                                    echo '<a href="index.php?page=detail&&id_pro='.$pro_special[2]['id_sanpham'].'">
+                                    echo '
                                             <div class="new-suit">
-                                                    <img src="public/img/'.$image[2]['link_anh'].'" alt="">
+                                                    <a href="index.php?page=detail&&id_pro='.$pro_special[2]['id_sanpham'].'"><img src="public/img/'.$image[2]['link_anh'].'" alt=""></a>
                                                     <span>special</span>
                                                 </div>
-                                            </a>';
+                                            ';
                                 }
                                 if(isset($pro_special[3]) && !empty($pro_special[3])){
-                                    echo '<a href="index.php?page=detail&&id_pro='.$pro_special[3]['id_sanpham'].'">
+                                    echo '
                                             <div class="new-suit">
-                                                    <img src="public/img/'.$image[3]['link_anh'].'" alt="">
+                                                    <a href="index.php?page=detail&&id_pro='.$pro_special[3]['id_sanpham'].'"><img src="public/img/'.$image[3]['link_anh'].'" alt=""></a>
                                                     <span>special</span>
-                                                </div>
-                                            </a>';
+                                                </div>'
+                                            ;
                                 }
                         echo '</div>
                     </section>';

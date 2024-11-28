@@ -63,8 +63,8 @@
             <div class="wrapp-product-large">
                 <div class="wrapp-product">
                     <?php 
-                        if(isset($product) && !empty($product) && isset($image) && !empty($image)){
-                            for($i = 0 ; $i < count($product) ; $i++){
+                        if(isset($product_ht) && !empty($product_ht) && isset($image_ht) && !empty($image_ht)){
+                            for($i = 0 ; $i < count($product_ht) ; $i++){
                                         echo '<div class="fame-product">
                                                 <a href="index.php?page=detail&&id_pro='.$product_ht[$i]['id_sanpham'].'"><img src="public/img/'.$image_ht[$i]['link_anh'].'" alt="">
                                                     <div class="content-product">
