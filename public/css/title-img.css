@@ -112,7 +112,7 @@
     }
     .container .main .form-information .link-dieuhuong{
         width: 100%;
-        height: 70px;
+        height: max-content;
         margin-top: 20px;
     }
     .container .main .form-information .link-dieuhuong ul{
@@ -247,7 +247,7 @@
     }
     .container .main .form-information .link-dieuhuong{
         width: 100%;
-        height: 70px;
+        height: max-content;
         margin-top: 20px;
     }
     .container .main .form-information .link-dieuhuong ul{
@@ -379,7 +379,7 @@
     }
     .container .main .form-information .link-dieuhuong{
         width: 100%;
-        height: 70px;
+        height: max-content;
         margin-top: 20px;
     }
     .container .main .form-information .link-dieuhuong ul{
