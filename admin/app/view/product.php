@@ -14,7 +14,7 @@
 ?>
 <form action="index.php?page_adm=product" method="post">
                         <div class="admin-showdata">
-                        <h3>DANH MỤC SẢN PHẨM</h3>
+                        <h3>DANH SÁCH SẢN PHẨM</h3>
                             <div class="admin-function">
                                 <a id="admin-function-add" href="index.php?page_adm=addpro"><i class="fa-solid fa-calendar-plus"></i>Thêm sản phẩm</a>
                                 <button type="submit" name="delete_pro_for_id_pro" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa sản phẩm</button>

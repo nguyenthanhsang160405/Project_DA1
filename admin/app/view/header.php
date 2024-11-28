@@ -12,7 +12,7 @@
         <div class="admin-content">
             <header>
                 <div class="image_nguoi_dung">
-                    <img src="../public/img/haicho.jpg" alt="">
+                    <img src="../public/img/default-avatar-profile-icon-vector-social-media-user-photo-700-205577532.jpg" alt="">
                     <p>Xin chào, <?php if(isset($_SESSION['admin']) && !empty($_SESSION['admin'])) echo $_SESSION['admin']['ten_kh'] ?></p>
                     <p>Chào mừng bạn trở lại!</p>
                 </div>

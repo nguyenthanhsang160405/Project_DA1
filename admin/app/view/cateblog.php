@@ -10,7 +10,7 @@
 ?>
 <form action="index.php?page_adm=cateblog" method="post">
                         <div class="admin-showdata">
-                        <h3>DANH MỤC SẢN PHẨM</h3>
+                        <h3>DANH MỤC BÀI VIẾT</h3>
                             <div class="admin-function">
                                 <a id="admin-function-add" href="index.php?page_adm=addcateblog"><i class="fa-solid fa-calendar-plus"></i>Thêm loại bài viết </a>
                                 <button name="delete_cateblog_for_id_cateblog" type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa loại bài viết</button>

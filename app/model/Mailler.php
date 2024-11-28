@@ -47,7 +47,7 @@ require '../PHPMailer/src/SMTP.php';
                 $this->email->AltBody = 'Đơn hàng sẽ giao đến bạn trong thời gian sớm nhất. Chân thành cảm ơn!';
                 $this->email->send();
                 // echo 'Message has been sent';
-            } catch (Exception $e) {
+            } catch (Exception $e){
                 echo "Message could not be sent. Mailer Error: {$this->email->ErrorInfo}";
             }
         }
