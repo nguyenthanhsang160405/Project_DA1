@@ -63,6 +63,7 @@
             <div class="wrapp-product-large">
                 <div class="wrapp-product">
                     <?php 
+
                         if(isset($product_ht) && !empty($product_ht) && isset($image_ht) && !empty($image_ht)){
                             for($i = 0 ; $i < count($product_ht) ; $i++){
                                         echo '<div class="fame-product">

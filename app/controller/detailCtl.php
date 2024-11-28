@@ -4,10 +4,18 @@
         public $product;
         public $image;
         public $cart;
+        public $comment;
+        public $user;
+        public $order;
+        public $detail_order;
         public function __construct(){
             $this->product = new ProductModel();
             $this->image = new ImageProModel();
             $this->cart = new CartModel();
+            $this->comment =  new CommentModel();
+            $this->user = new UserModel();
+            $this->order = new OderModel();
+            $this->detail_order = new DetailOrderModel();
         }
         public function getPro(){
             if(isset($_GET['id_pro']) && !empty($_GET['id_pro'])){
@@ -21,6 +29,48 @@
                     $one_image = $this->image->getOneImageForIdPro($one['id_sanpham']);
                     array_push($this->data['all_image'],$one_image); 
                 }
+                // comment
+                $this->data['comment'] = $this->comment->getAllCommentForIdPro($id_pro);
+                $this->data['user_comment'] = [];
+                for($i = 0 ; $i < count($this->data['comment']); $i++){
+                    array_push($this->data['user_comment'],$this->user->getOneUser($this->data['comment'][$i]['id_kh']));
+                }
+            }
+        }
+        public function getIdOrder_Detail(){
+            if(isset($_GET['id_detail_order']) && !empty($_GET['id_detail_order'])){
+                $this->data['id_detail_order'] = $_GET['id_detail_order'];
+            }
+        }
+        public function AddComment(){
+            if(isset($_POST['add_comment']) && !empty($_POST['add_comment']) && isset($_SESSION['user']) && !empty($_SESSION['user'])){
+                $err_comment = '';
+
+                $id_kh = $_SESSION['user']['id_kh']; 
+                $comment = $_POST['comment'];
+                $id_detail_order = $_POST['id_detai_order'];
+                $id_pro = $_POST['id_product'];
+                $flag = 0;
+                if(empty($comment)){
+                    $err_comment = 'Bình luận không được để trống';
+                    $flag = 1;
+                }
+                if($flag==0){
+                    $data = [$comment,$id_kh,$id_pro];
+                    if($this->comment->InSertComment($data)==true){
+                        if($this->detail_order->UpdateCheckCommentDetaiOrderByIdDetailOrder($id_detail_order,[2])==true){
+                            echo '<script>alert("Thêm bình luận thành công")</script>';
+                        }
+                    }else{
+                        echo 'Insert Comment không thành công';
+                    }
+                    
+                    
+                }else{
+                    $this->data['err'] = ['err_comment'=>$err_comment];
+                    $this->data['id_detail_order'] = $id_detail_order;
+                }
+
             }
         }
         public function AddCart(){
@@ -124,6 +174,8 @@
             include_once $seen;
         }
         public function ViewDetail(){
+            $this->AddComment();
+            $this->getIdOrder_Detail();
             $this->BuyProduct();
             $this->getPro();
             $this->AddCart();

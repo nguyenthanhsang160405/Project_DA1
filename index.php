@@ -45,7 +45,7 @@
 
     if(isset($_GET['page'])){
         $page = $_GET['page'];
-        if($page != 'product' && $page != 'sigin' && $page != 'usermanage' && $page != 'detail' && $page != 'register' && $page != 'cart' && $page != 'lookbook' && $page !='about' && $page != 'contact' && $page != 'detaillookbook'){
+        if($page != 'product' && $page != 'sigin' && $page != 'usermanage' && $page != 'detail' && $page != 'register' && $page != 'cart' && $page != 'lookbook' && $page !='about' && $page != 'contact' && $page != 'detaillookbook' &&  $page != 'payment'){
             $alike = new AlikeCtl();
             $alike->ViewAlike();
         }
