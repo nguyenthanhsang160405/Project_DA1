@@ -24,7 +24,7 @@
         <div class="overlay"></div>
         <h2>TÀI KHOẢN</h2>
     </div>
-    <div class="container">
+    <main>
         <div class="checkout-form">
             <form action="index.php?page=payment" method="post"></form>
                 <h2>Dwin Store - Thương hiệu bán đồ hàng đầu Việt Nam</h2>
@@ -91,4 +91,4 @@
                 </ul>
             </form>    
         </div>
-    </div>
+    </main>
