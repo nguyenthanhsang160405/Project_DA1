@@ -43,7 +43,8 @@
                         Thanh toán khi nhận hàng (COD)
                     </label>
                     <div class="cart-checkout">
-                        <input type="submit" name="cart-link" value="Giỏ Hàng"  class="cart-link">
+                        <!-- <input type="submit" name="cart-link" value="Giỏ Hàng"  class="cart-link"> -->
+                        <a href="cart.html">Giỏ Hàng</a>
                         <input type="submit" name="checkout_button" value="Đặt Hàng" class="checkout-button">
                     </div>
                 </form>
