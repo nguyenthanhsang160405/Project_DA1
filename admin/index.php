@@ -50,6 +50,7 @@
     include_once './app/controller/cateproCtl.php';
     include_once './app/controller/LoginOutCtl.php';
     include_once './app/controller/viewOrderDetail.php';
+    include_once './app/controller/statisticalCtl.php';
     $loginout = new LoginOutCtl();
     $loginout->ViewLogInOut();
     include_once './app/view/header.php';
@@ -167,6 +168,10 @@
             case 'detailorder':
                 $viewdetai_order = new ViewOrderDetail();
                 $viewdetai_order->ViewDetailOrder();
+                break;
+            case 'statistical':
+                $statistical = new StatisticalCtl();
+                $statistical->ViewStatistical();
                 break;
             default:
                 $addcate = new AddcateCtl();

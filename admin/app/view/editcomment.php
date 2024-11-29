@@ -1,5 +1,4 @@
 <?php 
-    print_r($data);
     if(isset($data) && !empty($data)){
         if(isset($data['comment']) && !empty($data['comment'])){
             $comment = $data['comment'];

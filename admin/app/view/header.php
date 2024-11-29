@@ -35,7 +35,7 @@
                         <li><a href="index.php?page_adm=acceptedorder"><i class="fa-solid fa-ticket"></i><p>Đơn hàng đã xác nhận</p></a></li>
                         </div>
                         <div class="row">
-                        <li><a href=""><i class="fa-solid fa-ticket"></i><p>Thống kê</p></a></li>
+                        <li><a href="index.php?page_adm=statistical"><i class="fa-solid fa-ticket"></i><p>Thống kê</p></a></li>
                         <li><a href="index.php?page_adm=allcomment"><i class="fa-solid fa-ticket"></i><p>Bình luận</p></a></li>
                         </div>
                     </ul>

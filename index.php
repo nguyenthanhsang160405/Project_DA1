@@ -39,13 +39,15 @@
     include_once 'app/controller/contactCtl.php';
     include_once 'app/model/MaillerUser.php';
     include_once 'app/controller/detaillookbookCtl.php';
+    include_once 'app/controller/otpCtl.php';
+    include_once 'app/controller/changepassCtl.php';
 
     $header = new HeaderCtl();
     $header->ViewHeader();
 
     if(isset($_GET['page'])){
         $page = $_GET['page'];
-        if($page != 'product' && $page != 'sigin' && $page != 'usermanage' && $page != 'detail' && $page != 'register' && $page != 'cart' && $page != 'lookbook' && $page !='about' && $page != 'contact' && $page != 'detaillookbook' &&  $page != 'payment'){
+        if($page != 'product' && $page != 'sigin' && $page != 'usermanage' && $page != 'detail' && $page != 'register' && $page != 'cart' && $page != 'lookbook' && $page !='about' && $page != 'contact' && $page != 'detaillookbook' &&  $page != 'payment' && $page != 'otp' && $page != 'changepass'){
             $alike = new AlikeCtl();
             $alike->ViewAlike();
         }
@@ -100,6 +102,14 @@
                 $detail_lookbook = new DetaillookbookCtl();
                 $detail_lookbook->ViewDetailLookBook();
                 break;
+            case 'otp';
+                $otp = new OtpCtl();
+                $otp->ViewOtp();
+                break;
+            case 'changepass';
+                $changepass = new ChangepassCtl();
+                $changepass->ViewChangePass();
+                break;
             default:
                 $home = new homeController();
                 $home ->ViewController();
@@ -109,6 +119,5 @@
         $home = new homeController();
         $home->ViewController();
     }
-        // require_once('app/view/footer.php');
     include_once 'app/view/footer.php';
 ?>

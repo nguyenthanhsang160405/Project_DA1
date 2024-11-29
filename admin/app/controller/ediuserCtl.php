@@ -74,8 +74,8 @@
             }
         }
         public function ViewEditUser(){
-            $this->getOneUser();
             $this->EditUser();
+            $this->getOneUser();
             $this->RenderView($this->data,'edituser');
         }
 

@@ -62,5 +62,10 @@
             $stmt->execute($param);
             return $this->conn->lastInsertId();
         }
+        public function getOne2($sql,$param){
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute($param);
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        }
     }
 ?>

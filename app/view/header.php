@@ -55,6 +55,18 @@
                 case 'about':
                     echo '<link rel="stylesheet" href="./public/css/about.css">';
                     break;
+                case 'otp':
+                    echo '<link rel="stylesheet" href="./public/css/title-img.css">
+                        <link rel="stylesheet" href="./public/css/index.css">
+                        <link rel="stylesheet" href="./public/css/all.css">
+                        <link rel="stylesheet" href="./public/css/lookbook.css">';
+                    break;
+                case 'changepass':
+                    echo '<link rel="stylesheet" href="./public/css/title-img.css">
+                        <link rel="stylesheet" href="./public/css/index.css">
+                        <link rel="stylesheet" href="./public/css/all.css">
+                        <link rel="stylesheet" href="./public/css/lookbook.css">';
+                    break;
                 case 'contact':
                     echo '<link rel="stylesheet" href="./public/css/contact.css">';
                     break;
@@ -69,12 +81,6 @@
             echo '<link rel="stylesheet" href="./public/css/index.css">';
         }
     ?>
-    
-    
-  
-
-    
-    
     <link rel="stylesheet" href="./public/css/footer.css">
     <title>Document</title>
 </head>
@@ -141,9 +147,13 @@
                     <a href="#">Sản phẩm</a>
                     <i onclick="AnHienConMenu()" class="fa-solid fa-plus"></i>
                     <ul id="menu_con-icon-mobile">
-                        <li class="menu-smaller"><a href="#">Áo Vest</a></li>
-                        <li class="menu-smaller"><a href="#">Áo Polo</a></li>
-                        <li class="menu-smaller"><a href="#">Áo Thun</a></li>
+                        <?php 
+                            if(isset($cate) && !empty($cate)){
+                                foreach($cate as $item){
+                                    echo '<li class="menu-smaller"><a href="index.php?page=product&&id_cate='.$item['id_loai'].'">'.$item['ten_loai'].'</a></li>';
+                                }
+                            }            
+                        ?>
                     </ul>
                 </li>
                 <li><a href="index.php?page=lookbook">Lookbook</a></li>

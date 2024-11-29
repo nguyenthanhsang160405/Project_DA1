@@ -43,7 +43,7 @@
                                     <ul>
                                         <li><a href="">Trở về</a></li>
                                         <li><a href="index.php?page=register">Đăng kí</a></li>
-                                        <li><a href="">Quên mật khẩu</a></li>
+                                        <li><a href="index.php?page=otp">Quên mật khẩu</a></li>
                                     </ul>
                                 </div>
                         </div>
