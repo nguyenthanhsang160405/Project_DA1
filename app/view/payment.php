@@ -24,7 +24,7 @@
         <div class="overlay"></div>
         <h2>TÀI KHOẢN</h2>
     </div>
-    <div class="container">
+    <main>
         <div class="checkout-form">
             <form action="index.php?page=payment" method="post"></form>
                 <h2>Dwin Store - Thương hiệu bán đồ hàng đầu Việt Nam</h2>
@@ -43,7 +43,8 @@
                         Thanh toán khi nhận hàng (COD)
                     </label>
                     <div class="cart-checkout">
-                        <input type="submit" name="cart-link" value="Giỏ Hàng"  class="cart-link">
+                        <!-- <input type="submit" name="cart-link" value="Giỏ Hàng"  class="cart-link"> -->
+                        <a href="cart.html">Giỏ Hàng</a>
                         <input type="submit" name="checkout_button" value="Đặt Hàng" class="checkout-button">
                     </div>
                 </form>
@@ -91,4 +92,4 @@
                 </ul>
             </form>    
         </div>
-    </div>
+    </main>

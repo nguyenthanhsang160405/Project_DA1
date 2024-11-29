@@ -160,7 +160,7 @@
     
     .order-summaryinput1 {
         width: 75%;
-        height: 20%;
+        height: 70px;
         border: 1px solid #ddd; 
         padding: 8px;
         margin-bottom: 15px;
@@ -169,7 +169,7 @@
     
     .order-summarysubmit {
         /* padding: 10px; */
-        height: 21%;
+        height: 70px;
         width: 23%;
         background: #007BFF;
         color: #fff;
