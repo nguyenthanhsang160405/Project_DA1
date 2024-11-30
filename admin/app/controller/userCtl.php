@@ -46,9 +46,9 @@ class UserCtl{
                         if($flag == 0){
                             $flag1 = 0;
                             for($i = 0 ; $i < count($arr_user_delete) ; $i++ ){
-                               if($this->user->DeleteUserForIdUser($arr_user_delete[$i]) == false){
+                            if($this->user->DeleteUserForIdUser($arr_user_delete[$i]) == false){
                                 $flag1 = 1;
-                               }
+                            }
                             }
                             if($flag1 == 0){
                                 $this->data['notification'] = 'Xóa thành công';

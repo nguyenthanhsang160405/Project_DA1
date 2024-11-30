@@ -42,6 +42,11 @@
                         $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                         array_push($this->data['image'],$one_image); 
                     }
+
+
+
+
+
                     //newwww
                     if(isset($_GET['id_page'])&& !empty($_GET['id_page'])){
                         $id_page = $_GET['id_page'];
@@ -84,6 +89,10 @@
                         $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                         array_push($this->data['image'],$one_image); 
                     }
+
+
+
+
                     //new 
                     if(isset($_GET['id_page'])&& !empty($_GET['id_page'])){
                         $id_page = $_GET['id_page'];
@@ -151,6 +160,12 @@
                             $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                             array_push($this->data['image'],$one_image); 
                         }
+
+
+
+
+
+
                         //neww
                         if(isset($_GET['id_page'])&& !empty($_GET['id_page'])){
                             $id_page = $_GET['id_page'];
@@ -193,6 +208,12 @@
                             $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                             array_push($this->data['image'],$one_image); 
                         }
+
+
+
+
+
+
                         //new
                         if(isset($_GET['id_page'])&& !empty($_GET['id_page'])){
                             $id_page = $_GET['id_page'];
@@ -259,6 +280,12 @@
                             $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                             array_push($this->data['image'],$one_image); 
                         }
+
+
+
+
+
+
                         //newwww
                         if(isset($_GET['id_page'])&& !empty($_GET['id_page'])){
                             $id_page = $_GET['id_page'];
@@ -301,6 +328,15 @@
                             $one_image = $this->image->getOneImageForIdPro($arr_pro[$i]['id_sanpham']);
                             array_push($this->data['image'],$one_image); 
                         }
+
+
+
+
+
+
+
+
+
                         //newww
                         if(isset($_GET['id_page'])&& !empty($_GET['id_page'])){
                             $id_page = $_GET['id_page'];
