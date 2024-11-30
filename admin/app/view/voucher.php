@@ -28,6 +28,7 @@
                                         <th>STT</th>
                                         <th>Mã giảm</th>
                                         <th>Số tiền giảm</th>
+                                        <th>Số lần sử dụng</th>
                                         <th>Ngày giờ tạo</th>
                                         <th colspan="2">Tính năng</th>
                                     </tr>
@@ -41,6 +42,7 @@
                                                     <td>'.$stt.'</td>
                                                     <td>'.$item['code_giamgia'].'</td>
                                                     <td>'.number_format($item['so_tiengiam']).'đ</td>
+                                                    <td>'.$item['so_lan'].'</td>
                                                     <td>'.$item['ngay_gio_tao'].'</td>
                                                     <td><a href="index.php?page_adm=editvoucher&&id_edit_voucher='.$item['id_giamgia'].'"><i class="fa-regular fa-pen-to-square"></i></a></td>
                                                     <td><a href="index.php?page_adm=voucher&&id_delete_voucher='.$item['id_giamgia'].'"><i class="fa-solid fa-trash"></i></a></td>
