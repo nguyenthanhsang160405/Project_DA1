@@ -30,12 +30,12 @@
             </div>
             <span><?php if(isset($err['name']) && !empty($err['name'])) echo $err['name']  ?></span>
             <input type="text" placeholder="Tên" value="<?php if(isset($ifm['name']) && !empty($ifm['name'])) echo $ifm['name']?>" name="name" id="">
-            <span><?php if(isset($err['email']) && !empty($err['email'])) echo $err['email']  ?></span>
+            <span class="error" id="err-email"><?php if(isset($err['email']) && !empty($err['email'])) echo $err['email']  ?></span>
             <input type="email" placeholder="Email" value="<?php if(isset($ifm['email']) && !empty($ifm['email'])) echo $ifm['email']?>" name="email" id="">
-            <span><?php if(isset($err['pass']) && !empty($err['pass'])) echo $err['pass']  ?></span>
-            <input type="text" placeholder="Mật khẩu" name="password" value="<?php if(isset($ifm['pass']) && !empty($ifm['pass'])) echo $ifm['pass']?>" id="">
-            <span><?php if(isset($err['xnpass']) && !empty($err['xnpass'])) echo $err['xnpass']  ?></span>
-            <input type="text" placeholder="Xác nhận mật khẩu" value="<?php if(isset($ifm['xnpass']) && !empty($ifm['xnpass'])) echo $ifm['xnpass']?>" name="xnpassword" id="">
+            <span class="error" id="err-password"><?php if(isset($err['pass']) && !empty($err['pass'])) echo $err['pass']  ?></span>
+            <input type="password" placeholder="Mật khẩu" name="password" value="<?php if(isset($ifm['pass']) && !empty($ifm['pass'])) echo $ifm['pass']?>" id="">
+            <span class="error" id="err-password"><?php if(isset($err['xnpass']) && !empty($err['xnpass'])) echo $err['xnpass']  ?></span>
+            <input type="password" placeholder="Xác nhận mật khẩu" value="<?php if(isset($ifm['xnpass']) && !empty($ifm['xnpass'])) echo $ifm['xnpass']?>" name="xnpassword" id="">
             <button type="submit" name=register id="button-sigin">TẠO TÀI KHOẢN</button>
             <button class="button-link google"><div class="pre-btn-login"><i class="fa-brands fa-google-plus-g"></i></div><p>Đăng nhập Google </p></button>
             <button class="button-link facebook"><div class="pre-btn-login"><i class="fa-brands fa-facebook-f"></i></div><p>Đăng nhập FaceBook </p></button>

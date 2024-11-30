@@ -30,10 +30,10 @@
                                 <div class="title">
                                     <h3>ĐĂNG NHẬP</h3>
                                 </div>
-                                <span><?php if(isset($err['err_email']) && !empty($err['err_email'])) echo $err['err_email'] ?></span>
+                                <span class="error" id="err-email"><?php if(isset($err['err_email']) && !empty($err['err_email'])) echo $err['err_email'] ?></span>
                                 <input name = "email" type="email" placeholder="Email" name="email" id="">
-                                <span><?php if(isset($err['err_pass']) && !empty($err['err_pass'])) echo $err['err_pass'] ?></span>
-                                <input name="pass" type="text" placeholder="Mật khẩu" name="password" id="">
+                                <span class="error" id="err-password"><?php if(isset($err['err_pass']) && !empty($err['err_pass'])) echo $err['err_pass'] ?></span>
+                                <input name="pass" type="password" placeholder="Mật khẩu" name="password" id="">
                                 <button type="submit" name="login" id="button-sigin">ĐĂNG NHẬP</button>
                                 <span><?php if(isset($notification) && !empty($notification)) echo $notification ?></span>
                                 <button class="button-link google"><div class="pre-btn-login"><i class="fa-brands fa-google-plus-g"></i></div><p>Đăng nhập Google </p></button>
