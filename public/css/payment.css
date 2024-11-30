@@ -114,13 +114,18 @@
         padding: 10px;
     }
     
-    .cart-checkout.giohang {
-            color: #007BFF;
-            text-decoration: none;
-            font-size: 16px;
-            background-color: #ffff;
+    .cart-checkout .giohang {
+        color: #007BFF;
+        text-decoration: none;
+        font-size: 16px;
+        background-color: #ffff;
     }
-    
+   /* .giohang {
+        color: #007BFF;
+        text-decoration: none;
+        font-size: 16px;
+        background-color: #ffff;
+    } */
     .checkout-button {
         width: 23%;
         height: 70px;

@@ -44,7 +44,7 @@
                     </label>
                     <div class="cart-checkout">
                         <!-- <input type="submit" name="cart-link" value="Giỏ Hàng"  class="cart-link"> -->
-                        <a href="cart.html" class="giohang">Giỏ Hàng</a>
+                        <a href="cart.html" name="giohang" class="giohang">Giỏ Hàng</a>
                         <input type="submit" name="checkout_button" value="Đặt Hàng" class="checkout-button">
                     </div>
                 </form>
