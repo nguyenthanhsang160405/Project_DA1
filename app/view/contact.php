@@ -22,7 +22,7 @@
             <h2>LIÊN HỆ</h2>
             <p><i class="fa-solid fa-phone"></i> Hotline: 0363599809</p>
             <p><i class="fa-solid fa-house"></i> Số 81A Phố Huế, Ngô Thì Nhậm, Hai Bà Trưng, Hà Nội</p>
-            <p><i class="fa-solid fa-envelope"> nghithps40419@gmail.com</p>
+            <p><i class="fa-solid fa-envelope"></i> nghithps40419@gmail.com</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.444162391639!2d106.62348197480605!3d10.853782889299708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b6c59ba4c97%3A0x535e784068f1558b!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYw!5e0!3m2!1svi!2s!4v1731060532397!5m2!1svi!2s" 
             width="400" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           
