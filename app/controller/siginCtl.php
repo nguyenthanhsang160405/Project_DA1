@@ -75,6 +75,11 @@
                 
             }
         }
+        public function ThongBao(){
+            if(isset($_GET['tb'])){
+                echo '<script>alert("Bạn đã đăng ký thành công")</script>';
+            }
+        }
         public function Logout(){
             if(isset($_GET['logout'])){
                 unset($_SESSION['user']);
@@ -86,6 +91,7 @@
             include_once $seen;
         }
         public function ViewSigIn(){
+            $this->ThongBao();
             $this->Logout();
             $this->SigIn();
             $this->RenderView($this->data,'sigin');

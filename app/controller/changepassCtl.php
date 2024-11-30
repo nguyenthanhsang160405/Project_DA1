@@ -58,7 +58,7 @@
                         $pass_new = password_hash($new_pass,PASSWORD_DEFAULT);
                         if($this->user->UpdatePassUser($user['id_kh'],[$pass_new])==true){
                             if($this->user->InsertOTP_Time_User(['','',$email])==true){
-                                echo '<script>alert("Thay đổi mật khẩu thành công")</script>';
+                                header('location:index.php?page=sigin&&tb');
                             }else{
                                 echo '<script>alert("Thay đổi mật khẩu không thành công")</script>';
                             }                         
