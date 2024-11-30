@@ -1,4 +1,4 @@
-<?php 
+<?php
     class IfmUserCtl{
         public $data;
         public $user;
@@ -11,7 +11,7 @@
         }
         public function UpdateIfm(){
             if(isset($_POST['update_ifm'])){
-                echo 200;
+                // echo 200;
                 $id_kh = $_SESSION['user']['id_kh'];
                 $err_name = '';
                 $err_phone = '';
@@ -37,10 +37,10 @@
                 }
 
                 if(empty($address)){
-                    $err_address = 'Số điện thoại không được để trống';
+                    $err_address = 'Địa chỉ không được để trống';
                     $flag = 1;
                 }
-                
+
                 if($flag == 0){
                     $data =[$name,$phone,$address];
                     if($this->user->UpdateIfmUser($id_kh,$data)==true){
@@ -52,7 +52,7 @@
                 }else{
                     $this->data['err'] = ['err_name'=>$err_name,'err_phone'=>$err_phone,'err_address'=>$err_address];
                 }
-                
+
             }
         }
         public function UpdatePassword(){
@@ -91,7 +91,7 @@
                         $err_xnpass = '';
                     }
                 }
-                
+
                 if($flag == 0){
                     $pass = password_hash($pass,PASSWORD_DEFAULT);
                     if($this->user->UpdatePassUser($id_kh,[$pass])==true){

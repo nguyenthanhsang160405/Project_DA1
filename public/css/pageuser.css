@@ -96,7 +96,12 @@ body {
 .register .register-menu2 .column2 {
     margin-right: 0; /* Không cần khoảng cách bên phải cho cột thứ hai */
 }
-
+.form-group {
+    color: red;
+}
+.form-group label{
+    color: black;
+}
 .register .register-menu2 .column1 input, .column2 input {
     width: 100%;
     padding: 15px;
@@ -104,7 +109,6 @@ body {
     border-radius: 4px;
     margin: 10px 0;
 }
-
 .register .register-menu2 button {
     padding: 15px 30px;
     background-color: #4291b1;
@@ -122,7 +126,10 @@ body {
     .mainpageuser {
         flex-direction: column; /* Đặt phần tử chính theo chiều dọc */
     }
-
+    .form-group {
+        color: red;
+        font-size: 12px;
+    }
     .register {
         /* flex-direction: column; Đặt các phần tử đăng ký theo chiều dọc */
     }
@@ -160,7 +167,7 @@ body {
     /* -------------------------------------------------------------------------------------------------- */
     .mainpageuser {
         flex-direction: column; /* Đặt phần tử chính theo chiều dọc */
-        height: 1200px;
+        height: 1253px;
     }
 
     .register {
