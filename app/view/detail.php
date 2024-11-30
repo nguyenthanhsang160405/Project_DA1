@@ -95,7 +95,6 @@
                 <div class="tab1">THÔNG SỐ</div>
                 <div class="tab">CHI TIẾT SẢN PHẨM</div>
                 <div class="tab">BẢO HÀNH</div>
-                <div class="tab">BÌNH LUẬN</div>
             </div>
             <div class="size">
                 <img class="luachonsize" src="./public/img/size.webp" alt="">
