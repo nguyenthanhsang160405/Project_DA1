@@ -8,7 +8,7 @@
             $sql = "SELECT * FROM bai_viet";
             return $this->db->getAll($sql);
         }
-        public function getAllBlogForIdCateBlog($id_cateblog,){
+        public function getAllBlogForIdCateBlog($id_cateblog){
             $sql = "SELECT * FROM bai_viet WHERE id_loaibv = $id_cateblog";
             return $this->db->getAll($sql);
         }
