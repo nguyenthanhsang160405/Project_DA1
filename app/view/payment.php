@@ -5,7 +5,6 @@
         }
         if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
             $user = $_SESSION['user'];
-            print_r($user);
         }
         if(isset($data['voucher']) && !empty($data['voucher'])){
             $voucher = $data['voucher'];
@@ -86,6 +85,14 @@
                 </form>
                 <div class="total">
                     <span class="total-label">Tổng tiền</span>
+                    <span class="total-amount"><?php echo number_format($total )?> VNĐ</span>
+                </div>
+                <div class="total">
+                    <span class="total-label">Voucher</span>
+                    <span class="total-amount">-<?php echo number_format( (isset($voucher) && !empty($voucher) ? $voucher['so_tiengiam'] : 0)) ?> VNĐ</span>
+                </div>
+                <div class="total">
+                    <span class="total-label">Tổng thanh toán</span>
                     <span class="total-amount"><?php echo number_format($total - (isset($voucher) && !empty($voucher) ? $voucher['so_tiengiam'] : 0)) ?> VNĐ</span>
                 </div>
 
