@@ -174,7 +174,7 @@
         form {
             display: flex;
             flex-direction: column;
-            margin-top: 30px;
+            /* margin-top: 30px; */
         }
         label {
             margin-top: 15px;
@@ -276,7 +276,7 @@
     
         form {
             flex-direction: column;
-            margin-top: 30px;
+            /* margin-top: 30px; */
         }
         label {
             margin-top: 10px;
@@ -289,7 +289,7 @@
         }
         input, textarea {
             width: 100%;
-            margin: 10px 0;
+            /* margin: 10px 0; */
             font-size: 14px; 
             height: 40px;
         }
