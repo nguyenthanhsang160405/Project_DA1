@@ -82,7 +82,7 @@
     .main .wrapp-product-large .wrapp-product{
         display: flex;
         flex-wrap: wrap;
-        margin: 10%;
+        justify-content: center;
     }
     .main .wrapp-product-large .wrapp-product .fame-product{
         width: 370px;
