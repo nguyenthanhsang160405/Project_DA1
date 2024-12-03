@@ -3,7 +3,9 @@
         if(isset($data['cart']) && !empty($data['cart'])){
             $cart = $data['cart'];
         }
-        
+        if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+            $user = $_SESSION['user'];
+        }
         if(isset($data['voucher']) && !empty($data['voucher'])){
             $voucher = $data['voucher'];
         }
@@ -31,10 +33,10 @@
                 <h3>Thông tin thanh toán</h3>
                 <form action="index.php?page=payment" method="post">
                     <input type="text" placeholder="Việt Nam" >
-                    <input type="text" name="name" placeholder="Họ và Tên*" required>
-                    <input type="text" name="phone" placeholder="Điện thoại*" required>
-                    <input type="text" name="address" placeholder="Địa chỉ*"   required>   
-                    <input type="text" name="email" placeholder="Email*" required> 
+                    <input type="text" name="name" placeholder="Họ và Tên*" value="<?php echo $user['ten_kh'] ?>" required>
+                    <input type="text" name="phone" placeholder="Điện thoại*" value="<?php echo $user['sdt_kh'] ?>" required>
+                    <input type="text" name="address" placeholder="Địa chỉ*" value="<?php echo $user['diachi_kh'] ?>"   required>   
+                    <input type="text" name="email" placeholder="Email*" value="<?php echo $user['email_kh'] ?>" required> 
                     <input type="hidden" name="total" value="<?php echo $total - (isset($voucher) && !empty($voucher) ? $voucher['so_tiengiam'] : 0) ?>" id="">
                     <input type="hidden" name="id_voucher" value="<?php if(isset($voucher) && !empty($voucher)) echo $voucher['id_giamgia'] ?>">
                     <h4>Phương thức thanh toán</h4>
@@ -83,6 +85,14 @@
                 </form>
                 <div class="total">
                     <span class="total-label">Tổng tiền</span>
+                    <span class="total-amount"><?php echo number_format($total )?> VNĐ</span>
+                </div>
+                <div class="total">
+                    <span class="total-label">Voucher</span>
+                    <span class="total-amount">-<?php echo number_format( (isset($voucher) && !empty($voucher) ? $voucher['so_tiengiam'] : 0)) ?> VNĐ</span>
+                </div>
+                <div class="total">
+                    <span class="total-label">Tổng thanh toán</span>
                     <span class="total-amount"><?php echo number_format($total - (isset($voucher) && !empty($voucher) ? $voucher['so_tiengiam'] : 0)) ?> VNĐ</span>
                 </div>
 

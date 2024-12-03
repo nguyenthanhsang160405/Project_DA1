@@ -26,6 +26,8 @@
                                 <input type="text" name="ma_giam" value="<?php if(isset($voucher['code_giamgia']) && !empty($voucher['code_giamgia'])) echo $voucher['code_giamgia'] ?>"><br>
                                 <label for="">Số tiền giảm: </label><span><?php if(isset($err['err_tien_giam']) && !empty($err['err_tien_giam'])) echo $err['err_tien_giam'] ?></span><br>
                                 <input type="number" name="tien_giam" value="<?php if(isset($voucher['so_tiengiam']) && !empty($voucher['so_tiengiam'])) echo $voucher['so_tiengiam'] ?>">
+                                <label for="">Số lần sử dụng: </label><span><?php if(isset($err['err_so_lan']) && !empty($err['err_so_lan'])) echo $err['err_so_lan'] ?></span><br>
+                                <input type="number" name="so_lan" value="<?php if(isset($voucher['so_lan']) && !empty($voucher['so_lan'])) echo $voucher['so_lan'] ?>">
                                 <input type="hidden" name="id_voucher" value="<?php if(isset($voucher['id_giamgia']) && !empty($voucher['id_giamgia'])) echo $voucher['id_giamgia'] ?>">
                                 <br>
                                 <br>

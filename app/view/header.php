@@ -115,12 +115,13 @@
                         <form id="form-desktop" action="index.php" method="get">
                             <li  class="sub-menu-right">
                                 <input type="hidden" name="page" id="timkiem" value="product" placeholder="Tìm Kiếm">
-                                <input type="text" name="timkiem" id="timkem1" placeholder="Tìm Kiếm">
+                                <input type="text" name="timkiem" placeholder="Tìm Kiếm">
                                 <i class="fa-solid fa-magnifying-glass search"></i>
                             </li>
                         </form>
                         <form id="form-mobile" action="index.php" method="GET">
                             <li class="sub-menu-right">
+                                <input type="hidden" name="page" id="timkiem" value="product" placeholder="Tìm Kiếm">
                                 <input type="text" name="timkiem" id="timkem">
                                 <i class="fa-solid fa-magnifying-glass search"></i>
                             </li>
@@ -141,10 +142,10 @@
                 </div>
             </header>
             <ul id="menu-mobile-visi-hid">
-                <li><a href="#">Trang chủ</a></li>
+                <li><a href="index.php">Trang chủ</a></li>
                 <li><a href="#">Giới thiệu</a></li>
                 <li>
-                    <a href="#">Sản phẩm</a>
+                    <a href="index.php?page=product">Sản phẩm</a>
                     <i onclick="AnHienConMenu()" class="fa-solid fa-plus"></i>
                     <ul id="menu_con-icon-mobile">
                         <?php 
@@ -157,6 +158,6 @@
                     </ul>
                 </li>
                 <li><a href="index.php?page=lookbook">Lookbook</a></li>
-                <li><a href="#">Về chúng tôi</a></li>
-                <li><a href="#">Liên Hệ</a></li>
+                <li><a href="index.php?page=about">Về chúng tôi</a></li>
+                <li><a href="index.php?page=contact">Liên Hệ</a></li>
             </ul>

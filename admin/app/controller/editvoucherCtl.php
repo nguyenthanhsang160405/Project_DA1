@@ -17,10 +17,12 @@
                     //variable err
                     $err_ma_giam = '';
                     $err_tien_giam = '';
+                    $err_so_lan = '';
                     //variable imformation 
                     $id_voucher = $_POST['id_voucher'];
                     $ma_giam = $_POST['ma_giam'];
                     $tien_giam = $_POST['tien_giam'];
+                    $so_lan = $_POST['so_lan'];
                     $flag = 0;
                     if(empty($ma_giam)){
                         $err_ma_giam = 'Mã giảm không được để trống';
@@ -32,7 +34,7 @@
                             $flag = 1;
                         }else{
                             $flag2 = 0;
-                            $arr_voucher = $this->voucher->getAllVoucher();
+                            $arr_voucher = $this->voucher->getAllVoucherDifferentIdVoucher($id_voucher);
                             foreach($arr_voucher as $one_voucher){
                                 if($one_voucher['code_giamgia']==$ma_giam){
                                     $flag2 = 1;
@@ -54,16 +56,27 @@
                         }
                     }
 
+                    if(empty($so_lan)){
+                        $err_so_lan = 'Số lần giảm không được để trống';
+                        $flag = 1;
+                    }else{
+                        if($so_lan < 1){
+                            $err_so_lan = 'Số lần giảm phải là 1 số dương';
+                            $flag = 1;
+                        }
+                    }
+
+
                     if($flag==0){
-                        $data = [$ma_giam,$tien_giam];
+                        $data = [$ma_giam,$tien_giam,$so_lan];
                         if($this->voucher->UpdateVoucher($id_voucher,$data) == true){
                             $this->data['notification'] = 'Cập nhật voucher thành công';
                         }else{
                             $this->data['notification'] = 'Cập nhật voucher không thành công';
                         }
                     }else{
-                        $this->data['err'] = ['err_ma_giam'=>$err_ma_giam,'err_tien_giam'=>$err_tien_giam];
-                        $this->data['ifm'] = ['ma_giam'=>$ma_giam,'tien_giam'=>$tien_giam];
+                        $this->data['err'] = ['err_ma_giam'=>$err_ma_giam,'err_tien_giam'=>$err_tien_giam,'err_so_lan'=>$err_so_lan];
+                        $this->data['ifm'] = ['ma_giam'=>$ma_giam,'tien_giam'=>$tien_giam,'so_lan'=>$so_lan];
                     }
                 }else{
                     $this->data['notification'] = 'Bạn vui lòng đăng nhập để thực hiện chức năng này';

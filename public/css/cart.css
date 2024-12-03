@@ -2,7 +2,6 @@
 @media only screen and (min-width:1440px){
     .container .main .box-cart{
         width: 100%;
-        height: 85vh;
         margin-top: 20px;
         
     }
@@ -39,6 +38,7 @@
         margin-bottom: 10px;
     }
     .container .main .box-cart .detail-cart .infor-product-cart {
+        margin-bottom: 20px;
         display: flex;
         justify-content: space-evenly;
     }
@@ -200,7 +200,6 @@
 @media only screen and (max-width:1440px){
     .container .main .box-cart{
         width: 100vw;
-        height: 70vh;
         margin-top: 20px;
         
     }
@@ -458,7 +457,7 @@
 @media only screen and (max-width:630px){
     .container .main .box-cart{
         width: 100vw;
-        height: 50vh;
+        /* height: 50vh; */
         margin-top: 20px;
         
     }
@@ -484,6 +483,7 @@
         text-align: right;
     }
     .container .main .box-cart .detail-cart .infor-product-cart .price-prod-cart {
+        /* margin-bottom: 20px; */
         width: 100px;
         padding: 10px;
     }

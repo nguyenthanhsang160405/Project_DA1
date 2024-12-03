@@ -28,17 +28,22 @@
                     $flag = 0;
                     $arr_voucher = $this->voucher->getAllVoucher();
                     for($i = 0 ; $i < count($arr_voucher) ; $i++ ){
-                        if($voucher == $arr_voucher[$i]['code_giamgia']){
-                            $this->data['voucher'] = $arr_voucher[$i];
+                        if($voucher == $arr_voucher[$i]['code_giamgia'])
                             $flag = 1;
                         }
                     }
                     if($flag == 0){
                         $this->data['notification'] = 'Mã giảm giá không tồn tại';
+                    }else{
+                        $one_voucher =  $this->voucher->getOneVoucherByNameVoucher([$voucher]);
+                        if($one_voucher['so_lan'] < 1){
+                            $this->data['notification'] = 'Mã giảm đã hết hạn';
+                        }else{
+                            $this->data['voucher'] = $one_voucher;
+                        }
                     }
                 }
 
-            }
         }
         public function Pay(){
             if(isset($_POST['checkout_button']) && $_POST['checkout_button']){
@@ -102,13 +107,21 @@
                         $data = [$cart['ten_sanpham'],$cart['gia_sanpham'],$cart['soluong_sanpham'],$cart['size_sanpham'],$cart['id_sanpham'],$id_order,$cart['anh_sanpham']];
                         if($this->detailOrder->InsertOrderDetail($data)==false){
                             $flag_addcart = 1;
-                           
                         }else{
                             $this->cart->DeleteCartByIdCart($cart['id_ctgiohang']);
                         }
                     }
                     if($flag_addcart == 0){
-                        header('location:index.php');
+                        if(!empty($id_voucher) && $id_voucher != null){
+                            $get_voucher = $this->voucher->getOneVoucher($id_voucher);
+                            $so_lan  = $get_voucher['so_lan'] - 1;
+                            if($this->voucher->UpDateSL($id_voucher,[$so_lan])==true){
+                                header('location:index.php');
+                            }
+                        }else{
+                            header('location:index.php');
+                        }
+                        
                     }
                 }else{
                     $this->data['err'] = ['name'=>$err_name,'err_email'=>$err_email,'err_phone'=>$err_phone,'err_address'=>$err_address];

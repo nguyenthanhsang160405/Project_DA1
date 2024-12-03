@@ -17,11 +17,8 @@
             if(isset($_GET['id_delete_voucher']) && !empty($_GET['id_delete_voucher'])){
                 if(isset($_SESSION['admin']) && !empty($_SESSION['admin'])){
                     $id_voucher = $_GET['id_delete_voucher'];
-                    if($this->voucher->deleteVoucherforIdVoucher($id_voucher) == true){
-                        $this->data['notification'] = 'Xóa thành công';
-                    }else{
-                        $this->data['notification'] = 'Xóa không thành công';
-                    }
+                    $this->voucher->deleteVoucherforIdVoucher($id_voucher);
+                    $this->data['notification'] = 'Xóa thành công';
                 }else{
                     $this->data['notification'] = 'Bạn vui lòng đăng nhập để thực hiện chức năng này';
                 }

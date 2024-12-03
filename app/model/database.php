@@ -27,6 +27,11 @@
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
+        public function getOneParam($sql,$param){
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute($param);
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        }
         public function query($sql,$param){
             try{
                 $stmt = $this->conn->prepare($sql);

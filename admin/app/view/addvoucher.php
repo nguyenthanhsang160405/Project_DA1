@@ -26,6 +26,8 @@
                                 <input type="text" name="ma_giam" value="<?php if(isset($ifm['ma_giam']) && !empty($ifm['ma_giam'])) echo $ifm['ma_giam'] ?>"><br>
                                 <label for="">Số tiền giảm: </label><span><?php if(isset($err['err_tien_giam']) && !empty($err['err_tien_giam'])) echo $err['err_tien_giam'] ?></span><br>
                                 <input type="number" name="tien_giam" value="<?php if(isset($ifm['tien_giam']) && !empty($ifm['tien_giam'])) echo $ifm['tien_giam'] ?>">
+                                <label for="">Số lần sử dụng: </label><span><?php if(isset($err['err_so_lan']) && !empty($err['err_so_lan'])) echo $err['err_so_lan'] ?></span><br>
+                                <input type="number" name="so_lan" value="<?php if(isset($ifm['so_lan']) && !empty($ifm['so_lan'])) echo $ifm['so_lan'] ?>">
                                 <br>
                                 <br>
                                 <hr>

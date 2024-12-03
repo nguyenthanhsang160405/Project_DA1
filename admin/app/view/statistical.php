@@ -6,9 +6,12 @@
         if(isset($data['cate']) && !empty($data['cate'])){
             $cate = $data['cate'];
         }
-        // if(isset($data['notification']) && !empty($data['notification'])){
-        //     $tb = $data['notification'];
-        // }
+        if(isset($data['product_in_month']) && !empty($data['product_in_month'])){
+            $product_in_month = $data['product_in_month'];
+        }
+        if(isset($data['product_in_day']) && !empty($data['product_in_day'])){
+            $product_in_day = $data['product_in_day'];
+        }
         // if(isset($data['user']) && !empty($data['user'])){
         //     $user = $data['user'];
         // }
@@ -61,6 +64,56 @@
                                                 </tr>';
                                         }
                                     }
+                                    ?>
+                                </table>
+                            </div>
+                            <br>
+                            <h3 style="text-transform: uppercase;">SẢN PHẨM BÁN CHẠY NHẤT TRONG NGÀY</h3>
+                            <hr>
+                            <br>
+                            <br>
+                            <div class="admin-table-ifm">
+                                <table border="1">
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Ảnh sản phẩm</th>
+                                        <th>Giá sản phẩm</th>
+                                        <th>Số lượng sản phẩm đã bán</th>
+                                    </tr>
+                                    <?php
+                                    if(isset($product_in_day) && !empty($product_in_day)){
+                                            echo '<tr>
+                                                    <td>'.$product_in_day[0]['product']['ten_sanpham'].'</td>
+                                                    <td><img id="image_table" src="../public/img/'.$product_in_day[0]['product']['anh_sanpham'].'" alt=""></td>
+                                                    <td>'.number_format($product_in_day[0]['product']['gia_sanpham']).'đ</td>
+                                                    <td>'.$product_in_day[0]['soluong'].'</td>
+                                                </tr>';
+                                        }
+                                    ?>
+                                </table>
+                            </div>
+                            <br>
+                            <h3 style="text-transform: uppercase;">SẢN PHẨM BÁN CHẠY NHẤT TRONG THÁNG</h3>
+                            <hr>
+                            <br>
+                            <br>
+                            <div class="admin-table-ifm">
+                                <table border="1">
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Ảnh sản phẩm</th>
+                                        <th>Giá sản phẩm</th>
+                                        <th>Số lượng sản phẩm đã bán</th>
+                                    </tr>
+                                    <?php
+                                    if(isset($product_in_month) && !empty($product_in_month)){
+                                            echo '<tr>
+                                                    <td>'.$product_in_month[0]['product']['ten_sanpham'].'</td>
+                                                    <td><img id="image_table" src="../public/img/'.$product_in_month[0]['product']['anh_sanpham'].'" alt=""></td>
+                                                    <td>'.number_format($product_in_month[0]['product']['gia_sanpham']).'đ</td>
+                                                    <td>'.$product_in_month[0]['soluong'].'</td>
+                                                </tr>';
+                                        }
                                     ?>
                                 </table>
                             </div>

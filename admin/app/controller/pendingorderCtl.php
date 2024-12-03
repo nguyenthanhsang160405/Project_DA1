@@ -4,10 +4,12 @@
         public $oder;
         public $email;
         public $order_detail;
+        public $voucher;
         public function __construct(){
             $this->oder = new OderModel();
             $this->email = new Mailler();
             $this->order_detail = new DetailOrderModel();
+            $this->voucher = new VoucherModel();
         }
         public function getAllOrder(){
                 $this->data['pending_order'] = $this->oder->getOrderPending();
@@ -65,8 +67,20 @@
             if(isset($_GET['id_order_delete']) && !empty($_GET['id_order_delete'])){
                 if(isset($_SESSION['admin']) && !empty($_SESSION['admin'])){
                     $id_donhang = $_GET['id_order_delete'];
+                    $order = $this->oder->getOneOrderByIdOrder($id_donhang);
                     if($this->oder->DeletePendingOrder($id_donhang) == true){
-                        $this->data['notification'] = 'Huỷ đơn hàng thành công';
+                        if(empty($order['id_giamgia'])){
+                            $this->data['notification'] = 'Huỷ đơn hàng thành công';
+                        }else{
+                            $id_voucher = $order['id_giamgia'];
+                            $voucher = $this->voucher->getOneVoucher($id_voucher);
+                            if($this->voucher->UpDateSL($id_voucher,[($voucher['so_lan']+1)])==true){
+                                $this->data['notification'] = 'Huỷ đơn hàng thành công';
+                            }else{
+                                $this->data['notification'] = 'Hủy đơn hàng thất bại';
+                            }
+                        }
+                        
                     }else{
                         $this->data['notification'] = 'Hủy đơn hàng thất bại';
                     }

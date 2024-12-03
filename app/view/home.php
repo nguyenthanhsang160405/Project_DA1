@@ -17,19 +17,19 @@
                 <div class="grid-banner mb-banner">
                         <div class="item1">
                             <img src="public/img/hc_img_1_1024x1024.png" alt="">
-                            <button class="hover-button">Xem Thêm</button>
+                            <a href="index.php?page=product&&id_cate=39"><button class="hover-button">Xem Thêm</button></a>
                         </div>
                     <div class="item2">
                         <img src="public/img/hc_img_2_large.png" alt="">
-                        <button class="hover-button">Xem Thêm</button>
+                        <a href="index.php?page=product&&id_cate=37"><button class="hover-button">Xem Thêm</button></a>
                     </div>
                     <div class="item3">
                         <img src="public/img/hc_img_3_large.png" alt="">
-                        <button class="hover-button">Xem Thêm</button>
+                        <a href="index.php?page=product&&id_cate=41"><button class="hover-button">Xem Thêm</button></a>
                     </div>
                     <div class="item4 img4">
                         <img src="public/img/hc_img_4_large.png" alt="">
-                        <button class="hover-button">Xem Thêm</button>
+                        <a href="index.php?page=product&&id_cate=38"><button class="hover-button">Xem Thêm</button></a>
                     </div>
                 </div>
                 <section class="popular">
