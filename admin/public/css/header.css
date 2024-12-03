@@ -120,6 +120,7 @@
         background-color: #9AF785;
         border-radius: 10px;
     }
+
     .container .admin-content .main .admin-ifm .admin-showdata .admin-function #admin-function-delete{
         background-color: #FFBDBD;
         border-radius: 10px;
@@ -547,6 +548,9 @@
         background-color: white;
         min-height: 750px;
         
+    }
+    .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm{
+        overflow-x: auto;
     }
     .container .admin-content .main .admin-ifm .admin-showdata .admin-table-ifm table{
         width: 100%;

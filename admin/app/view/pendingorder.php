@@ -12,8 +12,8 @@
                         <div class="admin-showdata">
                         <h3>ĐƠN HÀNG CHỜ XÁC NHẬN</h3>
                             <div class="admin-function">
-                            <button name="accept_order_for_id_order" type="submit" id="admin-function-delete"><i class="fa-solid fa-circle-check"></i>Chấp nhận tất cả</button>
-                                <button name="delete_order_for_id_order" type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa tất cả đơn hàng</button>
+                            <button style="background-color: #9AF785;" name="accept_order_for_id_order" type="submit" id="admin-function-delete"><i class="fa-solid fa-circle-check"></i>Chấp nhận tất cả</button>
+                                <button style="background-color: #FFBDBD;" name="delete_order_for_id_order" type="submit" id="admin-function-delete"><i class="fa-solid fa-trash"></i>Xóa tất cả đơn hàng</button>
                             </div>
                             <br>
                             <span id="ht-tb-da-thanh-cong"><?php  if(isset($tb) && !empty($tb)) echo $tb?></span>
