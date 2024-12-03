@@ -9,7 +9,7 @@
                     if(password_verify($arr_admin[$i]['id_kh'],$id_adm)==true){
                         $_SESSION['admin'] = $arr_admin[$i];
                     }else{
-                        echo 'Không đúng';
+                        // echo 'Không đúng';
                     }
                 }
             }

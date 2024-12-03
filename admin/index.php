@@ -3,12 +3,7 @@
     session_start();
     if(!isset($_SESSION['admin'])){
         $_SESSION['admin'] = [];
-    }
-    // unset($_SESSION['admin']);
-    // $_SESSION['admin'] = ['id_kh' => 7 ,'ten_kh' => 'Nguyễn Thanh Sang','email_kh' => 'nguyenthanhsang160405@gmail.com','matkhau_kh' => '$2y$10$LVscOsO1oiYW7' ,'diachi_kh' => '66/76 đường số 21 Nguyễn Văn Khối Gò Vấp','sdt_kh' => '0963004872','vai_tro'=>1];
-    
-    
-    
+    }    
     include_once '../app/model/Mailler.php';
     include_once '../app/model/detailOrderModel.php';
     include_once './app/controller/editblogCtl.php';

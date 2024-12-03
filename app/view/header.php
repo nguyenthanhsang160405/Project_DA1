@@ -115,12 +115,13 @@
                         <form id="form-desktop" action="index.php" method="get">
                             <li  class="sub-menu-right">
                                 <input type="hidden" name="page" id="timkiem" value="product" placeholder="Tìm Kiếm">
-                                <input type="text" name="timkiem" id="timkem1" placeholder="Tìm Kiếm">
+                                <input type="text" name="timkiem" placeholder="Tìm Kiếm">
                                 <i class="fa-solid fa-magnifying-glass search"></i>
                             </li>
                         </form>
                         <form id="form-mobile" action="index.php" method="GET">
                             <li class="sub-menu-right">
+                                <input type="hidden" name="page" id="timkiem" value="product" placeholder="Tìm Kiếm">
                                 <input type="text" name="timkiem" id="timkem">
                                 <i class="fa-solid fa-magnifying-glass search"></i>
                             </li>

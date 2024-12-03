@@ -3,7 +3,7 @@
         if(isset($data['product']) && !empty($data['product'])){
             $product = $data['product'];
         }
-        if(count($product )% 12 == 0){
+        if(count($product ) % 12 == 0){
             $page_number = count($product) / 12;
         }else{
             $page_number = intval(count($product) / 12) + 1;
