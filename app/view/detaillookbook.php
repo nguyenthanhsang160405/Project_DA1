@@ -3,6 +3,9 @@
         if(isset($data['blog']) && !empty($data['blog'])){
             $blog = $data['blog'];
         }
+        if(isset($data['cate_blog']) && !empty($data['cate_blog'])){
+            $cate_blog = $data['cate_blog'];
+        }
     }
 ?>
 <div class="main">
@@ -19,11 +22,13 @@
                     <div class="sidebar">
                         <h2>ADAMSTORE 360</h2>
                         <ul>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Khuyến mãi</a></li>
-                            <li><a href="#">Ưu đãi đối tác Adam</a></li>
-                            <li><a href="#">Sao Việt & Khách hàng</a></li>
-                            <li><a href="#">Adam's Videos</a></li>
+                            <?php 
+                                if(isset($cate_blog) && !empty($cate_blog)){
+                                    foreach($cate_blog as $one_cate){
+                                        echo '<li><a href="index.php?page=lookbook&&id_cate='.$one_cate['id_loaibv'].'">'.$one_cate['ten_loaibv'].'</a></li>';
+                                    }
+                                }
+                            ?>
                         </ul>
                         <div class="banner">
                             <img src="./public/img/7.webp" alt="">

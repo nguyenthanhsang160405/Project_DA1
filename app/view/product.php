@@ -3,12 +3,17 @@
         if(isset($data['product']) && !empty($data['product'])){
             $product = $data['product'];
         }
-        if(count($product ) % 12 == 0){
+        // if(isset($product) && !empty($product)){
+        //     if(count($product ) % 12 == 0){
+        //         $page_number = count($product) / 12;
+        //     }else{
+        //         $page_number = intval(count($product) / 12) + 1;
+        //     }
+        // }
+        if(isset($product) && !empty($product)){
             $page_number = count($product) / 12;
-        }else{
-            $page_number = intval(count($product) / 12) + 1;
         }
-        $page_number = count($product) / 12;
+        
         if(isset($data['image']) && !empty($data['image'])){
             $image = $data['image'];
         }
@@ -84,9 +89,12 @@
             <div class="next-page">
                 <div class="number-page">
                     <?php
+                    if(isset($page_number)){
                         for($i = 0 ; $i < $page_number ; $i++){
                             echo '<a style="color:black" href="index.php?page=product&&id_page='.($i+1).'&&id_cate='.(isset($id_cate) && !empty($id_cate) ? $id_cate : '').'&&timkiem='.(isset($name_timkiem) && !empty($name_timkiem) ? $name_timkiem : '').'"><span class="page">'.($i+1).'</span></a>';
                         }
+                    }
+                        
                     ?>
                     <!-- <a href=""><span class="page">1</span></a>
                     <span class="page">2</span>

@@ -2,8 +2,13 @@
     class DetaillookbookCtl{
         public $data;
         public $blog;
+        public $cateBlog;
         public function __construct(){
             $this->blog = new BlogModel();
+            $this->cateBlog = new CateBlogModel();
+        }
+        public function getAllCateBlog(){
+            $this->data['cate_blog'] = $this->cateBlog->getAllCateBlog();
         }
         public function getIfmBlog() {
             if(isset($_GET['id_blog']) && !empty($_GET['id_blog'])){
@@ -16,6 +21,7 @@
             include_once $seen;
         }
         public function ViewDetailLookBook(){
+            $this->getAllCateBlog();
             $this->getIfmBlog();
             $this->RenderView($this->data,'detaillookbook');
         }

@@ -52,13 +52,14 @@
                         $id_page = $_GET['id_page'];
                         $this->data['product_ht'] = [];
                         $this->data['image_ht'] = [];
-                        if(intval(count($this->data['product']) / 12) == $id_page){
-                            for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                        if(ceil(count($this->data['product']) / 12) == $id_page){
+                            echo floor(count($this->data['product']) / 12);
+                            for($i = floor(count($this->data['product']) / 12) * 12; $i < count($this->data['product']) ; $i ++){
                                 array_push($this->data['product_ht'],$this->data['product'][$i]);
                                 array_push($this->data['image_ht'],$this->data['image'][$i]);
                             }
                         }else{
-                            for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                            for($i = ($id_page * 12 - 12); $i < ($id_page * 12) ; $i ++){
                                 array_push($this->data['product_ht'],$this->data['product'][$i]);
                                 array_push($this->data['image_ht'],$this->data['image'][$i]);
                             }
@@ -98,13 +99,14 @@
                         $id_page = $_GET['id_page'];
                         $this->data['product_ht'] = [];
                         $this->data['image_ht'] = [];
-                        if(intval(count($this->data['product']) / 12) == $id_page){
-                            for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                        if(ceil(count($this->data['product']) / 12) == $id_page){
+                            echo floor(count($this->data['product']) / 12);
+                            for($i = floor(count($this->data['product']) / 12) * 12; $i < count($this->data['product']) ; $i ++){
                                 array_push($this->data['product_ht'],$this->data['product'][$i]);
                                 array_push($this->data['image_ht'],$this->data['image'][$i]);
                             }
                         }else{
-                            for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                            for($i = ($id_page * 12 - 12); $i < ($id_page * 12) ; $i ++){
                                 array_push($this->data['product_ht'],$this->data['product'][$i]);
                                 array_push($this->data['image_ht'],$this->data['image'][$i]);
                             }
@@ -171,13 +173,14 @@
                             $id_page = $_GET['id_page'];
                             $this->data['product_ht'] = [];
                             $this->data['image_ht'] = [];
-                            if(intval(count($this->data['product']) / 12) == $id_page){
-                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                            if(ceil(count($this->data['product']) / 12) == $id_page){
+                                echo floor(count($this->data['product']) / 12);
+                                for($i = floor(count($this->data['product']) / 12) * 12; $i < count($this->data['product']) ; $i ++){
                                     array_push($this->data['product_ht'],$this->data['product'][$i]);
                                     array_push($this->data['image_ht'],$this->data['image'][$i]);
                                 }
                             }else{
-                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                for($i = ($id_page * 12 - 12); $i < ($id_page * 12) ; $i ++){
                                     array_push($this->data['product_ht'],$this->data['product'][$i]);
                                     array_push($this->data['image_ht'],$this->data['image'][$i]);
                                 }
@@ -219,13 +222,14 @@
                             $id_page = $_GET['id_page'];
                             $this->data['product_ht'] = [];
                             $this->data['image_ht'] = [];
-                            if(intval(count($this->data['product']) / 12) == $id_page){
-                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                            if(ceil(count($this->data['product']) / 12) == $id_page){
+                                echo floor(count($this->data['product']) / 12);
+                                for($i = floor(count($this->data['product']) / 12) * 12; $i < count($this->data['product']) ; $i ++){
                                     array_push($this->data['product_ht'],$this->data['product'][$i]);
                                     array_push($this->data['image_ht'],$this->data['image'][$i]);
                                 }
                             }else{
-                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                for($i = ($id_page * 12 - 12); $i < ($id_page * 12) ; $i ++){
                                     array_push($this->data['product_ht'],$this->data['product'][$i]);
                                     array_push($this->data['image_ht'],$this->data['image'][$i]);
                                 }
@@ -291,13 +295,14 @@
                             $id_page = $_GET['id_page'];
                             $this->data['product_ht'] = [];
                             $this->data['image_ht'] = [];
-                            if(intval(count($this->data['product']) / 12) == $id_page){
-                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                            if(ceil(count($this->data['product']) / 12) == $id_page){
+                                echo floor(count($this->data['product']) / 12);
+                                for($i = floor(count($this->data['product']) / 12) * 12; $i < count($this->data['product']) ; $i ++){
                                     array_push($this->data['product_ht'],$this->data['product'][$i]);
                                     array_push($this->data['image_ht'],$this->data['image'][$i]);
                                 }
                             }else{
-                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                for($i = ($id_page * 12 - 12); $i < ($id_page * 12) ; $i ++){
                                     array_push($this->data['product_ht'],$this->data['product'][$i]);
                                     array_push($this->data['image_ht'],$this->data['image'][$i]);
                                 }
@@ -342,13 +347,14 @@
                             $id_page = $_GET['id_page'];
                             $this->data['product_ht'] = [];
                             $this->data['image_ht'] = [];
-                            if(intval(count($this->data['product']) / 12) == $id_page){
-                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                            if(ceil(count($this->data['product']) / 12) == $id_page){
+                                echo floor(count($this->data['product']) / 12);
+                                for($i = floor(count($this->data['product']) / 12) * 12; $i < count($this->data['product']) ; $i ++){
                                     array_push($this->data['product_ht'],$this->data['product'][$i]);
                                     array_push($this->data['image_ht'],$this->data['image'][$i]);
                                 }
                             }else{
-                                for($i = ($id_page * 12 - 12); $i < count($this->data['product']) ; $i ++){
+                                for($i = ($id_page * 12 - 12); $i < ($id_page * 12) ; $i ++){
                                     array_push($this->data['product_ht'],$this->data['product'][$i]);
                                     array_push($this->data['image_ht'],$this->data['image'][$i]);
                                 }
